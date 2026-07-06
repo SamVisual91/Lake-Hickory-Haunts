@@ -1,0 +1,163 @@
+{
+  "the-hollow": {
+    "name": "Silence",
+    "subtitle": "Foundry Phantom Beneath the Rust",
+    "legacySlugs": [
+      "the-hollow"
+    ]
+  },
+  "vesper-wraith": {
+    "name": "MothMan",
+    "subtitle": "Winged Terror in Violet Static",
+    "heroImage": "/assets/characters-mothman-hero-v2.png",
+    "gallery": [
+      "/assets/characters-mothman-hero-v2.png"
+    ],
+    "legacySlugs": [
+      "vesper-wraith"
+    ]
+  },
+  "riftbone": {
+    "name": "Shepherd",
+    "subtitle": "Bone-Masked Rift Breaker",
+    "gallery": [
+      "/assets/characters-carousel-6.png",
+      "/assets/characters-shepherd-gallery-1-v2.jpg",
+      "/assets/characters-shepherd-gallery-2-v2.png"
+    ],
+    "legacySlugs": [
+      "riftbone"
+    ]
+  },
+  "furnace-warden": {
+    "name": "Rust",
+    "subtitle": "Gatekeeper of the Burn Hall",
+    "legacySlugs": [
+      "furnace-warden"
+    ]
+  },
+  "the-outlaw": {
+    "name": "THE Sheriff",
+    "subtitle": "Last Gun at Dead Lantern",
+    "legacySlugs": [
+      "the-outlaw"
+    ]
+  },
+  "shock-harlequin": {
+    "name": "Lilith",
+    "subtitle": "Storm-Door Riot Clown",
+    "heroImage": "/assets/characters-lilith-hero-v2.png",
+    "gallery": [
+      "/assets/characters-lilith-hero-v2.png",
+      "/assets/characters-lilith-gallery-1-v2.png",
+      "/assets/characters-lilith-gallery-2-v2.png"
+    ],
+    "legacySlugs": [
+      "shock-harlequin"
+    ]
+  },
+  "ringmaster-ruin": {
+    "name": "Boss the clown",
+    "subtitle": "Midway Headliner of Ruin",
+    "heroImage": "/assets/characters-boss-hero-v4.png",
+    "gallery": [
+      "/assets/characters-boss-hero-v4.png",
+      "/assets/characters-boss-gallery-1-v2.png",
+      "/assets/characters-boss-gallery-2-v2.png"
+    ],
+    "legacySlugs": [
+      "ringmaster-ruin"
+    ]
+  },
+  "scarlet-showman": {
+    "name": "The ringmaster",
+    "subtitle": "Carnival Master of the Crimson Midway",
+    "legacySlugs": [
+      "scarlet-showman"
+    ]
+  },
+  "violet-prophet": {
+    "name": "Sir Kracken",
+    "subtitle": "Dust-Crowned Oracle of the Static",
+    "legacySlugs": [
+      "violet-prophet"
+    ]
+  },
+  "abyss-diver": {
+    "name": "Overgrown",
+    "subtitle": "Sunken Reaper from the Green Deep",
+    "legacySlugs": [
+      "abyss-diver"
+    ]
+  },
+  "gourd-grim": {
+    "name": "Gouda Grim",
+    "subtitle": "Jack-O-Lantern Harvest Reaper",
+    "legacySlugs": [
+      "gourd-grim"
+    ]
+  },
+  "lurker-gnash": {
+    "name": "The mutant",
+    "subtitle": "Close-Quarter Bite Thing",
+    "legacySlugs": [
+      "lurker-gnash"
+    ]
+  },
+  "surgeon-rot": {
+    "name": "Possessed Diver",
+    "subtitle": "Many-Eyed Doctor of the Last Ward",
+    "legacySlugs": [
+      "surgeon-rot"
+    ]
+  },
+  "ivy-wraith": {
+    "name": "Squeeks",
+    "subtitle": "Root-Bound Hunter of the Green Dark",
+    "legacySlugs": [
+      "ivy-wraith"
+    ]
+  },
+  "ragmask": {
+    "gallery": [
+      "/assets/characters-new-ragmask.png",
+      "/assets/characters-ragmask-gallery-1-v2.png",
+      "/assets/characters-ragmask-gallery-2-v2.png"
+    ]
+  },
+  "deadly-delilah": {
+    "gallery": [
+      "/assets/characters-carousel-7.png",
+      "/assets/characters-deadly-delilah-gallery-1-v2.png",
+      "/assets/characters-deadly-delilah-gallery-2-v2.png"
+    ]
+  },
+  "werewolf": {
+    "gallery": [
+      "/assets/characters-werewolf-costume.png",
+      "/assets/characters-werewolf-gallery-1-v2.png",
+      "/assets/characters-werewolf-gallery-2-v2.png"
+    ]
+  },
+  "rat": {
+    "gallery": [
+      "/assets/characters-carousel-5.png",
+      "/assets/characters-rat-gallery-1-v3.jpg",
+      "/assets/characters-rat-gallery-2-v3.jpg"
+    ]
+  },
+  "bloody-mira": {
+    "name": "Moira",
+    "subtitle": "Shrieking Dollmaker of Black Pines",
+    "legacySlugs": [
+      "bloody-mira"
+    ]
+  },
+  "deepjaw": {
+    "name": "Vodyanoi",
+    "subtitle": "Flood-Tunnel Ambusher",
+    "legacySlugs": [
+      "deepjaw"
+    ]
+  }
+}

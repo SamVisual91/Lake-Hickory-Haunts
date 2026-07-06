@@ -1,0 +1,18 @@
+{
+  "name": "lake-hickory-haunts-next",
+  "version": "1.0.0",
+  "description": "Multi-page Next.js concept site for Lake Hickory Haunts",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^16.2.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
+  }
+}

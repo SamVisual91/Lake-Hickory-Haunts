@@ -1,0 +1,23 @@
+node_modules
+.next
+out
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+public/assets/natures-revenge-final.mov
+public/assets/natures-revenge-final.mp4
+public/assets/chop-shop-final.mov
+public/assets/chop-shop-final.mp4
+public/assets/big-top-circus-promo-2023.mp4
+public/assets/shipwrecked-trailer.mp4
+public/assets/aftermath-the-survivors.mp4
+public/assets/extinction-trailer.mp4
+public/assets/voodoo-bayou-trailer.mp4
+t-shirt pictures/
+.DS_Store

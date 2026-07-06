@@ -1,0 +1,236 @@
+{
+  "productOverrides": {
+    "hoodie": {
+      "name": "Lake Hickory Haunt OG Tee",
+      "price": 24.99,
+      "note": "shortsleeve / Unisex",
+      "image": "/uploads/shop-merch/1781201642779-4f7345c5-3db5-4095-abb0-6f7e798946ec.png",
+      "salePrice": 20,
+      "stock": 9,
+      "visible": true,
+      "featured": true,
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Black",
+          "swatch": "#111111",
+          "image": "/uploads/shop-merch/1781624915506-7c1ce69b-a781-4e09-95e3-b96cab1a6033.png",
+          "images": [
+            "/uploads/shop-merch/1781624915506-7c1ce69b-a781-4e09-95e3-b96cab1a6033.png",
+            "/uploads/shop-merch/1781624932687-079ff9d7-8f36-4f6c-9d77-d762c52a772e.png"
+          ]
+        }
+      ]
+    },
+    "tee": {
+      "name": "LHH Pumkin Tee",
+      "note": "shortsleeve / Unisex",
+      "image": "/uploads/shop-merch/1781201642781-39e496ce-92cb-442f-a786-35556e9fc470.png",
+      "featured": false,
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Black",
+          "swatch": "#101010",
+          "image": "/uploads/shop-merch/1781624961790-0633a82f-a7ed-4124-906c-bb255b87ef01.png",
+          "images": [
+            "/uploads/shop-merch/1781624961790-0633a82f-a7ed-4124-906c-bb255b87ef01.png",
+            "/uploads/shop-merch/1781624966566-1ae56a03-6215-48cd-86ac-5d6e9840b17e.png",
+            "/uploads/shop-merch/1781624966568-f774fd7b-499f-4965-8f19-f0d3a267edc2.png"
+          ]
+        }
+      ]
+    },
+    "logo-tee": {
+      "name": "LHH Witch Tee",
+      "note": "shortsleeve / Unisex",
+      "image": "/uploads/shop-merch/1781201642784-abfc243c-eb6b-46cf-a359-c9fbbc6f9771.png",
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Green",
+          "swatch": "#6cfe43",
+          "image": "/uploads/shop-merch/1781624985579-b43be209-4e38-4d19-a6a3-cc7d516f6b01.png",
+          "images": [
+            "/uploads/shop-merch/1781624985579-b43be209-4e38-4d19-a6a3-cc7d516f6b01.png",
+            "/uploads/shop-merch/1781625004746-0a1caab5-8cb3-4266-ac24-af6a18205949.png"
+          ]
+        },
+        {
+          "id": "color-1781625018138-465",
+          "label": "Black",
+          "swatch": "#8a8a8a",
+          "image": "/uploads/shop-merch/1781625052948-df08306b-fb45-435d-a9ad-9ca66cd4a4a3.png",
+          "images": [
+            "/uploads/shop-merch/1781625052948-df08306b-fb45-435d-a9ad-9ca66cd4a4a3.png",
+            "/uploads/shop-merch/1781625052951-24d952a1-44e7-4909-86ed-81ecafad0707.png"
+          ]
+        }
+      ]
+    },
+    "midnight-tee": {
+      "name": "LHH Aftermath Tee",
+      "note": "shortsleeve / Unisex",
+      "image": "/uploads/shop-merch/1781201642786-94056c94-84e6-4a28-99b4-936f2a38e3ed.png",
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Black",
+          "swatch": "#101010",
+          "image": "/uploads/shop-merch/1781625084612-8a6c7651-6cf5-4fa4-988a-e678553e2a20.png",
+          "images": [
+            "/uploads/shop-merch/1781625084612-8a6c7651-6cf5-4fa4-988a-e678553e2a20.png",
+            "/uploads/shop-merch/1781625084615-e2909078-f615-494a-ba19-dcb66d7567cf.png",
+            "/uploads/shop-merch/1781625104790-088407b4-8cc3-43ba-a3b8-c315b2f53b72.png",
+            "/uploads/shop-merch/1781625104793-559e8f32-f12e-4068-bf7a-7ed10838f1e7.png",
+            "/uploads/shop-merch/1781625104795-16d16c81-3ed5-453d-ae39-96a4ef01f541.png"
+          ]
+        }
+      ]
+    },
+    "shipwrecked-tee": {
+      "name": "LHH Vintage Tee",
+      "note": "Season Drop / shortsleeve / Unisex",
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Black",
+          "swatch": "#101010",
+          "image": "/uploads/shop-merch/1781625153525-658f6709-1bdd-4f1b-a508-b3accc80f8f3.png",
+          "images": [
+            "/uploads/shop-merch/1781625153525-658f6709-1bdd-4f1b-a508-b3accc80f8f3.png",
+            "/uploads/shop-merch/1781625153528-833186e2-8f30-48e3-8d95-545e7e7268be.png"
+          ]
+        }
+      ]
+    },
+    "descent-longsleeve": {
+      "note": "longsleeve / Unisex",
+      "name": "LHH Vintage Tee LS",
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Black",
+          "swatch": "#101010",
+          "image": "/assets/shop-tee.png",
+          "images": [
+            "/assets/shop-tee.png",
+            "/uploads/shop-merch/1781625232663-e1868999-79a0-48ba-b721-9ee8c44bdacb.png",
+            "/uploads/shop-merch/1781625232667-5d63a83a-3447-4e71-9eff-be35c62388fd.png"
+          ]
+        }
+      ]
+    },
+    "glow-hoodie": {
+      "name": "Witch T-shirt ",
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Black",
+          "swatch": "#101010",
+          "image": "/uploads/shop-merch/1781625250051-544a08ca-cbe9-46b5-98db-d58bc4c39647.png",
+          "images": [
+            "/uploads/shop-merch/1781625250051-544a08ca-cbe9-46b5-98db-d58bc4c39647.png",
+            "/uploads/shop-merch/1781625285925-1bb719ba-b538-4e3e-9ec3-9d846e20a5b9.png"
+          ]
+        }
+      ]
+    },
+    "graveyard-zip": {
+      "name": "I Love Boss Tee",
+      "colorOptions": [
+        {
+          "id": "black",
+          "label": "Black",
+          "swatch": "#101010",
+          "image": "/assets/shop-hoodie.png",
+          "images": [
+            "/assets/shop-hoodie.png",
+            "/uploads/shop-merch/1781625311716-a64678d9-4a90-43f1-857d-09aa2ad1b9b7.png",
+            "/uploads/shop-merch/1781625311720-3093bada-8880-4331-a95c-0c4097ac51b4.png",
+            "/uploads/shop-merch/1781625311724-a346a7be-ddc2-44b7-a136-9e384ca00f87.png"
+          ]
+        }
+      ]
+    },
+    "fog-joggers": {
+      "name": "LHH Kraken Tee"
+    },
+    "haunt-beanie": {
+      "name": "We are LHH"
+    },
+    "night-crew-cap": {
+      "name": "Creative LHH"
+    },
+    "custom-1778180049819": {
+      "name": "Boss Purple LHH"
+    },
+    "lanyard": {
+      "name": "LHH Wristbands"
+    },
+    "snapback": {
+      "name": "LHH Haunt Cups"
+    },
+    "vip-lanyard": {
+      "name": "LHH Shot glasses"
+    },
+    "glow-lanyard": {
+      "name": "LHH Tall Glass"
+    },
+    "event-lanyard": {
+      "name": "LHH Sticker Bundle"
+    },
+    "monster-cap": {
+      "name": "LHH Boss Magnet"
+    },
+    "midway-cap": {
+      "name": "LHH Shephard Magnet"
+    },
+    "haunt-tumbler": {
+      "name": "LHH Wood Magnet"
+    },
+    "steel-bottle": {
+      "name": "LHH Acrylic Key Chains"
+    },
+    "blackout-bottle": {
+      "name": "LHH Pint Glasses"
+    },
+    "gift-set": {
+      "name": "LHH Patch"
+    },
+    "custom-1778190547967": {
+      "name": "LHH Coffee Mug",
+      "price": 9.99
+    }
+  },
+  "customProducts": [
+    {
+      "id": "custom-1778190547967",
+      "name": "New Merch Item",
+      "category": "accessories",
+      "price": 0,
+      "note": "Local Draft",
+      "image": "/assets/shop-tee.png",
+      "accent": "green",
+      "featured": false,
+      "visible": true,
+      "stock": 12,
+      "lowStockThreshold": 4,
+      "isCustom": true
+    },
+    {
+      "id": "custom-1778180049819",
+      "name": "New Merch Item",
+      "category": "apparel",
+      "price": 0,
+      "note": "Local Draft",
+      "image": "/assets/shop-tee.png",
+      "accent": "green",
+      "featured": false,
+      "visible": true,
+      "stock": 12,
+      "lowStockThreshold": 4,
+      "isCustom": true
+    }
+  ]
+}
