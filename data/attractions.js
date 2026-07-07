@@ -644,6 +644,7 @@ const lairOfTheUndead = attractions.find((attraction) => attraction.slug === "la
 
 if (lairOfTheUndead) {
   lairOfTheUndead.subtitle = null;
+  lairOfTheUndead.detailVideoEmbedUrl = "https://www.youtube.com/embed/vlEx55_HzHQ?controls=1&rel=0&modestbranding=1&playsinline=1";
   lairOfTheUndead.description = [
     { type: "title", text: "Undead Spirits, Zombies, and Ghosts" },
     "Outside the Nightmare Factory, haunted crypts and graveyards are inhabited by lost souls, wandering in despair. These souls are trapped in a realm between reality and dream, and they will latch onto whatever they can to become alive once more! Beware, these living dead creatures look as if they're alive, but they're not... or are they? Some of these foul creatures have some soul left, some do not. You are their last chance at life! Beware of ghosts, zombies, poltergeists, and spirits haunting this land of the dead... Tread lightly, they will play with your mind and emotions to lure you in with insidious tricks.",
@@ -655,6 +656,16 @@ if (lairOfTheUndead) {
 const voodooBayou = attractions.find((attraction) => attraction.slug === "voodoo-bayou");
 
 if (voodooBayou) {
+  voodooBayou.detailVideoEmbedUrl = "https://www.youtube.com/embed/PdFrtn-y49Y?controls=1&rel=0&modestbranding=1&playsinline=1";
+  voodooBayou.gallery = [
+    {
+      title: "Bayou Title",
+      className: "gallery-bayou-title",
+      imageSrc: "/assets/voodoo-bayou-gallery-title-2026.png",
+      caption: "The Voodoo Bayou title art over bark with a stitched voodoo doll centerpiece",
+    },
+    ...(voodooBayou.gallery ?? []),
+  ];
   voodooBayou.subtitle = null;
   voodooBayou.description = [
     { type: "title", text: "Experience Mystifying Enchantments" },

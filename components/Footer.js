@@ -141,10 +141,10 @@ export function Footer() {
         <div className="footer-brand">
           <Image
             className="footer-logo"
-            src="/assets/logo-transparent.png"
+            src="/assets/footer-haunt-logo-2026.png"
             alt="Lake Hickory Haunts logo"
-            width={2048}
-            height={682}
+            width={3454}
+            height={1554}
           />
           <div className="footer-socials" aria-label="Social links">
             {socialLinks.map((link) => (
@@ -166,7 +166,7 @@ export function Footer() {
               className="footer-sister-logo-image"
               src="/assets/escape-logo-black-outline.png"
               alt="Lake Hickory Escape logo"
-              width={2048}
+              width={3454}
               height={1091}
             />
           </a>
@@ -232,3 +232,4 @@ export function Footer() {
     </footer>
   );
 }
+

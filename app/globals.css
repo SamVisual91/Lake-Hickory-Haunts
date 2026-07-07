@@ -2354,7 +2354,6 @@ h1 {
   .promo-card::after {
     display: none;
   }
-
   .promo-copy {
     position: relative;
     top: auto;
@@ -2363,34 +2362,41 @@ h1 {
     bottom: auto;
     display: grid;
     gap: 12px;
-    padding: 18px 18px 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 16px 0;
     text-align: left;
     pointer-events: auto;
-    max-width: none;
+    box-sizing: border-box;
+    overflow: hidden;
     min-width: 0;
   }
 
   .promo-card .promo-title {
     max-width: none;
+    width: 100%;
     margin: 0;
     text-align: left;
-    font-size: clamp(1.6rem, 8vw, 2rem);
-    letter-spacing: 0.1em;
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
+    letter-spacing: 0.08em;
+    overflow-wrap: anywhere;
   }
 
   .promo-card--vip .promo-title br {
     display: none;
   }
+
   .promo-card .promo-subtext {
     position: relative;
     left: auto;
     bottom: auto;
     width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
     margin: 0;
-    font-size: 0.88rem;
-    line-height: 1.46;
+    padding-right: 6px;
+    box-sizing: border-box;
+    font-size: 0.82rem;
+    line-height: 1.42;
     opacity: 1;
     transform: none;
     text-align: left;
@@ -2403,10 +2409,24 @@ h1 {
   }
 
   .promo-subtext--list {
+    width: 100%;
     max-width: 100%;
-    box-sizing: border-box;
-    padding-left: 1rem;
+    padding-inline-start: 1rem;
+    padding-right: 6px;
     margin: 0;
+    box-sizing: border-box;
+    list-style-position: outside;
+  }
+
+  .promo-subtext--list li {
+    max-width: 100%;
+    padding-right: 2px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .promo-subtext--list li + li {
+    margin-top: 0.45rem;
   }
 
   .promo-subtext--list li {
