@@ -211,8 +211,6 @@ export function GeneralAdmissionDateTimePage({ titleClassName, initialDate = nul
   );
 
   const selectedDateId = formatBookingDateId(activeMonth.year, activeMonth.monthIndex, selectedDate);
-  const selectedBand = bookingDateToBand[selectedDateId] ?? bookingScheduleBands[0];
-  const selectedDateLabel = `${activeMonth.monthName} ${selectedDate}, ${activeMonth.year}`;
   const canGoPrevMonth = selectedMonthIndex > 0;
   const canGoNextMonth = selectedMonthIndex < bookingMonths.length - 1;
 
@@ -385,10 +383,6 @@ export function GeneralAdmissionDateTimePage({ titleClassName, initialDate = nul
                       </div>
                     </article>
                   ))}
-                </div>
-                <div className="ga2-booking-night-note" style={{ "--ga2-night-accent": selectedBand.accent }}>
-                  <strong>{selectedBand.name}</strong>
-                  <span>{selectedBand.note}</span>
                 </div>
               </div>
             </section>

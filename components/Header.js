@@ -17,6 +17,13 @@ const faqLinks = [
   { label: "General Questions", href: "/faq#general-questions" },
 ];
 
+const mobileUtilityItems = [
+  { label: "Book Your Night", href: "https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287", external: true },
+  { label: "Directions", href: "/directions" },
+  { label: "About Us", href: "/about-us" },
+  { label: "Hours and Events", href: "/hours-events" },
+];
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -26,6 +33,7 @@ export function Header() {
   useEffect(() => {
     const handlePointerDown = (event) => {
       if (!headerRef.current?.contains(event.target)) {
+        setOpen(false);
         setFaqOpen(false);
       }
     };
@@ -33,6 +41,15 @@ export function Header() {
     document.addEventListener("pointerdown", handlePointerDown);
     return () => document.removeEventListener("pointerdown", handlePointerDown);
   }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle("nav-drawer-open", open);
+    if (!open) {
+      setFaqOpen(false);
+    }
+
+    return () => document.body.classList.remove("nav-drawer-open");
+  }, [open]);
 
   if (pathname?.startsWith("/attractions/") || pathname === "/shop") {
     return null;
@@ -62,7 +79,14 @@ export function Header() {
       <div className="main-nav-shell">
         <div className="page-width">
           <nav className="nav">
-            <Link className="brand" href="/" onClick={() => setOpen(false)}>
+            <Link
+              className="brand"
+              href="/"
+              onClick={() => {
+                setOpen(false);
+                setFaqOpen(false);
+              }}
+            >
               <Image src="/assets/logo-2026-15-years-octopus.png" alt="Lake Hickory Haunts 2026 logo" width={2048} height={1375} priority />
             </Link>
 
@@ -71,6 +95,7 @@ export function Header() {
               type="button"
               aria-expanded={open}
               aria-controls="nav-menu"
+              aria-label={open ? "Close navigation" : "Open navigation"}
               onClick={() => setOpen((value) => !value)}
             >
               <span />
@@ -80,6 +105,21 @@ export function Header() {
             </button>
 
             <div className={`nav-menu ${open ? "is-open" : ""}`} id="nav-menu">
+              <div className="nav-menu-mobile-header">
+                <span className="nav-menu-mobile-title sr-only">Menu</span>
+                <button
+                  type="button"
+                  className="nav-menu-close"
+                  aria-label="Close navigation"
+                  onClick={() => {
+                    setOpen(false);
+                    setFaqOpen(false);
+                  }}
+                >
+                  X
+                </button>
+              </div>
+
               <div className="nav-links-cluster">
                 {navItems.map((item) => (
                   <Link
@@ -90,7 +130,8 @@ export function Header() {
                       setFaqOpen(false);
                     }}
                   >
-                    {item.label}
+                    <span>{item.label}</span>
+                    <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
                   </Link>
                 ))}
 
@@ -101,7 +142,8 @@ export function Header() {
                     setFaqOpen(false);
                   }}
                 >
-                  Contact Us
+                  <span>Contact Us</span>
+                  <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
                 </Link>
 
                 <div className={`nav-ticket-wrap ${faqOpen ? "is-open" : ""}`}>
@@ -115,6 +157,7 @@ export function Header() {
                     }}
                   >
                     <span>FAQ</span>
+                    <span className={`nav-mobile-arrow ${faqOpen ? "is-open" : ""}`} aria-hidden="true">{">"}</span>
                     <span className="nav-ticket-caret" aria-hidden="true">v</span>
                   </button>
                   <div className="nav-ticket-inline" id="faq-menu">
@@ -127,7 +170,8 @@ export function Header() {
                           setFaqOpen(false);
                         }}
                       >
-                        {link.label}
+                        <span>{link.label}</span>
+                        <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
                       </Link>
                     ))}
                   </div>
@@ -141,10 +185,53 @@ export function Header() {
                     setFaqOpen(false);
                   }}
                 >
-                  Tickets
+                  <span>Tickets</span>
+                  <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
                 </Link>
               </div>
+
+              <div className="nav-mobile-only nav-mobile-secondary">
+                {mobileUtilityItems.map((item) => (
+                  item.external ? (
+                    <a
+                      key={item.label}
+                      href={item.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={() => {
+                        setOpen(false);
+                        setFaqOpen(false);
+                      }}
+                    >
+                      <span>{item.label}</span>
+                      <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      onClick={() => {
+                        setOpen(false);
+                        setFaqOpen(false);
+                      }}
+                    >
+                      <span>{item.label}</span>
+                      <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
+                    </Link>
+                  )
+                ))}
+              </div>
             </div>
+
+            <button
+              type="button"
+              className={`nav-drawer-backdrop ${open ? "is-open" : ""}`}
+              aria-label="Close navigation"
+              onClick={() => {
+                setOpen(false);
+                setFaqOpen(false);
+              }}
+            />
           </nav>
 
           <div className={`nav-ticket-mega ${faqOpen ? "is-open" : ""}`}>
@@ -168,3 +255,5 @@ export function Header() {
     </header>
   );
 }
+
+
