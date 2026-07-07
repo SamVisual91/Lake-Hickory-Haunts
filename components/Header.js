@@ -178,6 +178,23 @@ export function Header() {
                 </div>
 
                 <Link
+                  className="nav-jobs-link"
+                  href="/jobs"
+                  onClick={() => {
+                    setOpen(false);
+                    setFaqOpen(false);
+                  }}
+                >
+                  <Image
+                    src="/assets/jobs-monsters-wanted.png"
+                    alt="Monsters Wanted apply now"
+                    width={2048}
+                    height={834}
+                  />
+                  <span className="sr-only">Apply now</span>
+                </Link>
+
+                <Link
                   className="nav-cta nav-cta-tickets"
                   href="/tickets"
                   onClick={() => {

@@ -602,6 +602,31 @@ html.splash-pending .site-shell {
   transition: max-height 0.28s ease, opacity 0.22s ease, transform 0.22s ease, padding 0.22s ease;
 }
 
+.nav-jobs-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  margin-left: clamp(8px, 1vw, 14px);
+}
+
+.nav-jobs-link img {
+  width: clamp(132px, 13vw, 208px);
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+  transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.nav-jobs-link:hover img,
+.nav-jobs-link:focus-visible img {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.32),
+    0 0 18px rgba(255, 32, 32, 0.2);
+  filter: brightness(1.05);
+}
+
 .nav-cta {
   margin-left: clamp(12px, 1.6vw, 24px);
   position: relative;
@@ -7619,6 +7644,12 @@ h1 {
     white-space: normal;
     box-shadow: none;
     animation: none;
+  }
+
+  .nav-jobs-link,
+  .nav-jobs-link:hover,
+  .nav-jobs-link:focus-visible {
+    display: none;
   }
 
   .nav-menu a span:first-child,
