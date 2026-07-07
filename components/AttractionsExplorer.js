@@ -6,13 +6,35 @@ import { useRef } from "react";
 import { attractions } from "../data/attractions";
 
 export function AttractionCard({ attraction }) {
+  const previewImage = attraction.gallery?.[0]?.imageSrc ?? attraction.heroBannerImage ?? null;
+  const previewAlt = attraction.gallery?.[0]?.caption ?? `${attraction.title} attraction preview`;
+  const cardClassName = [
+    "attraction-card",
+    attraction.className,
+    attraction.selected ? "is-selected" : "",
+    previewImage ? "attraction-card--has-media" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <Link
       href={`/attractions/${attraction.slug}`}
-      className={`attraction-card ${attraction.className} ${attraction.selected ? "is-selected" : ""}`}
+      className={cardClassName}
       aria-label={attraction.title}
       title={attraction.theme}
     >
+      {previewImage ? (
+        <div className="attraction-card-media" aria-hidden="true">
+          <Image
+            src={previewImage}
+            alt={previewAlt}
+            fill
+            sizes="(max-width: 640px) 50vw, (max-width: 900px) 33vw, (max-width: 1200px) 25vw, 270px"
+          />
+        </div>
+      ) : null}
+
       <span className="attraction-card-number">{attraction.id}</span>
 
       {attraction.selected ? (

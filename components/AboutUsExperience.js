@@ -204,8 +204,7 @@ export function AboutUsExperience() {
         <p className="about-kicker">Lake Hickory Haunts</p>
         <h1>About Us</h1>
         <p className="about-intro">
-          The story, philosophy, and guest-first mindset behind the haunted theme park we keep
-          building bigger every season.
+          The philosophy, values, and mission statement of Lake Hickory Haunts
         </p>
       </div>
 

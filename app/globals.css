@@ -611,7 +611,7 @@ html.splash-pending .site-shell {
 }
 
 .nav-jobs-link img {
-  width: clamp(132px, 13vw, 208px);
+  width: clamp(84px, 8.2vw, 136px);
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
@@ -16555,13 +16555,28 @@ h1 {
     filter 180ms ease;
 }
 
+.attraction-card-media {
+  position: absolute;
+  inset: 0 0 68px;
+  z-index: 0;
+  display: grid;
+  place-items: center;
+  padding: 14px 14px 0;
+}
+
+.attraction-card-media img {
+  object-fit: contain;
+  object-position: center;
+  filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.42));
+}
+
 .attraction-picker-row-top .attraction-card {
-  min-height: 325px;
+  min-height: 348px;
   aspect-ratio: auto;
 }
 
 .attraction-picker-row-bottom .attraction-card {
-  min-height: 312px;
+  min-height: 334px;
   aspect-ratio: auto;
 }
 
@@ -16584,14 +16599,14 @@ h1 {
       rgba(255, 255, 255, 0.02) 0 2px,
       transparent 2px 18px
     );
-  opacity: 0.58;
+  opacity: 0.44;
   mix-blend-mode: screen;
 }
 
 .attraction-card::after {
   background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.94) 100%),
-    radial-gradient(circle at 50% 40%, transparent 18%, rgba(0, 0, 0, 0.7) 100%);
+    linear-gradient(180deg, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.62) 58%, rgba(0, 0, 0, 0.92) 100%),
+    radial-gradient(circle at 50% 40%, rgba(0, 0, 0, 0.06) 0%, rgba(0, 0, 0, 0.68) 100%);
 }
 
 .attraction-card:hover {
@@ -16946,6 +16961,16 @@ h1 {
   background-position: center center, center 26%, center, center, center, center;
 }
 
+.attraction-card--has-media {
+  background-image:
+    radial-gradient(circle at 82% 14%, rgba(var(--card-accent-rgb), 0.2), transparent 22%),
+    radial-gradient(circle at 16% 80%, rgba(var(--card-accent-rgb), 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(10, 15, 18, 0.58), rgba(2, 6, 8, 0.94)),
+    linear-gradient(135deg, rgba(8, 13, 15, 0.96), rgba(3, 6, 7, 0.99));
+  background-size: auto, auto, auto, auto;
+  background-position: center, center, center, center;
+}
+
 @media (max-width: 1720px) {
   .attraction-browser-hero,
   .attraction-picker {
@@ -16966,6 +16991,10 @@ h1 {
 
   .attraction-card {
     min-height: clamp(188px, 17vw, 220px);
+  }
+
+  .attraction-card-media {
+    inset: 0 0 62px;
   }
 
   .attraction-picker-row-top .attraction-card {
@@ -17072,6 +17101,10 @@ h1 {
     min-height: clamp(184px, 23vw, 218px);
   }
 
+  .attraction-card-media {
+    inset: 0 0 58px;
+  }
+
   .attraction-picker-row-top .attraction-card {
     min-height: clamp(184px, 23vw, 218px);
   }
@@ -17141,6 +17174,11 @@ h1 {
   .attraction-card {
     min-height: clamp(176px, 47vw, 212px);
     padding: 14px 12px 12px;
+  }
+
+  .attraction-card-media {
+    inset: 0 0 54px;
+    padding: 8px 8px 0;
   }
 
   .attraction-picker-row-top .attraction-card {
