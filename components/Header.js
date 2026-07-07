@@ -50,7 +50,7 @@ export function Header() {
             <a className="utility-book-link" href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287">
               Book Your Night
             </a>
-            <Link href="/directions">Direction</Link>
+            <Link href="/directions">Directions</Link>
           </div>
           <div className="utility-right">
             <Link href="/about-us">About Us</Link>

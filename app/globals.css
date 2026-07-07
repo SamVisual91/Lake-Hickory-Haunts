@@ -10043,8 +10043,8 @@ h1 {
 }
 
 .ga2-ticket-info-card--general-highlight {
-  --ga2-info-accent: #858585;
-  --ga2-info-accent-soft: rgba(133, 133, 133, 0.1);
+  --ga2-info-accent: #3fe4ef;
+  --ga2-info-accent-soft: rgba(63, 228, 239, 0.14);
 }
 
 .ga2-ticket-info-copy {
