@@ -123,10 +123,6 @@ export default function HomePage() {
               <p className="event-type">Video Feature</p>
               <h3>Lake Hickory Haunts 2026</h3>
               <p className="event-meta">A cinematic look at the attractions, monsters, and immersive experiences featured at Lake Hickory Haunts</p>
-              <p>
-                Give guests a polished feature that introduces the world of Lake Hickory
-                Haunts and captures the production, performers, and energy shaping the season.
-              </p>
             </div>
           </article>
 

@@ -2434,7 +2434,10 @@ h1 {
   }
 
   .promo-card--vip .promo-subtext {
+    color: #ffffff;
     transform: none;
+    opacity: 1;
+    transition: none;
   }
 
   .promo-subtext--list {
@@ -2524,6 +2527,13 @@ h1 {
   .promo-card:focus-within .promo-subtext,
   .promo-card:hover .promo-link,
   .promo-card:focus-within .promo-link {
+    transform: none;
+  }
+
+  .promo-grid:hover .promo-card--vip:not(:hover):not(:focus-within) .promo-subtext,
+  .promo-grid:hover .promo-card--vip:not(:hover):not(:focus-within) .promo-subtext li {
+    color: #ffffff;
+    opacity: 1;
     transform: none;
   }
 
