@@ -195,6 +195,18 @@ export function Header() {
                 </Link>
 
                 <Link
+                  className="nav-mobile-jobs-link"
+                  href="/jobs"
+                  onClick={() => {
+                    setOpen(false);
+                    setFaqOpen(false);
+                  }}
+                >
+                  <span>Monsters Wanted</span>
+                  <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
+                </Link>
+
+                <Link
                   className="nav-cta nav-cta-tickets"
                   href="/tickets"
                   onClick={() => {

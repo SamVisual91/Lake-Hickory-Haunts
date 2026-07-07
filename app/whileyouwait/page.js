@@ -74,7 +74,7 @@ export default function WhileYouWaitPage() {
           </div>
         </section>
 
-        <p className="visit-strip-heading">Things to do at the Midway of Mayhem</p>
+        <p className="visit-strip-heading">Things to do on the Midway of Mayhem</p>
       </div>
 
       <VisitMidwayGrid boxes={midwayBoxes} />

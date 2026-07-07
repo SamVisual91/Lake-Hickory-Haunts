@@ -271,10 +271,13 @@ export function AttractionDetailPage({ attraction }) {
   const heroRef = useRef(null);
   const [selectedGalleryIndex, setSelectedGalleryIndex] = useState(null);
   const gallery = attraction.gallery ?? getDefaultAttractionGallery();
+  const tagline = Object.prototype.hasOwnProperty.call(attraction, "tagline")
+    ? attraction.tagline
+    : "Where torment is assembled.";
   const galleryLightboxItems = gallery.filter((item) => item.imageSrc);
   const description =
     attraction.description ??
-    `Step deeper into ${attraction.shortTitle ?? attraction.title}. ${attraction.tagline ?? "The night only gets worse from here."}`;
+    `Step deeper into ${attraction.shortTitle ?? attraction.title}. ${tagline ?? "The night only gets worse from here."}`;
   const detailVideoEmbedUrl = attraction.detailVideoEmbedUrl ?? null;
   const videoUpdate = attraction.videoUpdate ?? null;
   const isShipwreckedTheme = attraction.detailThemeClass === "detail-theme-shipwrecked";
@@ -437,7 +440,7 @@ export function AttractionDetailPage({ attraction }) {
             <HeroTitle
               title={attraction.shortTitle ?? attraction.title}
               subtitle={attraction.subtitle}
-              tagline={attraction.tagline ?? "Where torment is assembled."}
+              tagline={tagline}
             />
 
             <DescriptionContent description={description} />

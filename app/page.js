@@ -69,8 +69,8 @@ export default function HomePage() {
                 <li>Free Printed Photo.</li>
               </ul>
             </div>
-            <a className="promo-link" href="/tickets/vip-experience">
-              Explore VIP
+            <a className="promo-link" href="/tickets">
+              Get VIP Pass
             </a>
           </article>
 
@@ -80,7 +80,7 @@ export default function HomePage() {
               <p className="promo-subtext">Fast Pass admission is an upgrade to a MUCH shorter line which moves MUCH faster than the General Admission to all 13 main attractions with a standard wait time.</p>
             </div>
             <a className="promo-link" href="/tickets">
-              See Fast Pass
+              Get Fast Pass
             </a>
           </article>
 
@@ -90,7 +90,7 @@ export default function HomePage() {
               <p className="promo-subtext">General admission includes admission to all 13 main attractions with a standard wait time.</p>
             </div>
             <a className="promo-link" href="/tickets">
-              View General Admission
+              Get General Admission
             </a>
           </article>
 
