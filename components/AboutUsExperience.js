@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+const aboutReviewsWidgetId = "ndrsl-5f370bac03f8820eafd74f79";
+
 const aboutSlides = [
   {
     eyebrow: "Lake Hickory Haunts",
@@ -149,6 +151,44 @@ export function AboutUsExperience() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex]);
 
+  useEffect(() => {
+    let cancelled = false;
+    let attempts = 0;
+
+    const mountReviewsWidget = () => {
+      if (cancelled) {
+        return;
+      }
+
+      const widgetElement = document.getElementById(aboutReviewsWidgetId);
+
+      if (!widgetElement) {
+        return;
+      }
+
+      if (widgetElement.childElementCount > 0) {
+        return;
+      }
+
+      if (typeof window !== "undefined" && typeof window.NDRSL?.renderElement === "function") {
+        window.NDRSL.renderElement(aboutReviewsWidgetId);
+        return;
+      }
+
+      attempts += 1;
+
+      if (attempts < 20) {
+        window.setTimeout(mountReviewsWidget, 250);
+      }
+    };
+
+    mountReviewsWidget();
+
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const activeSlide = aboutSlides[activeIndex];
   const activeGalleryItem = lightboxIndex === null ? null : aboutGalleryItems[lightboxIndex];
 
@@ -248,6 +288,21 @@ export function AboutUsExperience() {
               )}
             </button>
           ))}
+        </div>
+      </div>
+
+      <div className="about-reviews-shell page-width">
+        <div className="about-reviews-header">
+          <p className="about-carousel-label">Guest Reviews</p>
+          <h2>What Guests Are Saying</h2>
+          <p className="about-reviews-intro">
+            A featured set of Google reviews from Drip Reviews, displayed right here under
+            the About Us gallery while the floating review widget stays live site-wide.
+          </p>
+        </div>
+
+        <div className="about-reviews-card">
+          <div id={aboutReviewsWidgetId} className="ndrsl-widget" />
         </div>
       </div>
 
