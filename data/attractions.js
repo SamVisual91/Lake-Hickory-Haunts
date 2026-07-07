@@ -686,6 +686,7 @@ const shipwrecked = attractions.find((attraction) => attraction.slug === "shipwr
 
 if (shipwrecked) {
   shipwrecked.subtitle = null;
+  shipwrecked.detailVideoEmbedUrl = "https://www.youtube.com/embed/XKe07X-7MS0?controls=1&rel=0&modestbranding=1&playsinline=1";
   shipwrecked.detailVideoSrc = "/assets/shipwrecked-trailer.mp4";
   shipwrecked.detailVideoType = "video/mp4";
   shipwrecked.videoUpdate = [
@@ -711,6 +712,15 @@ if (shipwrecked) {
 const aquaphobia = attractions.find((attraction) => attraction.slug === "aquaphobia");
 
 if (aquaphobia) {
+  aquaphobia.gallery = [
+    {
+      title: "Aquaphobia Title",
+      className: "gallery-aqua-title",
+      imageSrc: "/assets/aquaphobia-gallery-title-2026.png",
+      caption: "The Aquaphobia title art glowing over a submerged teal water backdrop",
+    },
+    ...(aquaphobia.gallery ?? []),
+  ];
   aquaphobia.subtitle = null;
   aquaphobia.videoUpdate = [
     { type: "label", text: "Attraction Update:" },
@@ -729,6 +739,16 @@ if (aquaphobia) {
 const extinction = attractions.find((attraction) => attraction.slug === "extinction");
 
 if (extinction) {
+  extinction.detailVideoEmbedUrl = "https://www.youtube.com/embed/Wme8pc7W0SQ?controls=1&rel=0&modestbranding=1&playsinline=1";
+  extinction.gallery = [
+    {
+      title: "Extinction Title",
+      className: "gallery-ext-title",
+      imageSrc: "/assets/extinction-gallery-title-2026.jpg",
+      caption: "The Extinction title graphic over hazard stripes with a glowing biohazard emblem",
+    },
+    ...(extinction.gallery ?? []),
+  ];
   extinction.subtitle = null;
   extinction.tagline = "A chilling and otherworldly Sci-fy experience";
   extinction.description = [
@@ -745,6 +765,15 @@ if (extinction) {
 const aftermath = attractions.find((attraction) => attraction.slug === "aftermath");
 
 if (aftermath) {
+  aftermath.gallery = [
+    {
+      title: "Aftermath Title",
+      className: "gallery-after-title",
+      imageSrc: "/assets/aftermath-gallery-title-2026.jpg",
+      caption: "The Aftermath title art over a burning skyline with blood-red fallout splatter",
+    },
+    ...(aftermath.gallery ?? []),
+  ];
   aftermath.subtitle = null;
   aftermath.description = [
     { type: "title", text: "The Wasteland of Survivalists" },
@@ -818,6 +847,15 @@ if (chopShop) {
 const ghostTown = attractions.find((attraction) => attraction.slug === "ghost-town");
 
 if (ghostTown) {
+  ghostTown.gallery = [
+    {
+      title: "Ghost Town Title",
+      className: "gallery-ghost-title",
+      imageSrc: "/assets/ghost-town-gallery-title-2026.webp",
+      caption: "The Ghost Town title art with shadowed hands pressing through the haze",
+    },
+    ...(ghostTown.gallery ?? []),
+  ];
   ghostTown.subtitle = null;
   ghostTown.tagline = "An “Abandoned” Frontier…";
 }
