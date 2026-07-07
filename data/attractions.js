@@ -774,6 +774,7 @@ if (aftermath) {
     },
     ...(aftermath.gallery ?? []),
   ];
+  aftermath.detailVideoEmbedUrl = "https://www.youtube.com/embed/apwLGiUGb0s?controls=1&rel=0&modestbranding=1&playsinline=1";
   aftermath.subtitle = null;
   aftermath.description = [
     { type: "title", text: "The Wasteland of Survivalists" },
@@ -789,6 +790,7 @@ if (naturesRevenge) {
   naturesRevenge.lines = ["NATURE'S REVENGE"];
   naturesRevenge.subtitle = null;
   naturesRevenge.heroBannerImage = "/assets/natures-revenge-hero-banner.webp";
+  naturesRevenge.detailVideoEmbedUrl = "https://www.youtube.com/embed/qJUCC_07cg4?controls=1&rel=0&modestbranding=1&playsinline=1";
   naturesRevenge.description = [
     { type: "title", text: "Beware of Her Wrath..." },
     "In an ancient experimental Greenhouse, Nature takes her Revenge! Prepare for a breathtaking immersive encounter with the beautiful aspects of mother nature, but beware of her wrath... Nature, tired of being used, limited, and synthesized; has consumed the Greenhouse and mutated into a wrathful, horrifying freak of nature. Trees talk, plants eat people, and insects are larger than you've ever imagined! Tread carefully, nature's wisdom becomes deadly when she becomes conscious! The science-hungry botanist discovered that, the hard way.",
@@ -822,6 +824,7 @@ if (bigTopCircus) {
   bigTopCircus.subtitle = null;
   bigTopCircus.tagline = "A Creepy Clown Adventure";
   bigTopCircus.heroBannerImage = "/assets/big-top-circus-hero-banner.webp";
+  bigTopCircus.detailVideoEmbedUrl = "https://www.youtube.com/embed/VgSCOzFjy0Y?controls=1&rel=0&modestbranding=1&playsinline=1";
   bigTopCircus.description = [
     { type: "title", text: "Experience Boss the Clown's Army" },
     "Boss the Clown has one goal, to transform all humans into clowns; so he and his evil clown army can take over the world by any means necessary! Let's just say, Boss doesn't like humans very much. Boss and his clown army have been hard at work, creating new and mesmerizing experiences, to lure humans into his top secret laboratory!",
@@ -836,6 +839,7 @@ if (chopShop) {
   chopShop.subtitle = null;
   chopShop.tagline = "Horrifying Cannibals Await";
   chopShop.heroBannerImage = "/assets/chop-shop-hero-banner.webp";
+  chopShop.detailVideoEmbedUrl = "https://www.youtube.com/embed/ckrvWSu1C0I?controls=1&rel=0&modestbranding=1&playsinline=1";
   chopShop.description = [
     { type: "title", text: "This Family \"Business\" Lost its Way!" },
     "In a dilapidated and shabby one-stop-shop, horrifying cannibals await! Featuring a Butcher + Repair Shop, Junkyard, and something called The Mangler; this \"General Store\" was booming and thriving back in the 60's & 70's. Somewhere down the line, this family \"business\" lost its way... Now, locals call it the CHOP SHOP, which no one dares to enter! If you find yourself near the Chop Shop, you should definitely run!",
