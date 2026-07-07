@@ -2,40 +2,38 @@
 
 import { useEffect } from "react";
 
-const reviewStylesheets = [
-  "https://cdn.endorsal.io/widgets/endorsal-testimonials.min.css",
-  "https://cdn.endorsal.io/widgets/widget.min.css",
-  "https://cdn.endorsal.io/widgets/endorsal-reviewhq.min.css",
-];
-
-const reviewWidgetScript = "https://cdn.endorsal.io/widgets/reviewhq.min.js";
-const reviewWidgetId = "ndrsl-5f370bac03f8820eafd74f79";
+const propertyId = "5f36c60103f8820eafd74c5a";
+const reviewWidgetScript = "https://cdn.endorsal.io/widgets/widget.min.js";
 
 export function DripReviewsWidget() {
   useEffect(() => {
-    reviewStylesheets.forEach((href) => {
-      const existingLink = document.querySelector(`link[href="${href}"]`);
+    const existingContainer = document.getElementById("NDRSL-reviewhq");
 
-      if (existingLink) {
+    if (existingContainer) {
+      existingContainer.remove();
+    }
+
+    const initWidget = () => {
+      if (typeof window === "undefined" || typeof window.NDRSL?.init !== "function") {
         return;
       }
 
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.href = href;
-      document.head.appendChild(link);
-    });
+      window.NDRSL.init(propertyId);
+    };
 
     const existingScript = document.querySelector('script[data-dripreviews-widget="true"]');
 
     if (existingScript) {
-      existingScript.remove();
+      initWidget();
+      return;
     }
 
     const script = document.createElement("script");
     script.src = reviewWidgetScript;
     script.async = true;
+    script.defer = true;
     script.dataset.dripreviewsWidget = "true";
+    script.onload = initWidget;
     document.body.appendChild(script);
 
     return () => {
@@ -43,11 +41,5 @@ export function DripReviewsWidget() {
     };
   }, []);
 
-  return (
-    <div className="dripreviews-shell" aria-label="Guest reviews">
-      <div className="dripreviews-card">
-        <div id={reviewWidgetId} className="ndrsl-widget" />
-      </div>
-    </div>
-  );
+  return null;
 }
