@@ -18,39 +18,109 @@ export function ContactUsExperience() {
     inquiryType: inquiryTypes[0],
     message: "",
   });
+  const [contactStatus, setContactStatus] = useState({ type: "idle", message: "" });
   const [vipSignup, setVipSignup] = useState({
     name: "",
     mobile: "",
     email: "",
   });
+  const [vipStatus, setVipStatus] = useState({ type: "idle", message: "" });
 
-  const openMailDraft = () => {
-    const subject = `${form.inquiryType} - ${form.name || "Lake Hickory Haunts guest"}`;
-    const body = [
-      `Name: ${form.name || ""}`,
-      `Email: ${form.email || ""}`,
-      `Inquiry Type: ${form.inquiryType}`,
-      "",
-      "Message:",
-      form.message || "",
-    ].join("\n");
+  const submitToInbox = async (payload) => {
+    const response = await fetch(`https://formsubmit.co/ajax/${supportEmail}`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        ...payload,
+        _template: "table",
+        _captcha: "false",
+      }),
+    });
 
-    window.location.href = `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const result = await response.json().catch(() => ({}));
+
+    if (!response.ok || result.success === "false") {
+      throw new Error(result.message || "Unable to send right now.");
+    }
   };
 
-  const openVipSignupDraft = () => {
-    const subject = `VIP Text List Sign Up - ${vipSignup.name || "Lake Hickory Haunts guest"}`;
-    const body = [
-      "VIP Text List Sign Up",
-      "",
-      `Name: ${vipSignup.name || ""}`,
-      `Mobile: ${vipSignup.mobile || ""}`,
-      `Email: ${vipSignup.email || ""}`,
-      "",
-      "Please add me to the VIP text list for sales, offers, and discounts.",
-    ].join("\n");
+  const openMailDraft = async () => {
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setContactStatus({
+        type: "error",
+        message: "Please fill in your name, email, and message before sending.",
+      });
+      return;
+    }
 
-    window.location.href = `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setContactStatus({ type: "sending", message: "Sending your message..." });
+
+    try {
+      await submitToInbox({
+        name: form.name,
+        email: form.email,
+        inquiryType: form.inquiryType,
+        message: form.message,
+        _subject: `${form.inquiryType} - ${form.name || "Lake Hickory Haunts guest"}`,
+        _replyto: form.email,
+      });
+      setForm({
+        name: "",
+        email: "",
+        inquiryType: inquiryTypes[0],
+        message: "",
+      });
+      setContactStatus({
+        type: "success",
+        message: "Your message was sent to the haunt team.",
+      });
+    } catch {
+      setContactStatus({
+        type: "error",
+        message: `We could not send your message right now. Please email ${supportEmail} directly.`,
+      });
+    }
+  };
+
+  const openVipSignupDraft = async () => {
+    if (!vipSignup.name.trim() || !vipSignup.mobile.trim() || !vipSignup.email.trim()) {
+      setVipStatus({
+        type: "error",
+        message: "Please fill in your name, mobile number, and email address before joining.",
+      });
+      return;
+    }
+
+    setVipStatus({ type: "sending", message: "Sending your VIP sign-up..." });
+
+    try {
+      await submitToInbox({
+        name: vipSignup.name,
+        mobile: vipSignup.mobile,
+        email: vipSignup.email,
+        requestType: "VIP Text List Sign Up",
+        message: "Please add me to the VIP text list for sales, offers, and discounts.",
+        _subject: `VIP Text List Sign Up - ${vipSignup.name || "Lake Hickory Haunts guest"}`,
+        _replyto: vipSignup.email,
+      });
+      setVipSignup({
+        name: "",
+        mobile: "",
+        email: "",
+      });
+      setVipStatus({
+        type: "success",
+        message: "Your VIP sign-up was sent to the haunt team.",
+      });
+    } catch {
+      setVipStatus({
+        type: "error",
+        message: `We could not send your VIP sign-up right now. Please email ${supportEmail} directly.`,
+      });
+    }
   };
 
   return (
@@ -118,12 +188,18 @@ export function ContactUsExperience() {
             </div>
 
             <div className="contactx-actions">
-              <button type="button" className="contactx-submit" onClick={openMailDraft}>
+              <button
+                type="button"
+                className="contactx-submit"
+                onClick={openMailDraft}
+                disabled={contactStatus.type === "sending"}
+              >
                 Send Contact Request
               </button>
               <p>
-                This opens your email app with your message filled in and sends it to <strong>{supportEmail}</strong>.
+                This sends your message directly to <strong>{supportEmail}</strong>.
               </p>
+              {contactStatus.type !== "idle" ? <p>{contactStatus.message}</p> : null}
             </div>
           </section>
 
@@ -170,12 +246,18 @@ export function ContactUsExperience() {
             </div>
 
             <div className="contactx-actions contactx-actions-compact">
-              <button type="button" className="contactx-submit" onClick={openVipSignupDraft}>
+              <button
+                type="button"
+                className="contactx-submit"
+                onClick={openVipSignupDraft}
+                disabled={vipStatus.type === "sending"}
+              >
                 Join VIP Text List
               </button>
               <p>
-                This opens your email app with your VIP signup details filled in so the team can add you to the sales, offers, and discounts list.
+                This sends your VIP sign-up directly to the haunt team so they can add you to the sales, offers, and discounts list.
               </p>
+              {vipStatus.type !== "idle" ? <p>{vipStatus.message}</p> : null}
             </div>
           </aside>
         </div>
