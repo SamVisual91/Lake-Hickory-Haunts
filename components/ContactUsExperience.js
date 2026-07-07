@@ -9,6 +9,7 @@ const inquiryTypes = [
   "Accessibility Request",
   "Media or Partnership",
 ];
+const supportEmail = "lakehickoryhaunts@gmail.com";
 
 export function ContactUsExperience() {
   const [form, setForm] = useState({
@@ -34,7 +35,7 @@ export function ContactUsExperience() {
       form.message || "",
     ].join("\n");
 
-    window.location.href = `mailto:LakeHickoryHaunts@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   const openVipSignupDraft = () => {
@@ -49,7 +50,7 @@ export function ContactUsExperience() {
       "Please add me to the VIP text list for sales, offers, and discounts.",
     ].join("\n");
 
-    window.location.href = `mailto:LakeHickoryHaunts@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:${supportEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   };
 
   return (
@@ -121,7 +122,7 @@ export function ContactUsExperience() {
                 Send Contact Request
               </button>
               <p>
-                This opens your email app with your message filled in and sends it to <strong>LakeHickoryHaunts@gmail.com</strong>.
+                This opens your email app with your message filled in and sends it to <strong>{supportEmail}</strong>.
               </p>
             </div>
           </section>
