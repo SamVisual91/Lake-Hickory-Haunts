@@ -295,10 +295,6 @@ export function AboutUsExperience() {
         <div className="about-reviews-header">
           <p className="about-carousel-label">Guest Reviews</p>
           <h2>What Guests Are Saying</h2>
-          <p className="about-reviews-intro">
-            A featured set of Google reviews from Drip Reviews, displayed right here under
-            the About Us gallery while the floating review widget stays live site-wide.
-          </p>
         </div>
 
         <div className="about-reviews-card">
