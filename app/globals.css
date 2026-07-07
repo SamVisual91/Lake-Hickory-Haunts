@@ -2324,48 +2324,158 @@ h1 {
 
   .promo-card {
     width: min(100%, 420px);
-    min-height: clamp(500px, 136vw, 620px);
+    max-width: 420px;
+    min-height: 0;
+    grid-template-rows: auto auto auto;
+    align-content: start;
+    padding: 0 0 18px;
+    border: 1px solid rgba(105, 247, 221, 0.14);
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(4, 14, 16, 0.98), rgba(4, 12, 14, 0.94));
+    box-shadow:
+      0 18px 38px rgba(0, 0, 0, 0.34),
+      0 0 24px color-mix(in srgb, var(--promo-glow-ambient) 92%, transparent);
+  }
+
+  .promo-card::before {
+    position: relative;
+    inset: auto;
+    display: block;
+    min-height: clamp(220px, 64vw, 320px);
+    aspect-ratio: 16 / 11;
+    border-radius: 22px 22px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    filter: grayscale(0) saturate(1) brightness(1);
+    transform: none;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .promo-card::after {
+    display: none;
   }
 
   .promo-copy {
-    left: 18px;
-    right: 18px;
-    top: 52px;
-    bottom: 100px;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    display: grid;
+    gap: 12px;
+    padding: 18px 18px 0;
+    text-align: left;
+    pointer-events: auto;
     max-width: none;
+    min-width: 0;
   }
 
-  .promo-title {
+  .promo-card .promo-title {
+    max-width: none;
+    margin: 0;
+    text-align: left;
     font-size: clamp(1.6rem, 8vw, 2rem);
     letter-spacing: 0.1em;
   }
 
-  .promo-subtext {
-    width: min(240px, 100%);
+  .promo-card--vip .promo-title br {
+    display: none;
+  }
+  .promo-card .promo-subtext {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.46;
+    opacity: 1;
+    transform: none;
+    text-align: left;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
-  .promo-subtext {
-    font-size: 0.84rem;
-    line-height: 1.36;
+  .promo-card--vip .promo-subtext {
+    transform: none;
   }
 
   .promo-subtext--list {
+    max-width: 100%;
+    box-sizing: border-box;
     padding-left: 1rem;
+    margin: 0;
   }
 
-  .promo-link {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-    min-height: 58px;
-    padding-inline: 16px;
-    font-size: 1rem;
+  .promo-subtext--list li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+
+  .promo-card .promo-link {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: fit-content;
+    min-width: 0;
+    min-height: 54px;
+    margin: 16px 18px 0;
+    padding: 0 18px;
+    justify-content: center;
+    font-size: 0.98rem;
+    transform: none;
+    opacity: 1;
+  }
+
+  .promo-card--vip::before {
+    background:
+      linear-gradient(180deg, rgba(8, 10, 12, 0.06) 0%, rgba(2, 7, 5, 0.12) 28%, rgba(2, 7, 5, 0.42) 100%),
+      url("/assets/home-vip-pass-mobile-all-access-2026.png") center center / cover no-repeat;
+  }
+
+  .promo-card--fastpass::before {
+    background:
+      linear-gradient(180deg, rgba(5, 10, 12, 0.04) 0%, rgba(2, 7, 5, 0.1) 32%, rgba(2, 7, 5, 0.38) 100%),
+      url("/assets/home-fast-pass-mobile-2026.png") center center / cover no-repeat;
+  }
+
+  .promo-card--events::before {
+    background:
+      linear-gradient(180deg, rgba(8, 10, 12, 0.08) 0%, rgba(2, 7, 5, 0.14) 32%, rgba(2, 7, 5, 0.4) 100%),
+      url("/assets/home-general-admission-mobile-2026.png") center center / cover no-repeat;
+  }
+
+  .promo-card--tickets::before {
+    background:
+      linear-gradient(180deg, rgba(8, 10, 12, 0.06) 0%, rgba(2, 7, 5, 0.12) 26%, rgba(2, 7, 5, 0.42) 100%),
+      url("/assets/home-while-you-wait-mobile-2026.png") center center / cover no-repeat;
   }
 
   .promo-card--merch::before {
     background:
       linear-gradient(180deg, rgba(2, 7, 5, 0.18), rgba(2, 7, 5, 0.58)),
       url("/assets/home-vip-ticket-panel-gold.png") center center / cover no-repeat;
+  }
+
+  .promo-card:hover,
+  .promo-card:focus-within {
+    transform: none;
+  }
+
+  .promo-card:hover::before,
+  .promo-card:focus-within::before {
+    transform: none;
+  }
+
+  .promo-card:hover .promo-subtext,
+  .promo-card:focus-within .promo-subtext,
+  .promo-card:hover .promo-link,
+  .promo-card:focus-within .promo-link {
+    transform: none;
   }
 
   .home-attraction-row {
@@ -6816,6 +6926,96 @@ h1 {
   text-transform: uppercase;
 }
 
+@media (max-width: 760px) {
+  .footer-shell {
+    padding: 28px 0 22px;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-brand {
+    justify-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: min(220px, 78vw);
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .footer-sister-card {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer-sister-logo-image {
+    width: min(210px, 74vw);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .footer-group {
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .footer-group h3 {
+    font-size: 1.1rem;
+    line-height: 1.15;
+  }
+
+  .footer-links {
+    gap: 10px;
+  }
+
+  .footer-links a,
+  .footer-contact-item,
+  .footer-address-line,
+  .footer-address-note {
+    font-size: 0.94rem;
+    overflow-wrap: anywhere;
+  }
+
+  .footer-contact-block,
+  .footer-group-contact {
+    gap: 14px;
+  }
+
+  .footer-contact-item {
+    align-items: flex-start;
+    line-height: 1.45;
+  }
+
+  .footer-bottom {
+    margin-top: 22px;
+    padding-top: 16px;
+    gap: 12px;
+  }
+
+  .footer-legal-links {
+    gap: 10px 14px;
+  }
+
+  .footer-legal-links a {
+    font-size: 0.76rem;
+  }
+
+  .footer-copyright {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+}
+
 .legal-page-shell {
   width: 100%;
   min-height: 100vh;
@@ -7220,10 +7420,19 @@ h1 {
 
   .header-wrap {
     overflow-x: clip;
+    z-index: 220;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   body.nav-drawer-open {
     overflow: hidden;
+  }
+
+  body.nav-drawer-open .header-wrap,
+  body.nav-drawer-open .main-nav-shell,
+  body.nav-drawer-open .nav {
+    overflow: visible;
   }
 
   .nav {
@@ -7255,7 +7464,7 @@ h1 {
     margin: 0;
     padding: 0;
     position: relative;
-    z-index: 46;
+    z-index: 251;
     border: 0;
     border-radius: 0;
     background: transparent;
@@ -7282,7 +7491,7 @@ h1 {
   .nav-menu {
     position: fixed;
     inset: 0;
-    z-index: 45;
+    z-index: 250;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     align-content: start;
