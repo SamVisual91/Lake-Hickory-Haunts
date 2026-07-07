@@ -810,6 +810,15 @@ html.splash-pending .site-shell {
   padding-block: clamp(40px, 6vw, 72px) clamp(210px, 22vw, 280px);
 }
 
+.hero-brand-mark {
+  position: static;
+  z-index: 2;
+  width: min(220px, 18vw);
+  height: auto;
+  margin: 0 auto 10px;
+  filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.35));
+}
+
 .hero-copy {
   display: grid;
   justify-items: center;
@@ -7505,6 +7514,12 @@ h1 {
     padding-top: 20px;
   }
 
+  .hero-brand-mark {
+    width: min(180px, 54vw);
+    margin: 0 auto 10px;
+  }
+
+
   .hero-copy {
     gap: 12px;
     justify-items: center;
@@ -7605,161 +7620,6 @@ h1 {
     gap: 14px;
   }
 
-  .ticket-page-shell {
-    gap: 24px;
-  }
-
-  .ga-ticket-shell {
-    gap: 18px;
-    padding-top: 24px;
-    padding-bottom: 32px;
-  }
-
-  .ga-ticket-topnav {
-    display: grid;
-    gap: 12px;
-  }
-
-  .ga-ticket-brand strong {
-    font-size: 2.6rem;
-  }
-
-  .ga-ticket-links {
-    gap: 14px;
-  }
-
-  .ga-ticket-copy h1 {
-    max-width: 9ch;
-    font-size: clamp(3.4rem, 14vw, 5.6rem);
-  }
-
-  .ga-ticket-save {
-    justify-self: start;
-    width: 180px;
-    padding: 18px;
-  }
-
-  .ga-ticket-block,
-  .ga-ticket-reference-board {
-    padding: 18px;
-  }
-
-  .ga-calendar-grid {
-    gap: 6px;
-  }
-
-  .ga-calendar-cell {
-    min-height: 34px;
-    font-size: 0.88rem;
-  }
-
-  .ga-time-grid,
-  .ga-ticket-summary {
-    grid-template-columns: 1fr;
-  }
-
-  .ga-ticket-summary-item,
-  .ga-ticket-summary-cta {
-    min-height: auto;
-  }
-
-  .ga-ticket-summary-item {
-    padding: 18px;
-    border-right: 0;
-    border-bottom: 1px solid rgba(157, 247, 221, 0.1);
-  }
-
-  .ga-ticket-summary-cta {
-    min-height: 72px;
-    font-size: 1.35rem;
-  }
-
-  .ga-reference-item,
-  .ga-ticket-info-card,
-  .ga-night-card,
-  .ga-time-panel,
-  .ga-experience-card {
-    padding: 16px;
-  }
-
-  .ga-hero-copy,
-  .ga-stat-card,
-  .ga-pricing-card {
-    padding: 18px;
-  }
-
-  .ga-hero-stats {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .ticket-page-hero-copy,
-  .ticket-list-card,
-  .ticket-side-card,
-  .ticket-faq-card,
-  .ticket-quickfact-card {
-    padding: 18px;
-  }
-
-  .ticket-quickfacts-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .home-night-path-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .home-night-path-card {
-    padding: 16px;
-  }
-
-  .action-row {
-    justify-content: flex-start;
-  }
-
-  .button,
-  .nav-cta,
-  .utility-right a {
-    width: 100%;
-  }
-
-  .feature-copy,
-  .visit-card,
-  .character-copy,
-  .attraction-copy,
-  .character-card-copy,
-  .faq-card,
-  .hero-panel,
-  .spotlight-strip,
-  .spotlight-stat,
-  .marquee-strip {
-    padding: 20px;
-  }
-
-  .showcase-arrow {
-    width: 46px;
-    height: 46px;
-    font-size: 1.6rem;
-  }
-
-  .showcase-media img {
-    height: 260px;
-  }
-
-  .promo-header,
-  .event-highlight-header,
-  .showcase-header,
-  .home-night-path-header {
-    gap: 8px;
-  }
-
-  .showcase-header-art {
-    width: calc(100% + 8px);
-    margin-inline: -4px;
-  }
-
   .promo-grid,
   .event-highlight-grid {
     gap: 16px;
@@ -7782,161 +7642,6 @@ h1 {
   .event-video-trigger img,
   .event-video-frame {
     height: 220px;
-  }
-
-  .attractions-experience-header h1 {
-    max-width: 14ch;
-    font-size: clamp(2.6rem, 10.8vw, 4rem);
-  }
-
-  .attractions-experience-header-art {
-    width: 100%;
-    min-height: clamp(180px, 42vw, 260px);
-  }
-
-  .attractions-stage-card {
-    min-height: 520px;
-  }
-
-  .attractions-stage-content {
-    min-height: 520px;
-    padding: 20px;
-  }
-
-  .attractions-stage-content h2 {
-    max-width: none;
-    font-size: clamp(2.4rem, 10vw, 3.5rem);
-  }
-
-  .attractions-stage-headerblock {
-    position: static;
-    width: min(320px, 100%);
-  }
-
-  .attractions-stage-subtle {
-    position: static;
-    transform: none;
-    max-width: 26rem;
-    width: auto;
-    font-size: 0.92rem;
-  }
-
-  .kraken-banner {
-    padding: 0;
-  }
-
-  .kraken-banner-copy {
-    gap: 14px;
-  }
-
-  .kraken-banner-copy h2 {
-    max-width: none;
-    font-size: clamp(2.1rem, 8.2vw, 3.2rem);
-    line-height: 0.92;
-  }
-
-  .kraken-banner-panel {
-    gap: 18px;
-    margin-top: 0;
-    padding: 0;
-  }
-
-  .kraken-banner-middle {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-
-  .kraken-mini-card {
-    min-height: 116px;
-    padding: 16px 14px;
-    border-radius: 24px;
-  }
-
-  .kraken-mini-icon {
-    width: 58px;
-    height: 58px;
-  }
-
-  .kraken-mini-icon svg {
-    width: 24px;
-    height: 24px;
-  }
-
-  .kraken-mini-card strong {
-    font-size: 0.94rem;
-  }
-
-  .kraken-mini-card span {
-    font-size: 0.76rem;
-  }
-
-  .kraken-stat {
-    font-size: 1.28rem;
-    letter-spacing: 0.18em;
-  }
-
-  .kraken-callout {
-    font-size: 1rem;
-  }
-
-  .kraken-button {
-    width: 100%;
-    min-height: 50px;
-    padding: 0 14px 0 18px;
-    font-size: 0.98rem;
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-bottom {
-    margin-top: 20px;
-    padding-top: 16px;
-  }
-
-  .home-attraction-row {
-    padding: 0 0 64px;
-  }
-
-  .home-attraction-row-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .home-attraction-row-grid .attraction-card {
-    width: 100%;
-  }
-
-  .legal-page-shell {
-    padding: 32px 0 56px;
-  }
-
-  .legal-page {
-    padding: 0 14px;
-  }
-
-  .legal-page-content section {
-    padding: 16px 16px;
-    border-radius: 14px;
-  }
-
-  .home-attraction-row-arrow {
-    top: auto;
-    bottom: 0;
-    width: 52px;
-    height: 52px;
-    border: 1px solid rgba(157, 247, 221, 0.18);
-    border-radius: 999px;
-    background: rgba(6, 14, 16, 0.56);
-    transform: none;
-  }
-
-  .home-attraction-row-arrow-left {
-    left: calc(50% - 60px);
-  }
-
-  .home-attraction-row-arrow-right {
-    right: calc(50% - 60px);
   }
 }
 
@@ -21491,6 +21196,14 @@ h1 {
     transform: none;
   }
 }
+
+
+
+
+
+
+
+
 
 
 

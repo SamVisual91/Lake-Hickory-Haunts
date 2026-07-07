@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { HomePageEnhancer } from "../components/HomePageEnhancer";
 import { HomeAttractionRowCarousel } from "../components/HomeAttractionRowCarousel";
@@ -22,14 +23,21 @@ export default function HomePage() {
         </div>
         <div className="hero-overlay" />
         <div className="hero-grid page-width">
-            <div className="hero-copy">
-              <p className="eyebrow">Lake Hickory Haunts</p>
-              <h1 className="hero-copy-title">
-                <span className="hero-copy-line hero-copy-line-top hero-copy-accent">Premier Haunt</span>
-                <span className="hero-copy-line hero-copy-line-bottom">of the Carolinas</span>
-              </h1>
-            </div>
+          <div className="hero-copy">
+            <Image
+              className="hero-brand-mark"
+              src="/assets/logo-transparent.png"
+              alt="Lake Hickory Haunts logo"
+              width={2048}
+              height={682}
+              priority
+            />
+            <h1 className="hero-copy-title">
+              <span className="hero-copy-line hero-copy-line-top hero-copy-accent">Premier Haunt</span>
+              <span className="hero-copy-line hero-copy-line-bottom">of the Carolinas</span>
+            </h1>
           </div>
+        </div>
         <HeroEventSlider />
         <p className="hero-season-label">WHAT&apos;S NEW THIS YEAR</p>
         <div className="hero-tabs">
@@ -100,7 +108,7 @@ export default function HomePage() {
 
       <section className="page-width stack home-reveal">
         <div className="event-highlight-header">
-          <p className="eyebrow">Keep up with us</p>
+          <p className="eyebrow">Stay in Touch with LHH!</p>
           <h2>Follow the story behind the screams.</h2>
         </div>
 
@@ -157,3 +165,8 @@ export default function HomePage() {
     </main>
   );
 }
+
+
+
+
+
