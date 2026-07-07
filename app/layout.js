@@ -2,6 +2,7 @@ import "./globals.css";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { HistoryNavigationReloader } from "../components/HistoryNavigationReloader";
+import { DripReviewsWidget } from "../components/DripReviewsWidget";
 
 export const metadata = {
   title: "Lake Hickory Haunts",
@@ -19,7 +20,9 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </div>
+        <DripReviewsWidget />
       </body>
     </html>
   );
 }
+

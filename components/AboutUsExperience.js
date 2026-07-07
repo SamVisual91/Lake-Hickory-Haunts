@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { DripReviewsWidget } from "./DripReviewsWidget";
 
 const aboutSlides = [
   {
@@ -252,7 +251,6 @@ export function AboutUsExperience() {
         </div>
       </div>
 
-      <DripReviewsWidget />
 
       {activeGalleryItem ? (
         <div
@@ -292,3 +290,4 @@ export function AboutUsExperience() {
     </section>
   );
 }
+
