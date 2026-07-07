@@ -86,7 +86,7 @@ function VipExperienceTicketPage({ page }) {
             <Link className="vip-ticket-primary" href={page.primaryCta.href}>
               {page.primaryCta.label}
             </Link>
-            <Link className="vip-ticket-secondary" href="/tickets/general-admission">
+            <Link className="vip-ticket-secondary" href="/tickets">
               View Tickets
             </Link>
           </div>

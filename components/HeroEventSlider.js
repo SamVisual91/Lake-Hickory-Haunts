@@ -24,7 +24,7 @@ const events = [
     title: "Grab tickets, hit the Midway, and refuel at Kraken's Kitchen.",
     description:
       "Build the full night from your ticket plan to midway photo ops, roaming characters, quick bites, and warm drinks between attractions.",
-    href: "/tickets/general-admission",
+    href: "/tickets",
     cta: "Get Tickets",
   },
 ];

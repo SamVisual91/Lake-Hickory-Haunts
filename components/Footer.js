@@ -16,8 +16,8 @@ const footerGroups = [
   {
     title: "Tickets & Passes",
     links: [
-      { label: "Buy Tickets", href: "/tickets/general-admission" },
-      { label: "VIP Upgrade", href: "/tickets/general-admission" },
+      { label: "Buy Tickets", href: "/tickets" },
+      { label: "VIP Upgrade", href: "/tickets" },
     ],
   },
   {

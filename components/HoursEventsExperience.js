@@ -335,7 +335,7 @@ export function HoursEventsExperience() {
           </div>
 
           <div className="hx-calendar-actions">
-            <Link href={`/tickets/general-admission?date=${selectedDate}`} className="hx-primary-button">
+            <Link href={`/tickets?date=${selectedDate}`} className="hx-primary-button">
               Get your tickets here
             </Link>
           </div>

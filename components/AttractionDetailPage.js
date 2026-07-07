@@ -402,7 +402,7 @@ export function AttractionDetailPage({ attraction }) {
 
           <ActionButton
             variant="primary"
-            href={attraction.primaryActionHref ?? "/tickets/general-admission"}
+            href={attraction.primaryActionHref ?? "/tickets"}
             leadingIcon={<SkullIcon />}
             trailingIcon={<PlusCircleIcon />}
             className="attraction-detail-topbutton"
@@ -445,7 +445,7 @@ export function AttractionDetailPage({ attraction }) {
             <div className="attraction-detail-actions">
               <ActionButton
                 variant="primary"
-                href={attraction.primaryActionHref ?? "/tickets/general-admission"}
+                href={attraction.primaryActionHref ?? "/tickets"}
                 leadingIcon={<SkullIcon />}
                 trailingIcon={<PlusCircleIcon />}
               >

@@ -79,7 +79,7 @@ export default function HomePage() {
               <span className="promo-title">Fast Pass</span>
               <p className="promo-subtext">Fast Pass admission is an upgrade to a MUCH shorter line which moves MUCH faster than the General Admission to all 13 main attractions with a standard wait time.</p>
             </div>
-            <a className="promo-link" href="/tickets/general-admission">
+            <a className="promo-link" href="/tickets">
               See Fast Pass
             </a>
           </article>
@@ -89,7 +89,7 @@ export default function HomePage() {
               <span className="promo-title">General Admission</span>
               <p className="promo-subtext">General admission includes admission to all 13 main attractions with a standard wait time.</p>
             </div>
-            <a className="promo-link" href="/tickets/general-admission">
+            <a className="promo-link" href="/tickets">
               View General Admission
             </a>
           </article>

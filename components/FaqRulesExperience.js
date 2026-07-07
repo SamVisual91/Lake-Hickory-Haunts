@@ -258,7 +258,7 @@ const faqCategories = [
         answer: (
           <>
             Yes, our box office, gift shop, and concessions accept all major credit cards, debit cards, and Apple Pay.
-            Tickets may also be purchased online <Link href="/tickets/general-admission">HERE</Link>.
+            Tickets may also be purchased online <Link href="/tickets">HERE</Link>.
           </>
         ),
       },
@@ -267,7 +267,7 @@ const faqCategories = [
         question: "Can I purchase tickets online?",
         answer: (
           <>
-            Yes, tickets should be <Link href="/tickets/general-admission">purchased online</Link> and in advance.
+            Yes, tickets should be <Link href="/tickets">purchased online</Link> and in advance.
             In-person ticket availability is limited and will sell out quickly.
           </>
         ),
@@ -709,7 +709,7 @@ export function FaqRulesExperience() {
               <Link href="/whileyouwait" className="faq-exp-action-link">
                 Plan Your Visit
               </Link>
-              <Link href="/tickets/general-admission" className="faq-exp-action-link">
+              <Link href="/tickets" className="faq-exp-action-link">
                 See Ticket Options
               </Link>
             </div>

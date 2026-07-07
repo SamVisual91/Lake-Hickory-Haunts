@@ -179,7 +179,7 @@ export function Header() {
 
                 <Link
                   className="nav-cta nav-cta-tickets"
-                  href="/tickets/general-admission"
+                  href="/tickets"
                   onClick={() => {
                     setOpen(false);
                     setFaqOpen(false);

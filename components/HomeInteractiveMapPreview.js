@@ -12,7 +12,7 @@ const mapStops = [
     description:
       "Start at the gate, lock in your night color, and move straight into the scream route with fast access to admissions and will call.",
     accent: "#f4b04f",
-    href: "/tickets/general-admission",
+    href: "/tickets",
     cta: "View Admission Options",
     top: "74%",
     left: "12%",
@@ -68,7 +68,7 @@ const mapStops = [
     description:
       "Map your premium route with private lounge access, upgraded comfort, and an easier way to pace your night between headline scares.",
     accent: "#d545ff",
-    href: "/tickets/general-admission",
+    href: "/tickets",
     cta: "See VIP Access",
     top: "82%",
     left: "84%",

@@ -197,7 +197,7 @@ export const visitCards = [
     description:
       "The live site notes that in-person tickets are limited and first-come, first-served. This card keeps that message visible in a premium, conversion-friendly format.",
     cta: "Order online",
-    href: "/tickets/general-admission",
+    href: "/tickets",
     external: false,
     emphasis: true,
   },
@@ -256,7 +256,7 @@ export const ticketPages = [
     kicker: "Best value for the full 13-attraction night",
     description:
       "General Admission is the core Lake Hickory Haunts ticket and includes access to all 13 main attractions with standard queue timing.",
-    primaryCta: { label: "Buy General Admission", href: "/tickets/general-admission" },
+    primaryCta: { label: "Buy General Admission", href: "/tickets" },
     quickFacts: [
       { label: "Includes", value: "All 13 Main Attractions" },
       { label: "Queue Style", value: "Standard Wait Time" },
@@ -305,7 +305,7 @@ export const ticketPages = [
     kicker: "The fastest and most complete way to do the night",
     description:
       "VIP is the premium Lake Hickory Haunts package for guests who want immediate access to the haunt, exclusive lounge perks, and bonus extras built into one upgraded night.",
-    primaryCta: { label: "Buy VIP Experience", href: "/tickets/general-admission" },
+    primaryCta: { label: "Buy VIP Experience", href: "/tickets" },
     quickFacts: [
       { label: "Access", value: "Immediate Access with no wait time" },
       { label: "Lounge", value: "VIP Lounge, snack, and water included" },
@@ -406,7 +406,7 @@ export const ticketPages = [
     kicker: "A clearer lane for guests who want more than a base ticket",
     description:
       "Package Bundles gives the site a high-visibility place to explain combined options like admission, premium access, food, midway perks, or future add-ons in one cleaner planning page.",
-    primaryCta: { label: "Explore Bundle Options", href: "/tickets/general-admission" },
+    primaryCta: { label: "Explore Bundle Options", href: "/tickets" },
     quickFacts: [
       { label: "Best For", value: "Guests comparing bundled value instead of single tickets" },
       { label: "Bundle Logic", value: "Admission plus upgrades, perks, or add-ons" },

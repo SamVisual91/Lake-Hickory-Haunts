@@ -21,7 +21,7 @@ export const attractions = [
     heroBannerImage: "/assets/nightmare-factory-hero-banner.png",
     detailSignLabel: "Nightmare Factory",
     primaryActionLabel: "Buy Tickets",
-    primaryActionHref: "/tickets/general-admission",
+    primaryActionHref: "/tickets",
     detailVideoEmbedUrl: "https://www.youtube.com/embed/buuHs5spNvc?controls=1&rel=0&modestbranding=1&playsinline=1",
     description: [
       { type: "title", text: "Experience the Terror" },

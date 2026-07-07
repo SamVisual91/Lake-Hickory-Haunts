@@ -90,10 +90,10 @@ export function HomeTicketUrgencyBlock() {
           </p>
 
           <div className="home-ticket-urgency-actions">
-            <Link href="/tickets/general-admission" className="home-ticket-primary">
+            <Link href="/tickets" className="home-ticket-primary">
               Buy General Admission
             </Link>
-            <Link href="/tickets/general-admission" className="home-ticket-secondary">
+            <Link href="/tickets" className="home-ticket-secondary">
               Explore VIP Access
             </Link>
           </div>
