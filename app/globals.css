@@ -1708,7 +1708,7 @@ h1 {
 .promo-card--tickets::before {
   background:
     linear-gradient(180deg, rgba(2, 7, 5, 0.18), rgba(2, 7, 5, 0.58)),
-    url("/assets/home-while-you-wait-hourglass-purple.png") center center / cover no-repeat;
+    url("/assets/home-while-you-wait-midway-mayhem.png") center 18% / cover no-repeat;
 }
 
 .promo-card--fastpass::before {
@@ -1762,7 +1762,7 @@ h1 {
 .promo-card--events::before {
   background:
     linear-gradient(180deg, rgba(2, 7, 5, 0.18), rgba(2, 7, 5, 0.58)),
-    url("/assets/home-general-admission-ticket-panel-white.png") center center / cover no-repeat;
+    url("/assets/home-general-admission-ticket-panel-blue.png") center 22% / cover no-repeat;
 }
 
 .promo-card--events {
