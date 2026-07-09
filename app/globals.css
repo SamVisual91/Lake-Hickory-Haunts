@@ -1821,15 +1821,15 @@ h1 {
 }
 
 .promo-card--events {
-  --promo-glow-border: rgba(255, 255, 255, 0.94);
-  --promo-glow-outline: rgba(255, 255, 255, 0.42);
-  --promo-glow-main: rgba(255, 255, 255, 0.46);
-  --promo-glow-ambient: rgba(255, 255, 255, 0.18);
+  --promo-glow-border: rgba(118, 196, 255, 0.94);
+  --promo-glow-outline: rgba(118, 196, 255, 0.42);
+  --promo-glow-main: rgba(74, 164, 255, 0.46);
+  --promo-glow-ambient: rgba(74, 164, 255, 0.18);
   --promo-accent-text: #ffffff;
   --promo-title-color: #ffffff;
   --promo-accent-subtext: rgba(255, 255, 255, 0.94);
-  --promo-link-border-hover: rgba(255, 255, 255, 0.42);
-  --promo-link-bg-hover: rgba(255, 255, 255, 0.14);
+  --promo-link-border-hover: rgba(118, 196, 255, 0.42);
+  --promo-link-bg-hover: rgba(74, 164, 255, 0.14);
 }
 
 .promo-card:hover,

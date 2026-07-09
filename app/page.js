@@ -117,12 +117,11 @@ export default function HomePage() {
             <VideoFeatureCard
               thumbnailSrc="/assets/doc-thumb-base.jpg"
               thumbnailAlt="Lake Hickory Haunts 2026 documentary video thumbnail"
-              embedUrl="https://www.youtube.com/embed/KZhnnYQI93c?autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
+              embedUrl="https://www.youtube.com/embed/videoseries?list=PL_CYx58_0jydvSSxjiRpRQWQhqwUGBhp8&autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
             />
             <div className="event-highlight-copy">
-              <p className="event-type">Video Feature</p>
               <h3>Lake Hickory Haunts 2026</h3>
-              <p className="event-meta">A cinematic look at the attractions, monsters, and immersive experiences featured at Lake Hickory Haunts</p>
+              <p className="event-meta">A cinematic look at the attractions, the monsters, and the atmosphere behind the 2026 season</p>
             </div>
           </article>
 
@@ -130,10 +129,9 @@ export default function HomePage() {
             <VideoFeatureCard
               thumbnailSrc="https://img.youtube.com/vi/7vooID_N95w/maxresdefault.jpg"
               thumbnailAlt="Road to Lake Hickory Haunts 2026 video thumbnail"
-              embedUrl="https://www.youtube.com/embed/7vooID_N95w?start=585&autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
+              embedUrl="https://www.youtube.com/embed/videoseries?list=PLR-C8Cvs2FCk&autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
             />
             <div className="event-highlight-copy">
-              <p className="event-type">Video Feature</p>
               <h3>Road to Lake Hickory Haunts 2026</h3>
               <p className="event-meta">A preview of the build season, progress updates, and the push toward opening night</p>
               <p>
