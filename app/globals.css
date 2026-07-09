@@ -488,9 +488,6 @@ html.splash-pending .site-shell {
 
 .main-nav-shell {
   background:
-    linear-gradient(180deg, rgba(6, 11, 13, 0.56), rgba(2, 7, 8, 0.74)),
-    linear-gradient(90deg, rgba(4, 7, 12, 0.52), rgba(4, 7, 12, 0.08) 38%, rgba(4, 7, 12, 0.52)),
-    radial-gradient(circle at 20% 0%, rgba(73, 215, 208, 0.14), transparent 30%),
     url("/assets/nav-background-lava-moon.png");
   background-position: center 42%;
   background-repeat: no-repeat;
@@ -1725,7 +1722,7 @@ h1 {
   inset: 0;
   background: transparent;
   pointer-events: none;
-  filter: grayscale(1) saturate(0.72) brightness(0.74);
+  filter: grayscale(0) saturate(0.9) brightness(0.96);
   transform: scale(1);
   transform-origin: center;
   transition: filter 280ms ease, transform 780ms cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -1940,8 +1937,8 @@ h1 {
 }
 
 .promo-grid:hover .promo-card--vip:not(:hover):not(:focus-within)::before {
-  filter: grayscale(1) saturate(0.72) brightness(0.74);
-  transform: scale(1);
+  filter: grayscale(0) saturate(0.9) brightness(0.96);
+  transform: scale(1.035);
 }
 
 .promo-grid:hover .promo-card--vip:not(:hover):not(:focus-within)::after {
@@ -1953,27 +1950,28 @@ h1 {
 }
 
 .promo-grid:hover .promo-card--vip:not(:hover):not(:focus-within) .promo-title {
-  color: rgba(214, 214, 214, 0.72);
+  color: var(--promo-accent-text);
   text-shadow:
-    0 0 16px rgba(255, 255, 255, 0.08),
+    0 0 20px color-mix(in srgb, var(--promo-accent-text) 28%, transparent),
     0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .promo-grid:hover .promo-card--vip:not(:hover):not(:focus-within) .promo-subtext {
-  color: rgba(255, 255, 255, 0.92);
-  opacity: 0;
-  transform: translate(-50%, 14px);
+  color: #ffffff;
 }
 
 .promo-grid:hover .promo-card--vip:not(:hover):not(:focus-within) .promo-link {
-  transform: translateY(18px);
-  opacity: 0;
-  color: #ffffff;
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(247, 244, 238, 0.1);
+  transform: translateY(0);
+  opacity: 1;
+  color: #ffe8a3;
+  border-color: var(--promo-link-border-hover);
+  background:
+    linear-gradient(180deg, rgba(120, 72, 12, 0.34), rgba(52, 28, 4, 0.34)),
+    var(--promo-link-bg-hover);
   box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 12px 30px rgba(0, 0, 0, 0.32),
+    0 0 18px rgba(255, 214, 102, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
 }
 
 .event-highlight-card {
@@ -2113,6 +2111,7 @@ h1 {
   min-height: 312px;
   width: 350px;
   aspect-ratio: auto;
+  filter: grayscale(0) saturate(1.32) brightness(1.08) contrast(1.05);
 }
 
 .home-attraction-row-arrow {
@@ -19738,6 +19737,27 @@ h1 {
 
   .attraction-detail-artcolumn {
     min-height: 320px;
+  }
+
+  .detail-theme-nightmare-factory .attraction-detail-titleblock h1 {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    line-height: 0.9;
+  }
+
+  .detail-theme-nightmare-factory .attraction-detail-artcolumn {
+    min-width: 0;
+    padding: 14px;
+  }
+
+  .detail-theme-nightmare-factory .attraction-detail-video-shell,
+  .detail-theme-nightmare-factory .attraction-detail-video-frame,
+  .detail-theme-nightmare-factory .attraction-detail-video,
+  .detail-theme-nightmare-factory .attraction-detail-video-embed {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .attraction-detail-factory-sign {

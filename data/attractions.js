@@ -750,7 +750,7 @@ if (extinction) {
     ...(extinction.gallery ?? []),
   ];
   extinction.subtitle = null;
-  extinction.tagline = "A chilling and otherworldly Sci-fy experience";
+  extinction.tagline = "A chilling and otherworldly Sci-fi experience";
   extinction.description = [
     { type: "title", text: "Adventure into the Abyss" },
     "Welcome to Extinction, a bone-chilling haunted attraction like no other. Deep beneath the murky waters of Lake Hickory, a powerful and superior alien hybrid named Kluath has emerged from the abyss. Its insidious goal: world domination through the annihilation of the human race.",
