@@ -1,18 +1,13 @@
 import localFont from "next/font/local";
 import { GeneralAdmissionPage } from "../../../components/GeneralAdmissionPage";
+import { buildMetadata, ticketSeoBySlug } from "../../../lib/seo";
 
 const theMacabre = localFont({
   src: "../../../public/fonts/The-Macabre.otf",
   display: "swap",
 });
 
-export const metadata = {
-  title: "General Admission Preview | Lake Hickory Haunts",
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
+export const metadata = buildMetadata(ticketSeoBySlug["general-admission-preview"]);
 
 export default async function GeneralAdmissionPreviewPage({ searchParams }) {
   const resolvedSearchParams = await searchParams;

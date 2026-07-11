@@ -1,6 +1,6 @@
-export const metadata = {
-  title: "Privacy Policy | Lake Hickory Haunts",
-};
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
+
+export const metadata = buildMetadata(staticPageSeo.privacyPolicy);
 
 const summaryItems = [
   {

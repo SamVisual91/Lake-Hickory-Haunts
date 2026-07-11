@@ -1,8 +1,7 @@
 import { AboutUsExperience } from "../../components/AboutUsExperience";
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
 
-export const metadata = {
-  title: "About Us | Lake Hickory Haunts",
-};
+export const metadata = buildMetadata(staticPageSeo.aboutUs);
 
 export default function AboutUsPage() {
   return (

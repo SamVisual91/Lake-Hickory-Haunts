@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { GeneralAdmissionPage } from "../../../components/GeneralAdmissionPage";
 import { TicketInfoPage } from "../../../components/TicketInfoPage";
 import { ticketPages } from "../../../data/site";
+import { buildMetadata, staticPageSeo, ticketSeoBySlug } from "../../../lib/seo";
 
 export function generateStaticParams() {
   return ticketPages.map((page) => ({ slug: page.slug }));
@@ -11,14 +12,16 @@ export function generateMetadata({ params }) {
   const page = ticketPages.find((entry) => entry.slug === params.slug);
 
   if (!page) {
-    return {
-      title: "Tickets | Lake Hickory Haunts",
-    };
+    return buildMetadata(staticPageSeo.tickets);
   }
 
-  return {
-    title: `${page.title} | Lake Hickory Haunts`,
-  };
+  return buildMetadata(
+    ticketSeoBySlug[page.slug] ?? {
+      title: `${page.title} - Lake Hickory Haunts`,
+      description: staticPageSeo.tickets.description,
+      path: `/tickets/${page.slug}`,
+    },
+  );
 }
 
 export default async function TicketRoutePage({ params, searchParams }) {

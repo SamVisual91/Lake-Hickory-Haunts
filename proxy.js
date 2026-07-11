@@ -1,0 +1,93 @@
+import { NextResponse } from "next/server";
+
+const legacyRedirects = new Map([
+  ["/tickets.html", "/tickets"],
+  ["/schedule.html", "/hours-events"],
+  ["/attractions.html", "/attractions"],
+  ["/characters.html", "/characters"],
+  ["/about.html", "/about-us"],
+  ["/new.html", "/characters"],
+  ["/directions", "/directions"],
+  ["/about", "/about-us"],
+  ["/warnings-and-disclaimers", "/faq"],
+  ["/tix", "/tickets"],
+  ["/tickets/{{ selectedReview.source.url }}", "/tickets"],
+  ["/tickets/{{ testimonial.source.url }}", "/tickets"],
+  ["/employment.html", "/jobs"],
+  ["/attractions/mangler", "/attractions/chop-shop"],
+  ["/character-bios/boss-the-clown", "/characters"],
+  ["/employment", "/jobs"],
+  ["/character-bios/deadly-dangerous-delilah", "/characters"],
+  ["/character-bios/charles-the-midnight-murderer", "/characters"],
+  ["/pictures/lhh-construction", "/about-us"],
+  ["/pdf/employeehandbook.pdf", "/jobs"],
+  ["/{{ testimonial.source.url }}", "/"],
+  ["/{{ selectedReview.source.url }}", "/"],
+  ["/Special", "/"],
+  ["/tickets.html/1000", "/tickets"],
+  ["/character-zone", "/characters"],
+  ["/contact.html", "/contact-us"],
+  ["/pictures/lhh-2014", "/about-us"],
+  ["/videos/profiles-season-1", "/characters"],
+  ["/pdf/lakehickoryhauntsapplicationofemployment-01.pdf", "/jobs"],
+  ["/www.XscapeNC.com", "/"],
+  ["/warnings.html/1000", "/faq"],
+  ["/photos-alt", "/about-us"],
+  ["/schedule.html/1000", "/hours-events"],
+  ["/gallery.html", "/about-us"],
+  ["/covid.html", "/"],
+  ["/videos/{{ selectedReview.source.url }}", "/"],
+  ["/videos/{{ testimonial.source.url }}", "/"],
+  ["/embrace-the-thrills-of-haunt-season-at-lake-hickory-haunts", "/"],
+  ["/characters/{{ testimonial.source.url }}", "/characters"],
+  ["/characters/{{ selectedReview.source.url }}", "/characters"],
+  ["/links.html", "/"],
+  ["/faq.html", "/faq"],
+  ["/warnings.html", "/faq"],
+]);
+
+function normalizePath(pathname) {
+  if (!pathname) {
+    return "/";
+  }
+
+  if (pathname.length > 1 && pathname.endsWith("/")) {
+    return pathname.slice(0, -1);
+  }
+
+  return pathname;
+}
+
+function getRedirectDestination(pathname) {
+  const candidates = new Set([normalizePath(pathname)]);
+
+  try {
+    candidates.add(normalizePath(decodeURIComponent(pathname)));
+  } catch {
+    // Keep the raw pathname when decoding fails.
+  }
+
+  for (const candidate of candidates) {
+    const destination = legacyRedirects.get(candidate);
+
+    if (destination) {
+      return destination;
+    }
+  }
+
+  return null;
+}
+
+export function proxy(request) {
+  const destination = getRedirectDestination(request.nextUrl.pathname);
+
+  if (!destination) {
+    return NextResponse.next();
+  }
+
+  return NextResponse.redirect(new URL(destination, request.url), 301);
+}
+
+export const config = {
+  matcher: ["/((?!_next/static|_next/image|favicon.ico).*)"],
+};

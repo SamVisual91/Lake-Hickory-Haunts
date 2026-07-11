@@ -1,14 +1,13 @@
 import localFont from "next/font/local";
 import { GeneralAdmissionDateTimePage } from "../../components/GeneralAdmissionDateTimePage";
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
 
 const theMacabre = localFont({
   src: "../../public/fonts/The-Macabre.otf",
   display: "swap",
 });
 
-export const metadata = {
-  title: "Tickets | Lake Hickory Haunts",
-};
+export const metadata = buildMetadata(staticPageSeo.tickets);
 
 export default async function TicketsPage({ searchParams }) {
   const resolvedSearchParams = await searchParams;

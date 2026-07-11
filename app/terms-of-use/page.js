@@ -1,6 +1,6 @@
-export const metadata = {
-  title: "Terms of Use | Lake Hickory Haunts",
-};
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
+
+export const metadata = buildMetadata(staticPageSeo.termsOfUse);
 
 const tableOfContents = [
   {

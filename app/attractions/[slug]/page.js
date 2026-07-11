@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { AttractionDetailPage } from "../../../components/AttractionDetailPage";
 import { attractions, getAttractionBySlug } from "../../../data/attractions";
+import { attractionSeoBySlug, buildMetadata, staticPageSeo } from "../../../lib/seo";
 
 export function generateStaticParams() {
   return attractions.map((attraction) => ({ slug: attraction.slug }));
@@ -11,14 +12,16 @@ export async function generateMetadata({ params }) {
   const attraction = getAttractionBySlug(resolvedParams.slug);
 
   if (!attraction) {
-    return {
-      title: "Attraction Not Found | Lake Hickory Haunts",
-    };
+    return buildMetadata(staticPageSeo.attractions);
   }
 
-  return {
-    title: `${attraction.shortTitle ?? attraction.title} | Lake Hickory Haunts`,
-  };
+  return buildMetadata(
+    attractionSeoBySlug[attraction.slug] ?? {
+      title: `${attraction.shortTitle ?? attraction.title} - Lake Hickory Haunts`,
+      description: staticPageSeo.attractions.description,
+      path: `/attractions/${attraction.slug}`,
+    },
+  );
 }
 
 export default async function AttractionDetailRoute({ params }) {

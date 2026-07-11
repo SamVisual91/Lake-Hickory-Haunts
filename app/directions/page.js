@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
 
 const directionsVideoEmbed =
   "https://www.youtube.com/embed/QA_uC_QgZDQ?controls=1&rel=0&modestbranding=1&playsinline=1";
@@ -16,9 +17,7 @@ const routeCards = [
   },
 ];
 
-export const metadata = {
-  title: "Directions | Lake Hickory Haunts",
-};
+export const metadata = buildMetadata(staticPageSeo.directions);
 
 export default function DirectionsPage() {
   return (

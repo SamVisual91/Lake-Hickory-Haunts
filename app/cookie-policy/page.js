@@ -1,6 +1,6 @@
-export const metadata = {
-  title: "Cookie Policy | Lake Hickory Haunts",
-};
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
+
+export const metadata = buildMetadata(staticPageSeo.cookiePolicy);
 
 export default function CookiePolicyPage() {
   return (

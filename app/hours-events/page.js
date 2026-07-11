@@ -1,8 +1,7 @@
 import { HoursEventsExperience } from "../../components/HoursEventsExperience";
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
 
-export const metadata = {
-  title: "Hours and Events | Lake Hickory Haunts",
-};
+export const metadata = buildMetadata(staticPageSeo.hoursEvents);
 
 export default function HoursEventsPage() {
   return (

@@ -1,8 +1,7 @@
 import { AttractionsExplorer } from "../../components/AttractionsExplorer";
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
 
-export const metadata = {
-  title: "Attractions | Lake Hickory Haunts",
-};
+export const metadata = buildMetadata(staticPageSeo.attractions);
 
 export default function AttractionsPage() {
   return (

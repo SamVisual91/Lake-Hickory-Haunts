@@ -1,8 +1,7 @@
 import { FaqRulesExperience } from "../../components/FaqRulesExperience";
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
 
-export const metadata = {
-  title: "FAQ | Lake Hickory Haunts",
-};
+export const metadata = buildMetadata(staticPageSeo.faq);
 
 export default function FaqPage() {
   return (

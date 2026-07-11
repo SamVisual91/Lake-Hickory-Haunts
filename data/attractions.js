@@ -887,6 +887,30 @@ if (midwayOfMayhem) {
   }
 }
 
+const missingGalleryImages = new Set([
+  "/assets/midway-mayhem-gallery-3-replacement.jpg",
+]);
+
+attractions.forEach((attraction) => {
+  if (!Array.isArray(attraction.gallery)) {
+    return;
+  }
+
+  const firstGalleryItem = attraction.gallery[0];
+  if (firstGalleryItem?.imageSrc) {
+    attraction.selectorImage = firstGalleryItem.imageSrc;
+    attraction.selectorImageAlt = firstGalleryItem.caption ?? `${attraction.title} attraction logo`;
+  }
+
+  attraction.gallery = attraction.gallery.filter((item, index) => {
+    if (index === 0) {
+      return false;
+    }
+
+    return !item?.imageSrc || !missingGalleryImages.has(item.imageSrc);
+  });
+});
+
 const midwayIndex = attractions.findIndex((attraction) => attraction.slug === "midway-mayhem");
 
 if (midwayIndex > 0) {

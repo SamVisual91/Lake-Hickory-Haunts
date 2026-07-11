@@ -1,5 +1,6 @@
 import Image from "next/image";
 import VisitMidwayGrid from "../visit/VisitMidwayGrid";
+import { buildMetadata, staticPageSeo } from "../../lib/seo";
 
 const midwayBoxes = [
   {
@@ -53,9 +54,7 @@ const midwayBoxes = [
   },
 ];
 
-export const metadata = {
-  title: "While You Wait | Lake Hickory Haunts",
-};
+export const metadata = buildMetadata(staticPageSeo.whileYouWait);
 
 export default function WhileYouWaitPage() {
   return (

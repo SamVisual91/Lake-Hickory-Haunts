@@ -5,6 +5,9 @@ import { HomeAttractionRowCarousel } from "../components/HomeAttractionRowCarous
 import { HomeVipTextSignup } from "../components/HomeVipTextSignup";
 import { HeroEventSlider } from "../components/HeroEventSlider";
 import { VideoFeatureCard } from "../components/VideoFeatureCard";
+import { buildMetadata, staticPageSeo } from "../lib/seo";
+
+export const metadata = buildMetadata(staticPageSeo.home);
 
 export default function HomePage() {
   return (
