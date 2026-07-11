@@ -58,7 +58,13 @@ export function Header() {
   return (
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
-        DURING THE OFF SEASON, VISIT OUR YEAR ROUND ATTRACTIONS AT LAKE HICKORY ESCAPE
+        <a
+          href="https://lakehickoryescape.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          DURING THE OFF-SEASON, VISIT LAKE HICKORY ESCAPE YEAR-ROUND.
+        </a>
       </div>
 
       <div className="utility-bar">

@@ -338,22 +338,38 @@ html.splash-pending .site-shell {
   padding: 8px 16px;
   background:
     linear-gradient(180deg, #d68000 0%, #f1a300 46%, #d87b00 100%);
-  color: #050505;
+  color: #ffffff;
   font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: clamp(0.72rem, 0.52rem + 0.34vw, 1rem);
+  font-size: clamp(0.82rem, 0.58rem + 0.4vw, 1.12rem);
+  font-weight: 800;
   letter-spacing: 0.24em;
   line-height: 1.1;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 228, 136, 0.18);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.28);
   border-bottom: 1px solid rgba(78, 36, 0, 0.18);
+}
+
+.season-banner a,
+.season-banner a:visited {
+  display: block;
+  width: 100%;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+}
+
+.season-banner a:hover,
+.season-banner a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 @media (max-width: 760px) {
   .season-banner {
     min-height: 40px;
     padding: 8px 12px;
-    font-size: 0.62rem;
+    font-size: 0.72rem;
     letter-spacing: 0.16em;
   }
 }
