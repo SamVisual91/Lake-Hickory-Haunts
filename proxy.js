@@ -8,7 +8,7 @@ const legacyRedirects = new Map([
   ["/characters.html", "/characters"],
   ["/about.html", "/about-us"],
   ["/new.html", "/characters"],
-  ["/directions", "/directions"],
+  ["/get-directions", "/directions"],
   ["/about", "/about-us"],
   ["/disclaimers-and-rules", "/faq#disclaimers-rules"],
   ["/warnings-and-disclaimers", "/faq"],
