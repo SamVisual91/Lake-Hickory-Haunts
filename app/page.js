@@ -59,9 +59,8 @@ export default function HomePage() {
           <article className="promo-card promo-card--vip">
             <div className="promo-copy">
               <span className="promo-title promo-title--stacked">
-                VIP
-                <br />
-                Pass
+                <span className="promo-title-word">VIP</span>{" "}
+                <span className="promo-title-word">Pass</span>
               </span>
               <ul className="promo-subtext promo-subtext--list">
                 <li>Immediate Access to the Haunt with no wait time on Midway or in queue (Faster than Fast Pass).</li>
