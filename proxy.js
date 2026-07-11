@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 const legacyRedirects = new Map([
   ["/tickets.html", "/tickets"],
   ["/schedule.html", "/hours-events"],
+  ["/hours-and-events", "/hours-events"],
   ["/attractions.html", "/attractions"],
   ["/characters.html", "/characters"],
   ["/about.html", "/about-us"],
