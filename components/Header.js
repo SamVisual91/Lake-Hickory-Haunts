@@ -136,7 +136,7 @@ export function Header() {
                 ))}
 
                 <Link
-                  href="/contact-us"
+                  href="/contact"
                   onClick={() => {
                     setOpen(false);
                     setFaqOpen(false);

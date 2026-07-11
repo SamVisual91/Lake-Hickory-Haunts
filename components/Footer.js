@@ -24,15 +24,15 @@ const footerGroups = [
     title: "Beyond the Haunt",
     links: [
       { label: "About Us", href: "/about-us" },
-      { label: "Careers", href: "https://lakehickoryhaunts.com/contact-us/" },
+      { label: "Careers", href: "https://lakehickoryhaunts.com/contact/" },
     ],
   },
   {
     title: "Help",
     links: [
-      { label: "Contact Us", href: "https://lakehickoryhaunts.com/contact-us/" },
+      { label: "Contact Us", href: "https://lakehickoryhaunts.com/contact/" },
       { label: "FAQs", href: "https://lakehickoryhaunts.com/faq/" },
-      { label: "Accessibility", href: "https://lakehickoryhaunts.com/contact-us/" },
+      { label: "Accessibility", href: "https://lakehickoryhaunts.com/contact/" },
       { label: "Hours & Events", href: "/hours-events" },
     ],
   },
