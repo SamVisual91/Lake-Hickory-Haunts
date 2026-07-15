@@ -110,6 +110,17 @@ export function Header() {
               <span className="sr-only">Toggle navigation</span>
             </button>
 
+            <Link
+              className="nav-mobile-ticket-button"
+              href="/tickets"
+              onClick={() => {
+                setOpen(false);
+                setFaqOpen(false);
+              }}
+            >
+              Tickets
+            </Link>
+
             <div className={`nav-menu ${open ? "is-open" : ""}`} id="nav-menu">
               <div className="nav-menu-mobile-header">
                 <span className="nav-menu-mobile-title sr-only">Menu</span>
