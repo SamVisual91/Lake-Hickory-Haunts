@@ -7465,7 +7465,14 @@ h1 {
 
 @media (max-width: 760px) {
   .main-nav-shell {
-    background-position: center 46%;
+    background-image:
+      linear-gradient(180deg, rgba(10, 52, 20, 0.62) 0%, rgba(8, 32, 18, 0.34) 34%, rgba(5, 14, 18, 0.1) 100%),
+      radial-gradient(circle at 50% 18%, rgba(140, 242, 69, 0.28), transparent 44%),
+      url("/assets/nav-background-ocean-moon-wide.png");
+    background-position: center, center, center 46%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply, screen, normal;
   }
 
   .main-nav-shell::before {
@@ -7475,8 +7482,8 @@ h1 {
     z-index: 0;
     pointer-events: none;
     background:
-      linear-gradient(180deg, rgba(88, 132, 255, 0.16) 0%, rgba(28, 96, 171, 0.08) 38%, rgba(6, 14, 18, 0) 100%),
-      radial-gradient(circle at 50% 18%, rgba(122, 212, 255, 0.18), transparent 42%);
+      linear-gradient(180deg, rgba(140, 242, 69, 0.34) 0%, rgba(74, 154, 52, 0.16) 38%, rgba(6, 14, 18, 0) 100%),
+      radial-gradient(circle at 50% 18%, rgba(182, 255, 121, 0.2), transparent 42%);
     mix-blend-mode: screen;
   }
 
