@@ -255,14 +255,20 @@ export function Header() {
 
             <div className="nav-header-actions">
               <Link
-                className="nav-apply-link"
+                className="nav-jobs-link"
                 href="/jobs"
                 onClick={() => {
                   setOpen(false);
                   setFaqOpen(false);
                 }}
               >
-                Apply Now
+                <Image
+                  src="/assets/jobs-monsters-wanted.png"
+                  alt="Monsters Wanted apply now"
+                  width={2048}
+                  height={834}
+                />
+                <span className="sr-only">Apply now</span>
               </Link>
 
               <Link

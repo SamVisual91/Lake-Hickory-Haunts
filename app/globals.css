@@ -654,11 +654,15 @@ html.splash-pending .site-shell {
 }
 
 .nav-jobs-link img {
-  width: clamp(84px, 8.2vw, 136px);
+  width: clamp(88px, 7.4vw, 116px);
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
   transition: transform 220ms ease, box-shadow 220ms ease, filter 220ms ease;
+}
+
+.nav-header-actions .nav-jobs-link {
+  margin-left: 0;
 }
 
 .nav-jobs-link:hover img,
