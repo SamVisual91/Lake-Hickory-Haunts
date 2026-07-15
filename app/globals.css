@@ -2162,6 +2162,37 @@ h1 {
   padding: 8px 34px;
 }
 
+.home-attraction-header {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.home-attraction-header h2 {
+  margin: 0;
+  max-width: 14ch;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2.4rem, 4.2vw, 4rem);
+  letter-spacing: 0.04em;
+  line-height: 0.94;
+  text-transform: uppercase;
+}
+
+.home-attraction-header h2 span {
+  display: block;
+  white-space: nowrap;
+}
+
+.home-attraction-header h2 span:first-child {
+  color: #d87b00;
+}
+
+.home-attraction-header h2 span:last-child {
+  color: #f3f7f5;
+}
+
 .home-attraction-row-grid {
   display: grid;
   grid-template-columns: repeat(4, 350px);
@@ -2634,6 +2665,15 @@ h1 {
 
   .home-attraction-row {
     padding-inline: 18px;
+  }
+
+  .home-attraction-header {
+    margin-bottom: 2px;
+  }
+
+  .home-attraction-header h2 {
+    max-width: min(100%, 320px);
+    font-size: clamp(1.9rem, 7.4vw, 2.5rem);
   }
 
   .home-attraction-row-grid {

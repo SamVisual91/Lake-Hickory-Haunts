@@ -55,6 +55,13 @@ export function HomeAttractionRowCarousel() {
 
   return (
     <section className="page-width stack home-reveal home-attraction-section">
+      <div className="home-attraction-header">
+        <h2>
+          <span>Featuring 13 Attractions</span>
+          <span>For the price of one.</span>
+        </h2>
+      </div>
+
       <section className="home-attraction-row" aria-label="Lake Hickory Haunts attractions">
         <button
           type="button"

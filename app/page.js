@@ -108,6 +108,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <HomeAttractionRowCarousel />
+
       <section className="page-width stack home-reveal">
         <div className="event-highlight-header">
           <p className="eyebrow">Stay in Touch with LHH!</p>
@@ -122,8 +124,7 @@ export default function HomePage() {
               embedUrl="https://www.youtube.com/embed/videoseries?list=PL_CYx58_0jydvSSxjiRpRQWQhqwUGBhp8&autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
             />
             <div className="event-highlight-copy">
-              <h3>Lake Hickory Haunts 2026</h3>
-              <p className="event-meta">A cinematic look at the attractions, the monsters, and the atmosphere behind the 2026 season</p>
+              <p className="event-meta">Watch &amp; Learn more about the about the attractions, experiences, and scares featured at Lake Hickory Haunts</p>
             </div>
           </article>
 
@@ -134,7 +135,6 @@ export default function HomePage() {
               embedUrl="https://www.youtube.com/embed/videoseries?list=PLR-C8Cvs2FCk&autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
             />
             <div className="event-highlight-copy">
-              <h3>Road to Lake Hickory Haunts 2026</h3>
               <p className="event-meta">A preview of the build season, progress updates, and the push toward opening night</p>
               <p>
                 Join us on the road to 2026 as Lake Hickory Haunts comes back to life
@@ -145,8 +145,6 @@ export default function HomePage() {
           </article>
         </div>
       </section>
-
-      <HomeAttractionRowCarousel />
 
       <section className="page-width home-reveal">
         <div className="kraken-banner vip-text-banner">
