@@ -370,12 +370,8 @@ html.splash-pending .site-shell {
 @media (max-width: 760px) {
   .header-wrap {
     background:
-      linear-gradient(
-        180deg,
-        color-mix(in srgb, var(--acid) 88%, #0b1609 12%) 0%,
-        color-mix(in srgb, var(--acid) 48%, transparent) 18%,
-        rgba(0, 0, 0, 0) 42%
-      );
+      radial-gradient(circle at left, rgba(140, 242, 69, 0.14), transparent 24%),
+      linear-gradient(180deg, rgba(16, 42, 20, 0.96), rgba(6, 15, 16, 0.98));
   }
 
   .season-banner {
@@ -7502,8 +7498,8 @@ h1 {
 @media (max-width: 760px) {
   .main-nav-shell {
     background-image:
-      linear-gradient(180deg, rgba(10, 52, 20, 0.62) 0%, rgba(8, 32, 18, 0.34) 34%, rgba(5, 14, 18, 0.1) 100%),
-      radial-gradient(circle at 50% 18%, rgba(140, 242, 69, 0.28), transparent 44%),
+      linear-gradient(180deg, rgba(7, 20, 24, 0.64) 0%, rgba(7, 18, 24, 0.34) 34%, rgba(5, 14, 18, 0.1) 100%),
+      radial-gradient(circle at 50% 18%, rgba(244, 176, 79, 0.12), transparent 44%),
       url("/assets/nav-background-ocean-moon-wide.png");
     background-position: center, center, center 46%;
     background-repeat: no-repeat;
@@ -7518,9 +7514,8 @@ h1 {
     z-index: 0;
     pointer-events: none;
     background:
-      linear-gradient(180deg, rgba(140, 242, 69, 0.34) 0%, rgba(74, 154, 52, 0.16) 38%, rgba(6, 14, 18, 0) 100%),
-      radial-gradient(circle at 50% 18%, rgba(182, 255, 121, 0.2), transparent 42%);
-    mix-blend-mode: screen;
+      linear-gradient(180deg, rgba(8, 22, 28, 0.3) 0%, rgba(8, 20, 28, 0.12) 38%, rgba(6, 14, 18, 0) 100%),
+      radial-gradient(circle at 50% 18%, rgba(244, 176, 79, 0.08), transparent 42%);
   }
 
   .main-nav-shell::after {
