@@ -7601,7 +7601,7 @@ h1 {
   .nav {
     position: relative;
     display: grid;
-    grid-template-columns: 44px minmax(0, 1fr) 86px;
+    grid-template-columns: 86px minmax(0, 1fr) 86px;
     align-items: center;
     min-height: auto;
     padding: 12px 0 16px;
@@ -7612,7 +7612,7 @@ h1 {
   .brand {
     grid-column: 2;
     justify-self: center;
-    width: min(220px, calc(100vw - 158px));
+    width: min(208px, calc(100vw - 204px));
     margin: 0;
   }
 
@@ -7620,8 +7620,8 @@ h1 {
     display: inline-flex;
     flex-direction: column;
     grid-column: 1;
-    justify-self: start;
-    align-items: flex-start;
+    justify-self: center;
+    align-items: center;
     justify-content: center;
     width: 32px;
     height: 32px;
@@ -7650,7 +7650,7 @@ h1 {
 
   .nav-mobile-ticket-button {
     grid-column: 3;
-    justify-self: end;
+    justify-self: center;
     display: inline-flex;
     align-items: center;
     justify-content: center;
