@@ -135,12 +135,7 @@ export default function HomePage() {
               embedUrl="https://www.youtube.com/embed/videoseries?list=PLR-C8Cvs2FCk&autoplay=1&controls=1&rel=0&modestbranding=1&playsinline=1"
             />
             <div className="event-highlight-copy">
-              <p className="event-meta">A preview of the build season, progress updates, and the push toward opening night</p>
-              <p>
-                Join us on the road to 2026 as Lake Hickory Haunts comes back to life
-                from the early setup to the growing excitement, building the suspense
-                one step at a time until opening night.
-              </p>
+              <p className="event-meta">Watch Road to Lake Hickory Haunts to stay up to date with construction, improvements, and more; happening year-around each year at Lake Hickory Haunts.</p>
             </div>
           </article>
         </div>
