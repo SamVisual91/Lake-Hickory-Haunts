@@ -110,16 +110,29 @@ export function Header() {
               <span className="sr-only">Toggle navigation</span>
             </button>
 
-            <Link
-              className="nav-mobile-ticket-button"
-              href="/tickets"
-              onClick={() => {
-                setOpen(false);
-                setFaqOpen(false);
-              }}
-            >
-              Tickets
-            </Link>
+            <div className="nav-mobile-actions">
+              <Link
+                className="nav-mobile-apply-link"
+                href="/jobs"
+                onClick={() => {
+                  setOpen(false);
+                  setFaqOpen(false);
+                }}
+              >
+                Apply Now
+              </Link>
+
+              <Link
+                className="nav-mobile-ticket-button"
+                href="/tickets"
+                onClick={() => {
+                  setOpen(false);
+                  setFaqOpen(false);
+                }}
+              >
+                Tickets
+              </Link>
+            </div>
 
             <div className={`nav-menu ${open ? "is-open" : ""}`} id="nav-menu">
               <div className="nav-menu-mobile-header">
@@ -163,6 +176,18 @@ export function Header() {
                   <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
                 </Link>
 
+                <Link
+                  className="nav-menu-ticket-link"
+                  href="/tickets"
+                  onClick={() => {
+                    setOpen(false);
+                    setFaqOpen(false);
+                  }}
+                >
+                  <span>Tickets</span>
+                  <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
+                </Link>
+
                 <div className={`nav-ticket-wrap ${faqOpen ? "is-open" : ""}`}>
                   <button
                     type="button"
@@ -193,47 +218,6 @@ export function Header() {
                     ))}
                   </div>
                 </div>
-
-                <Link
-                  className="nav-jobs-link"
-                  href="/jobs"
-                  onClick={() => {
-                    setOpen(false);
-                    setFaqOpen(false);
-                  }}
-                >
-                  <Image
-                    src="/assets/jobs-monsters-wanted.png"
-                    alt="Monsters Wanted apply now"
-                    width={2048}
-                    height={834}
-                  />
-                  <span className="sr-only">Apply now</span>
-                </Link>
-
-                <Link
-                  className="nav-mobile-jobs-link"
-                  href="/jobs"
-                  onClick={() => {
-                    setOpen(false);
-                    setFaqOpen(false);
-                  }}
-                >
-                  <span>Monsters Wanted</span>
-                  <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
-                </Link>
-
-                <Link
-                  className="nav-cta nav-cta-tickets"
-                  href="/tickets"
-                  onClick={() => {
-                    setOpen(false);
-                    setFaqOpen(false);
-                  }}
-                >
-                  <span>Tickets</span>
-                  <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
-                </Link>
               </div>
 
               <div className="nav-mobile-only nav-mobile-secondary">
@@ -267,6 +251,30 @@ export function Header() {
                   )
                 ))}
               </div>
+            </div>
+
+            <div className="nav-header-actions">
+              <Link
+                className="nav-apply-link"
+                href="/jobs"
+                onClick={() => {
+                  setOpen(false);
+                  setFaqOpen(false);
+                }}
+              >
+                Apply Now
+              </Link>
+
+              <Link
+                className="nav-cta nav-cta-tickets"
+                href="/tickets"
+                onClick={() => {
+                  setOpen(false);
+                  setFaqOpen(false);
+                }}
+              >
+                Tickets
+              </Link>
             </div>
 
             <button
