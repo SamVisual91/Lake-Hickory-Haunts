@@ -372,8 +372,8 @@ html.splash-pending .site-shell {
     background:
       linear-gradient(
         180deg,
-        color-mix(in srgb, var(--acid) 74%, var(--teal) 26%) 0%,
-        color-mix(in srgb, var(--acid) 34%, transparent) 18%,
+        color-mix(in srgb, var(--acid) 88%, #0b1609 12%) 0%,
+        color-mix(in srgb, var(--acid) 48%, transparent) 18%,
         rgba(0, 0, 0, 0) 42%
       );
   }
@@ -383,7 +383,6 @@ html.splash-pending .site-shell {
     padding: 8px 12px;
     font-size: 0.72rem;
     letter-spacing: 0.16em;
-    box-shadow: inset 0 10px 18px color-mix(in srgb, var(--mint) 28%, transparent);
   }
 }
 
