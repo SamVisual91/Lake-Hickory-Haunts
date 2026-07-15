@@ -1854,15 +1854,22 @@ h1 {
 }
 
 .promo-card--events {
-  --promo-glow-border: rgba(118, 196, 255, 0.94);
-  --promo-glow-outline: rgba(118, 196, 255, 0.42);
-  --promo-glow-main: rgba(74, 164, 255, 0.46);
-  --promo-glow-ambient: rgba(74, 164, 255, 0.18);
-  --promo-accent-text: #ffffff;
-  --promo-title-color: #ffffff;
-  --promo-accent-subtext: rgba(255, 255, 255, 0.94);
-  --promo-link-border-hover: rgba(118, 196, 255, 0.42);
-  --promo-link-bg-hover: rgba(74, 164, 255, 0.14);
+  --promo-glow-border: rgba(63, 228, 239, 0.88);
+  --promo-glow-outline: rgba(63, 228, 239, 0.4);
+  --promo-glow-main: rgba(63, 228, 239, 0.42);
+  --promo-glow-ambient: rgba(63, 228, 239, 0.16);
+  --promo-accent-text: #3fe4ef;
+  --promo-title-color: #3fe4ef;
+  --promo-accent-subtext: rgba(224, 253, 255, 0.94);
+  --promo-link-border-hover: rgba(63, 228, 239, 0.4);
+  --promo-link-bg-hover: rgba(63, 228, 239, 0.14);
+}
+
+.promo-card--events .promo-title {
+  color: rgba(217, 252, 255, 0.92);
+  text-shadow:
+    0 0 18px rgba(63, 228, 239, 0.22),
+    0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .promo-card:hover,
