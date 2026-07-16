@@ -5,7 +5,7 @@ export const metadata = buildMetadata(staticPageSeo.faq);
 
 export default function FaqPage() {
   return (
-    <main className="page-width interior-page faq-page-shell">
+    <main className="interior-page faq-page-shell">
       <FaqRulesExperience />
     </main>
   );

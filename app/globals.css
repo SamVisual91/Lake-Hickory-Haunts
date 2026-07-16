@@ -1959,6 +1959,11 @@ h1 {
 
 .promo-card--vip .promo-title {
   color: transparent;
+  display: grid;
+  justify-items: center;
+  gap: 0.38rem;
+  max-width: none;
+  letter-spacing: 0.08em;
   background-image: linear-gradient(
     180deg,
     #fff7cf 0%,
@@ -1972,6 +1977,55 @@ h1 {
   text-shadow:
     0 0 24px rgba(255, 221, 126, 0.26),
     0 6px 20px rgba(0, 0, 0, 0.54);
+}
+
+.promo-card--vip .promo-title-word--vip {
+  display: inline-block;
+  font-size: clamp(2.9rem, 5vw, 4.35rem);
+  font-weight: 800;
+  line-height: 0.84;
+  letter-spacing: 0.18em;
+  text-shadow:
+    0 0 28px rgba(255, 222, 124, 0.32),
+    0 0 52px rgba(232, 168, 44, 0.2),
+    0 10px 24px rgba(0, 0, 0, 0.56);
+  filter: drop-shadow(0 0 10px rgba(255, 220, 112, 0.22));
+}
+
+.promo-card--vip .promo-title-word--pass {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.36rem 1rem 0.28rem;
+  border: 1px solid rgba(255, 231, 160, 0.48);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(52, 30, 7, 0.18), rgba(21, 12, 3, 0.42)),
+    linear-gradient(135deg, rgba(255, 241, 195, 0.16), rgba(255, 196, 88, 0.1));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 248, 220, 0.34),
+    0 0 0 1px rgba(255, 210, 106, 0.08),
+    0 0 22px rgba(232, 168, 44, 0.16);
+  font-size: clamp(1.02rem, 1.7vw, 1.28rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 16px rgba(255, 228, 144, 0.22),
+    0 4px 14px rgba(0, 0, 0, 0.48);
+}
+
+.promo-card--vip .promo-title-word--pass::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border-radius: inherit;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), transparent 58%);
+  opacity: 0.9;
+  pointer-events: none;
 }
 
 .promo-card--vip .promo-subtext {
@@ -2529,7 +2583,7 @@ h1 {
   }
 
   .promo-card--vip .promo-title-word {
-    display: inline;
+    display: inline-block;
   }
 
   .promo-card .promo-subtext {
@@ -3298,7 +3352,16 @@ h1 {
 }
 
 .faq-page-shell {
-  padding-bottom: 64px;
+  width: 100%;
+  max-width: none;
+  padding: 28px clamp(16px, 3vw, 24px) 64px;
+  background-color: #04070b;
+  background:
+    linear-gradient(180deg, rgba(2, 7, 12, 0.56), rgba(3, 6, 10, 0.8)),
+    radial-gradient(circle at 50% 12%, rgba(105, 189, 255, 0.08), transparent 26%),
+    radial-gradient(circle at 50% 72%, rgba(162, 83, 255, 0.1), transparent 28%),
+    url("/assets/faq-background-portrait-20260716.png") center top / contain no-repeat;
+  background-attachment: scroll;
 }
 
 .faq-exp {
@@ -3319,7 +3382,7 @@ h1 {
   background:
     linear-gradient(115deg, rgba(3, 8, 9, 0.76) 0%, rgba(3, 8, 9, 0.46) 38%, rgba(3, 8, 9, 0.12) 100%),
     radial-gradient(circle at 18% 22%, rgba(70, 184, 79, 0.16), transparent 24%),
-    url("/assets/faq-hero-creature.png") center center / cover no-repeat,
+    url("/assets/faq-general-questions-hero-20260716.png") center center / cover no-repeat,
     linear-gradient(180deg, rgba(8, 20, 22, 0.54), rgba(2, 7, 8, 0.72));
   box-shadow: var(--shadow);
 }
@@ -3591,7 +3654,7 @@ h1 {
 
 @media (max-width: 760px) {
   .faq-page-shell {
-    padding-bottom: 42px;
+    padding: 22px 16px 42px;
   }
 
   .faq-exp-hero {
@@ -13432,6 +13495,8 @@ h1 {
 }
 
 .faq-exp-hub {
+  width: min(1240px, 100%);
+  margin: 0 auto;
   padding-bottom: 28px;
 }
 
@@ -13691,6 +13756,11 @@ h1 {
   color: #ffffff;
   font-size: clamp(2.4rem, 5vw, 4.4rem);
   line-height: 0.94;
+}
+
+.faq-exp-general-heading {
+  font-size: clamp(2rem, 4.1vw, 3.4rem) !important;
+  line-height: 0.98;
 }
 
 .faq-exp-block-head p {

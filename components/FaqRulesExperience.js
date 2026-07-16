@@ -575,26 +575,6 @@ export function FaqRulesExperience() {
 
   return (
     <section className="faq-exp faq-exp-hub">
-      <section className="faq-exp-hero">
-        <div className="faq-exp-hero-copy">
-          <p className="faq-exp-kicker">General Questions</p>
-          <h1>
-            Questions or Concerns
-            <br />
-            Before the Fear Begins.
-          </h1>
-          <p className="faq-exp-lede">
-            Find the most important Lake Hickory Haunts information in one place, including ticket
-            details, safety policies, and common guest questions before your visit.
-          </p>
-          <div className="faq-exp-inline-alerts" aria-label="Top planning reminders">
-            <span>Buy online in advance</span>
-            <span>Arrive 10 to 15 minutes early</span>
-            <span>Fog and strobe lights are used</span>
-          </div>
-        </div>
-      </section>
-
       <nav className="faq-exp-jump-nav" aria-label="FAQ sections">
         {jumpLinks.map((link) => (
           <a
@@ -616,12 +596,10 @@ export function FaqRulesExperience() {
       <section className="faq-exp-block faq-exp-general-block" id="general-questions">
         <div className="faq-exp-block-head">
           <p className="faq-exp-kicker">General Questions</p>
-          <h2>Browse the answers the way guests actually plan their night.</h2>
-          <p>
-            The official Lake Hickory Haunts FAQ covers a lot of ground. To make it flow better,
-            the information is grouped by planning topic so guests can jump straight to tickets,
-            pricing, safety, policies, or experience details.
-          </p>
+          <h2 className="faq-exp-general-heading">
+            Browse the Official FAQ of Lake Hickory Haunts to learn more about tickets, pricing,
+            safety, policies, and experience details.
+          </h2>
         </div>
 
         <div className="faq-exp-general-stage">
