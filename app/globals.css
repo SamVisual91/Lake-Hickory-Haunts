@@ -9070,7 +9070,10 @@ h1 {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  background: linear-gradient(180deg, #020504 0%, #050909 100%);
+  background:
+    linear-gradient(180deg, rgba(1, 6, 18, 0.68) 0%, rgba(2, 5, 14, 0.84) 100%),
+    url("/assets/tickets-page-background-20260716.png") center top / cover no-repeat,
+    linear-gradient(180deg, #020504 0%, #050909 100%);
 }
 
 .ga2-shell::before,
@@ -9119,9 +9122,8 @@ h1 {
 }
 
 .ga2-hero::before {
-  background:
-    url("/assets/ga-hero-delilah-wide.png") right center / cover no-repeat;
-  opacity: 0.96;
+  background: none;
+  opacity: 0;
   filter: brightness(1.22) saturate(1.12) contrast(1.06);
   -webkit-mask-image:
     linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.92) 10%, rgba(0, 0, 0, 0.98) 72%, rgba(0, 0, 0, 0.82) 90%, transparent 100%),
@@ -9134,10 +9136,7 @@ h1 {
 }
 
 .ga2-hero::after {
-  background:
-    linear-gradient(90deg, rgba(2, 5, 4, 0.98) 0%, rgba(2, 5, 4, 0.82) 22%, rgba(2, 5, 4, 0.28) 48%, rgba(2, 5, 4, 0.52) 70%, rgba(2, 5, 4, 0.9) 86%, rgba(2, 5, 4, 0.98) 100%),
-    linear-gradient(180deg, rgba(2, 5, 4, 0.74) 0%, rgba(2, 5, 4, 0.1) 26%, rgba(2, 5, 4, 0.1) 78%, rgba(2, 5, 4, 0.8) 100%),
-    radial-gradient(circle at 74% 30%, rgba(88, 203, 145, 0.2), transparent 22%);
+  background: none;
 }
 
 .ga2-copy {
