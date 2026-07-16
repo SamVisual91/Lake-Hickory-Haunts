@@ -336,7 +336,7 @@ export const attractions = [
     fearRating: 5,
     scareMeterPercent: 90,
     gallery: [
-      { title: "Drowning Hall", className: "gallery-aqua-hall", imageSrc: "/assets/aquaphobia-gallery-1.png", caption: "A drowning soul surfacing from the black water" },
+      { title: "Drowning Hall", className: "gallery-aqua-hall", imageSrc: "/assets/aquaphobia-gallery-1-replacement-20260715.jpg", caption: "A drowning soul surfacing from the black water" },
       { title: "Flood Dock", className: "gallery-aqua-hand", imageSrc: "/assets/aquaphobia-gallery-2-replacement.jpg", caption: "A glowing dock and flooded railings cutting through the dark water village" },
       { title: "Aquaphobia Sign", className: "gallery-aqua-tank", imageSrc: "/assets/aquaphobia-gallery-3-replacement.jpg", caption: "The Aquaphobia sign looms over the entrance like a warning from the deep" },
       { title: "Village Walk", className: "gallery-aqua-depths", imageSrc: "/assets/aquaphobia-gallery-4-replacement.jpg", caption: "A haunted village path lit by blue water glow and burning lanterns" },
@@ -376,7 +376,6 @@ export const attractions = [
     ageGuidance: "13+",
     fearRating: 5,
     gallery: [
-      { title: "Lab Breach", className: "gallery-ext-lab", imageSrc: "/assets/extinction-gallery-1.png", caption: "Kluath emerges through the glowing lab mist" },
       { title: "Extinction Gate", className: "gallery-ext-eye", imageSrc: "/assets/extinction-gallery-2-replacement.png", caption: "The Extinction facility blazes with neon warning lights and toxic vapor" },
       { title: "Lab Exterior", className: "gallery-ext-city", imageSrc: "/assets/extinction-gallery-3-replacement.jpg", caption: "A wider view of the extinction lab glowing green, gold, and violet through the fog" },
       { title: "Waste Chamber", className: "gallery-ext-specimen", imageSrc: "/assets/extinction-gallery-4-replacement.jpg", caption: "Radioactive barrels and ruptured machinery ooze through the alien chamber" },
