@@ -593,9 +593,9 @@ export const attractions = [
     fearRating: 3,
     gallery: [
       { title: "Main Street", className: "gallery-ghost-main", caption: "Moonlit western main street" },
-      { title: "Jail Door", className: "gallery-ghost-jail", cardClassName: "attraction-detail-gallery-card-portrait", imageSrc: "/assets/ghost-town-gallery-1-replacement.png", caption: "The Ghost Town jail glows purple beneath the night sky" },
+      { title: "Jail Door", className: "gallery-ghost-jail", imageSrc: "/assets/ghost-town-gallery-1-replacement.png", caption: "The Ghost Town jail glows purple beneath the night sky" },
       { title: "Outpost Gate", className: "gallery-ghost-outpost", imageSrc: "/assets/ghost-town-gallery-2-replacement.png", caption: "A weathered gateway opens into the haunted western outpost" },
-      { title: "Wanted Hall", className: "gallery-ghost-wanted", cardClassName: "attraction-detail-gallery-card-portrait", imageSrc: "/assets/ghost-town-gallery-3-replacement.png", caption: "A skull-lit chandelier hangs over faded wanted posters indoors" },
+      { title: "Wanted Hall", className: "gallery-ghost-wanted", imageSrc: "/assets/ghost-town-gallery-3-replacement.png", caption: "A skull-lit chandelier hangs over faded wanted posters indoors" },
       { title: "Horned Drifter", className: "gallery-ghost-drifter", imageSrc: "/assets/ghost-town-gallery-4-replacement.png", caption: "A horned drifter crawls from the shadows between rusted machinery" },
       { title: "Ghost Sheriff", className: "gallery-ghost-sheriff", imageSrc: "/assets/ghost-town-gallery-5-replacement.png", caption: "The sheriff fixes guests with an eerie stare under violet light" },
       { title: "Stagecoach Grave", className: "gallery-ghost-graves", imageSrc: "/assets/ghost-town-gallery-6-replacement.png", caption: "A web-choked stagecoach display greets passersby at the entrance" },

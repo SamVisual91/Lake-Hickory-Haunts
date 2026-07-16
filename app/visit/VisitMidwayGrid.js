@@ -9,9 +9,6 @@ function setCardMotion(card, xRatio, yRatio) {
   const mediaShiftY = (0.5 - yRatio) * 18;
   const copyShiftX = (xRatio - 0.5) * 10;
   const copyShiftY = (yRatio - 0.5) * 8;
-  const iconShiftX = (xRatio - 0.5) * 12;
-  const iconShiftY = (yRatio - 0.5) * 10;
-
   card.style.setProperty("--pointer-x", `${(xRatio * 100).toFixed(2)}%`);
   card.style.setProperty("--pointer-y", `${(yRatio * 100).toFixed(2)}%`);
   card.style.setProperty("--rotate-x", `${rotateX.toFixed(2)}deg`);
@@ -20,8 +17,6 @@ function setCardMotion(card, xRatio, yRatio) {
   card.style.setProperty("--media-shift-y", `${mediaShiftY.toFixed(2)}px`);
   card.style.setProperty("--copy-shift-x", `${copyShiftX.toFixed(2)}px`);
   card.style.setProperty("--copy-shift-y", `${copyShiftY.toFixed(2)}px`);
-  card.style.setProperty("--icon-shift-x", `${iconShiftX.toFixed(2)}px`);
-  card.style.setProperty("--icon-shift-y", `${iconShiftY.toFixed(2)}px`);
 }
 
 function handleCardPointerMove(event) {
@@ -63,10 +58,6 @@ export default function VisitMidwayGrid({ boxes }) {
                 <Image src={box.image} alt="" fill sizes="432px" />
               </div>
             ) : null}
-
-            <span className="visit-midway-card-icon" aria-hidden="true">
-              {box.icon ? <Image src={box.icon} alt="" fill sizes="54px" /> : null}
-            </span>
 
             <div className="visit-midway-card-copy">
               <h2>{box.title}</h2>
