@@ -18112,7 +18112,7 @@ h1 {
 
 .attraction-detail-actions {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 22px;
   opacity: 0;
   animation: attractionHeroActionsReveal 0.72s cubic-bezier(0.2, 0.8, 0.2, 1) 0.92s forwards;
@@ -18139,6 +18139,7 @@ h1 {
 
 .attraction-detail-topbar .attraction-detail-topbutton {
   width: auto;
+  max-width: 100%;
   min-width: 0;
   flex: 0 0 auto;
 }
@@ -18200,9 +18201,11 @@ h1 {
   flex: 1;
   min-width: 0;
   text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  line-height: 1.05;
+  overflow-wrap: anywhere;
 }
 
 .attraction-detail-arrow {
@@ -19873,9 +19876,9 @@ h1 {
   }
 }
 
-@media (max-width: 1180px) {
-  .attraction-detail-actions {
-    grid-template-columns: 1fr;
+@media (max-width: 1380px) {
+  .attraction-detail-action {
+    font-size: 1.14rem;
   }
 }
 
