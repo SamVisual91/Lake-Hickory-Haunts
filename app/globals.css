@@ -15690,7 +15690,7 @@ h1 {
   background:
     linear-gradient(180deg, rgba(3, 20, 24, 0.18) 0%, rgba(2, 14, 18, 0.2) 16%, rgba(0, 0, 0, 0.74) 68%, rgba(0, 0, 0, 0.96) 100%),
     radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.08), transparent 24%),
-    url("/assets/underwater-kraken-background-2026.png"),
+    url("/assets/character-page-background-20260715.png"),
     #000000;
   background-repeat: no-repeat;
   background-size: auto, auto, cover, auto;
@@ -15732,7 +15732,7 @@ h1 {
     background:
       linear-gradient(180deg, rgba(3, 20, 24, 0.08) 0%, rgba(2, 14, 18, 0.12) 18%, rgba(0, 0, 0, 0.58) 66%, rgba(0, 0, 0, 0.88) 100%),
       radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.1), transparent 28%),
-      url("/assets/underwater-kraken-background-2026.png"),
+      url("/assets/character-page-background-20260715.png"),
       #000000;
     background-repeat: no-repeat;
     background-size: auto, auto, cover, auto;
@@ -16586,21 +16586,26 @@ h1 {
   position: relative;
   isolation: isolate;
   width: 100%;
-  background:
-    linear-gradient(180deg, rgba(3, 20, 24, 0.18) 0%, rgba(2, 14, 18, 0.2) 16%, rgba(0, 0, 0, 0.74) 68%, rgba(0, 0, 0, 0.96) 100%),
-    radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.08), transparent 24%),
-    url("/assets/underwater-kraken-background-2026.png"),
-    #000000;
-  background-repeat: no-repeat;
-  background-size: auto, auto, cover, auto;
-  background-position: center top, center top, center center, center;
+  background: #000000;
 }
 
 .attraction-browser-hero {
+  position: relative;
   width: 100%;
+  min-height: clamp(320px, 38vw, 540px);
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   padding: clamp(24px, 2.8vw, 40px) clamp(16px, 1.6vw, 24px) clamp(8px, 1vw, 16px);
+  background:
+    linear-gradient(180deg, rgba(3, 20, 24, 0.18) 0%, rgba(2, 14, 18, 0.2) 16%, rgba(0, 0, 0, 0.74) 68%, rgba(0, 0, 0, 0.96) 100%),
+    radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.08), transparent 24%),
+    url("/assets/attractions-page-background-20260715-v3.png"),
+    #000000;
+  background-repeat: no-repeat;
+  background-size: auto, auto, cover, auto;
+  background-position: center top, center top, center top, center;
+  overflow: hidden;
   pointer-events: none;
 }
 
@@ -17238,15 +17243,16 @@ h1 {
 }
 
 @media (max-width: 900px) {
-  .attraction-browser {
+  .attraction-browser-hero {
+    min-height: clamp(230px, 46vw, 360px);
     background:
       linear-gradient(180deg, rgba(3, 20, 24, 0.08) 0%, rgba(2, 14, 18, 0.12) 18%, rgba(0, 0, 0, 0.58) 66%, rgba(0, 0, 0, 0.88) 100%),
       radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.1), transparent 28%),
-      url("/assets/underwater-kraken-background-2026.png"),
+      url("/assets/attractions-page-background-20260715-v3.png"),
       #000000;
     background-repeat: no-repeat;
     background-size: auto, auto, cover, auto;
-    background-position: center top, center top, center center, center;
+    background-position: center top, center top, center top, center;
   }
 
   .home-attraction-section {
