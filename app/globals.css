@@ -15687,6 +15687,10 @@ h1 {
   position: relative;
   width: 100%;
   min-height: clamp(320px, 38vw, 540px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: clamp(24px, 2.8vw, 40px) clamp(16px, 1.6vw, 24px) clamp(8px, 1vw, 16px);
   background:
     linear-gradient(180deg, rgba(3, 20, 24, 0.18) 0%, rgba(2, 14, 18, 0.2) 16%, rgba(0, 0, 0, 0.74) 68%, rgba(0, 0, 0, 0.96) 100%),
     radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.08), transparent 24%),
@@ -15694,18 +15698,14 @@ h1 {
     #000000;
   background-repeat: no-repeat;
   background-size: auto, auto, cover, auto;
-  background-position: center top, center top, center center, center;
+  background-position: center top, center top, center top, center;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .character-banner-headline {
-  position: absolute;
-  top: clamp(18px, 2.4vw, 34px);
-  left: 50%;
   z-index: 1;
-  width: min(100%, 1120px);
-  padding-inline: clamp(14px, 2vw, 24px);
-  transform: translateX(-50%);
+  width: min(100%, 1180px);
   display: flex;
   justify-content: center;
   pointer-events: none;
@@ -15713,11 +15713,8 @@ h1 {
 
 .character-banner-headline img {
   display: block;
-  width: min(100%, 980px);
+  width: min(100%, 1180px);
   height: auto;
-  filter:
-    drop-shadow(0 12px 28px rgba(0, 0, 0, 0.48))
-    drop-shadow(0 0 22px rgba(140, 255, 63, 0.12));
 }
 
 @media (max-width: 1200px) {
@@ -15736,12 +15733,11 @@ h1 {
       #000000;
     background-repeat: no-repeat;
     background-size: auto, auto, cover, auto;
-    background-position: center top, center top, center center, center;
+    background-position: center top, center top, center top, center;
   }
 
   .character-banner-headline {
-    top: clamp(14px, 3vw, 24px);
-    width: min(100%, 900px);
+    width: 100%;
   }
 
   .character-banner-scroll {
@@ -15815,18 +15811,12 @@ h1 {
 
 @media (max-width: 640px) {
   .character-banner-hero {
-    min-height: clamp(190px, 54vw, 300px);
-    background-position: center top, center top, center 8%, center;
+    padding-top: 14px;
+    padding-bottom: 4px;
   }
 
   .character-banner-headline {
-    top: 12px;
     width: 100%;
-    padding-inline: 14px;
-  }
-
-  .character-banner-headline img {
-    width: min(100%, 720px);
   }
 
   .character-banner-scroll {
