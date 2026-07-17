@@ -1897,10 +1897,37 @@ h1 {
 }
 
 .promo-card--events .promo-title {
-  color: rgba(217, 252, 255, 0.92);
+  color: var(--promo-accent-text);
   text-shadow:
-    0 0 18px rgba(63, 228, 239, 0.22),
+    0 0 20px color-mix(in srgb, var(--promo-accent-text) 28%, transparent),
     0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.promo-card--events {
+  box-shadow:
+    0 0 28px color-mix(in srgb, var(--promo-glow-main) 68%, transparent),
+    0 0 56px color-mix(in srgb, var(--promo-glow-ambient) 92%, transparent),
+    0 16px 34px rgba(0, 0, 0, 0.2);
+  transform: none;
+}
+
+.promo-card--events::before {
+  filter: grayscale(0) saturate(0.94) brightness(0.98);
+  transform: scale(1.02);
+}
+
+.promo-card--events::after {
+  opacity: 1;
+  border: 0;
+  box-shadow:
+    0 0 32px color-mix(in srgb, var(--promo-glow-main) 68%, transparent);
+  animation: promoGlowPulse 2.4s ease-in-out infinite;
+}
+
+.promo-card--events .promo-subtext {
+  color: #ffffff;
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 .promo-card:hover,
