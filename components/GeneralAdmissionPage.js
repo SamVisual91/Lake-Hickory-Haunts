@@ -545,18 +545,10 @@ export function GeneralAdmissionPage({ titleClassName = "", initialDate = null }
 
         <section className="page-width ga2-hero">
           <div className="ga2-copy">
-            <h1 className={titleClassName}>
-              <span className="ga2-title-top">Face Your</span>
-              <span className="ga2-title-bottom">Fears</span>
-            </h1>
+            <h1 className={`${titleClassName} ga2-title-single`.trim()}>Secure your tickets</h1>
             <p className="ga2-lede">
-              Plan a fun-filled night of spooky adventures and unforgettable memories at The Premier <span>Haunted Attraction</span> of the Carolinas
+              Plan a fun-filled night of spooky adventures and unforgettable experiences at The Premier <span>Haunted Attraction</span> of the Carolinas
             </p>
-
-            <div className="ga2-hero-note">
-              <span>Buy Early</span>
-              <strong>Save online before gate pricing.</strong>
-            </div>
           </div>
         </section>
 
