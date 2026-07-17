@@ -3391,6 +3391,12 @@ h1 {
   background-attachment: scroll;
 }
 
+.contact-page-shell {
+  background-size: auto, auto, auto, 100% auto;
+  background-position: center top, center 12%, center 72%, center top;
+  background-repeat: repeat, no-repeat, no-repeat, no-repeat;
+}
+
 .faq-exp {
   display: grid;
   gap: 26px;
@@ -9893,13 +9899,6 @@ h1 {
 
 .contactx-page {
   min-height: 100vh;
-  background-color: #04070b;
-  background:
-    linear-gradient(180deg, rgba(2, 7, 12, 0.56), rgba(3, 6, 10, 0.8)),
-    radial-gradient(circle at 50% 12%, rgba(105, 189, 255, 0.08), transparent 26%),
-    radial-gradient(circle at 50% 72%, rgba(162, 83, 255, 0.1), transparent 28%),
-    url("/assets/faq-background-portrait-20260716.png") center top / contain no-repeat;
-  background-attachment: scroll;
 }
 
 .contactx-shell {
@@ -9918,6 +9917,7 @@ h1 {
   z-index: 1;
   display: grid;
   gap: 24px;
+  max-width: 46rem;
   padding: clamp(28px, 4vw, 46px);
 }
 

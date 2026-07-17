@@ -4,5 +4,9 @@ import { buildMetadata, staticPageSeo } from "../../lib/seo";
 export const metadata = buildMetadata(staticPageSeo.contact);
 
 export default function ContactPage() {
-  return <ContactUsExperience />;
+  return (
+    <main className="interior-page faq-page-shell contact-page-shell">
+      <ContactUsExperience />
+    </main>
+  );
 }

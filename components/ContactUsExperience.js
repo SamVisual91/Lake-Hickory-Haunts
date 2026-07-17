@@ -124,8 +124,8 @@ export function ContactUsExperience() {
   };
 
   return (
-    <main className="contactx-page">
-      <section className="page-width contactx-shell">
+    <section className="contactx-page">
+      <div className="page-width contactx-shell">
         <div className="contactx-hero">
           <div className="contactx-copy">
             <p className="contactx-eyebrow">Contact Us</p>
@@ -261,7 +261,7 @@ export function ContactUsExperience() {
             </div>
           </aside>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
   );
 }
