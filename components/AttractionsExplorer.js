@@ -86,7 +86,7 @@ export function AttractionsExplorer() {
       <h1 className="sr-only">Choose your nightmare</h1>
       <div className="attraction-browser-hero" aria-hidden="true">
         <Image
-          src="/assets/choose-your-nightmare-header-text-2026-v3.png"
+          src="/assets/explore-the-attractions-header-text-2026-v2.png"
           alt=""
           width={1672}
           height={941}

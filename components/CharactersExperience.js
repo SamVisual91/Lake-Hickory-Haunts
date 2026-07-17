@@ -1,76 +1,294 @@
-"use client";
-
 import Image from "next/image";
-import { useRef, useState } from "react";
 
 const characterCarouselImages = [
-  { src: "/assets/character-banners/Boss.png", alt: "Boss character banner", name: "Boss" },
-  { src: "/assets/character-banners/Dr Death.png", alt: "Dr. Death character banner", name: "Dr. Death" },
-  { src: "/assets/character-banners/Kluath.png", alt: "Kluath character banner", name: "Kluath" },
-  { src: "/assets/character-banners/Shepherd.png", alt: "Shepherd character banner", name: "Shepherd" },
-  { src: "/assets/character-banners/Vodyanoi.png", alt: "Vodyanoi character banner", name: "Vodyanoi" },
-  { src: "/assets/character-banners/grim.png", alt: "Grim character banner", name: "Grim" },
-  { src: "/assets/character-banners/Lilith.png", alt: "Lilith character banner", name: "Lilith" },
-  { src: "/assets/character-banners/Hoss.png", alt: "Pirate Captain character banner", name: "Pirate Captain" },
-  { src: "/assets/character-banners/Rat.png", alt: "Rat character banner", name: "Rat" },
+  {
+    src: "/assets/character-banners/Boss the Clown.jpg",
+    alt: "Boss the Clown character banner",
+    name: "Boss the Clown",
+    fit: "cover",
+    position: "center 28%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Dr Death.jpg",
+    alt: "Dr. Death character banner",
+    name: "Dr. Death",
+    fit: "cover",
+    position: "center 38%",
+  },
+  {
+    src: "/assets/character-banners/Kluath.jpg",
+    alt: "Kluath character banner",
+    name: "Kluath",
+    fit: "cover",
+    position: "center 40%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Shepherd.jpg",
+    alt: "Shepherd character banner",
+    name: "Shepherd",
+    fit: "cover",
+    position: "center 26%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Vodyanoi.jpg",
+    alt: "Vodyanoi character banner",
+    name: "Vodyanoi",
+    fit: "cover",
+    position: "center 34%",
+  },
+  {
+    src: "/assets/character-banners/Grim.jpg",
+    alt: "Grim character banner",
+    name: "Grim",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Hoss.jpg",
+    alt: "Hoss character banner",
+    name: "Hoss",
+    fit: "cover",
+    position: "center 32%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Lilith.jpg",
+    alt: "Lilith character banner",
+    name: "Lilith",
+    fit: "cover",
+    position: "center 32%",
+  },
+  {
+    src: "/assets/character-banners/Pirate Captain.jpg",
+    alt: "Pirate Captain character banner",
+    name: "Pirate Captain",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Rat.jpg",
+    alt: "Rat character banner",
+    name: "Rat",
+    fit: "cover",
+    position: "center 32%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Moth Man.jpg",
+    alt: "Moth Man character banner",
+    name: "Moth Man",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
   { src: "/assets/character-banners/The Creature.png", alt: "The Creature character banner", name: "The Creature" },
-  { src: "/assets/character-banners/Nova Kaine.png", alt: "Nova Kaine character banner", name: "Nova Kaine" },
+  {
+    src: "/assets/character-banners/Nova Kaine.jpg",
+    alt: "Nova Kaine character banner",
+    name: "Nova Kaine",
+    fit: "cover",
+    position: "center 22%",
+    quality: 100,
+  },
   { src: "/assets/character-banners/Rust.png", alt: "Rust character banner", name: "Rust" },
-  { src: "/assets/character-banners/Nurse Delilah.png", alt: "Nurse Delilah character banner", name: "Nurse Delilah" },
-  { src: "/assets/character-banners/Sherbert.png", alt: "Sherbert character banner", name: "Sherbert" },
-  { src: "/assets/character-banners/Bloody Moira.png", alt: "Bloody Moira character banner", name: "Bloody Moira" },
+  {
+    src: "/assets/character-banners/Nurse Delilah.jpg",
+    alt: "Nurse Delilah character banner",
+    name: "Nurse Delilah",
+    fit: "cover",
+    position: "center 24%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Sherbert.jpg",
+    alt: "Sherbert character banner",
+    name: "Sherbert",
+    fit: "cover",
+    position: "center 34%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Bloody Moira.jpg",
+    alt: "Bloody Moira character banner",
+    name: "Bloody Moira",
+    fit: "cover",
+    position: "center 34%",
+  },
   { src: "/assets/character-banners/Twigsaw.png", alt: "Twigsaw character banner", name: "Twigsaw" },
-  { src: "/assets/character-banners/Ripr.png", alt: "Ripr character banner", name: "Ripr" },
-  { src: "/assets/character-banners/The Diver.png", alt: "The Diver character banner", name: "The Diver" },
-  { src: "/assets/character-banners/Wolfy.png", alt: "Wolfy character banner", name: "Wolfy" },
-  { src: "/assets/character-banners/Eden.png", alt: "Eden character banner", name: "Eden" },
-  { src: "/assets/character-banners/Grave Digger.png", alt: "Grave Digger character banner", name: "Grave Digger" },
+  {
+    src: "/assets/character-banners/Ripr.jpg",
+    alt: "Ripr character banner",
+    name: "Ripr",
+    fit: "cover",
+    position: "center 24%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/The Diver.jpg",
+    alt: "The Diver character banner",
+    name: "The Diver",
+    fit: "cover",
+    position: "center 28%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Wolfy.jpg",
+    alt: "Wolfy character banner",
+    name: "Wolfy",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Eden.jpg",
+    alt: "Eden character banner",
+    name: "Eden",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Grave Digger.jpg",
+    alt: "Grave Digger character banner",
+    name: "Grave Digger",
+    fit: "cover",
+    position: "center 28%",
+    quality: 100,
+  },
   { src: "/assets/character-banners/Precious.png", alt: "Precious character banner", name: "Precious" },
   { src: "/assets/character-banners/Pumpkin King.png", alt: "Pumpkin King character banner", name: "Pumpkin King" },
   { src: "/assets/character-banners/Squeeks.png", alt: "Squeeks character banner", name: "Squeeks" },
+  {
+    src: "/assets/character-banners/Gouda.jpg",
+    alt: "Gouda character banner",
+    name: "Gouda",
+    fit: "cover",
+    position: "center 34%",
+  },
+  {
+    src: "/assets/character-banners/Dizzy.jpg",
+    alt: "Dizzy character banner",
+    name: "Dizzy",
+    fit: "cover",
+    position: "center center",
+  },
+  {
+    src: "/assets/character-banners/Skorn.jpg",
+    alt: "Skorn character banner",
+    name: "Skorn",
+    fit: "cover",
+    position: "center 28%",
+  },
+  {
+    src: "/assets/character-banners/Abomination.jpg",
+    alt: "Abomination character banner",
+    name: "Abomination",
+    fit: "cover",
+    position: "center 30%",
+  },
+  {
+    src: "/assets/character-banners/Milo.png",
+    alt: "Milo character banner",
+    name: "Milo",
+    fit: "cover",
+    position: "center 32%",
+  },
+  {
+    src: "/assets/character-banners/Karnevil.jpg",
+    alt: "Karnevil character banner",
+    name: "Karnevil",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/The Fisherman.jpg",
+    alt: "The Fisherman character banner",
+    name: "The Fisherman",
+    fit: "cover",
+    position: "center 28%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Sea Hag.jpg",
+    alt: "Sea Hag character banner",
+    name: "Sea Hag",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Guppy.jpg",
+    alt: "Guppy character banner",
+    name: "Guppy",
+    fit: "cover",
+    position: "center 28%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Pumpkin.jpg",
+    alt: "Pumpkin character banner",
+    name: "Pumpkin",
+    fit: "cover",
+    position: "center 26%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/The Miners.jpg",
+    alt: "The Miners character banner",
+    name: "The Miners",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Mummy.jpg",
+    alt: "Mummy character banner",
+    name: "Mummy",
+    fit: "cover",
+    position: "center 28%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Mutant.jpg",
+    alt: "Mutant character banner",
+    name: "Mutant",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Headless Helga.jpg",
+    alt: "Headless Helga character banner",
+    name: "Headless Helga",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Cupcake.jpg",
+    alt: "Cupcake character banner",
+    name: "Cupcake",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
 ];
 
-function CarouselArrow({ direction = "right" }) {
-  const rotation = direction === "left" ? "rotate(180 14 14)" : undefined;
+const placeholderBanners = Array.from({ length: 0 }, (_, index) => ({
+  id: `placeholder-${index + 1}`,
+  name: `Open Slot ${String(index + 1).padStart(2, "0")}`,
+  placeholder: true,
+}));
 
-  return (
-    <svg viewBox="0 0 28 28" aria-hidden="true">
-      <g transform={rotation}>
-        <path
-          d="M8.5 4.5 18.5 14 8.5 23.5"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </g>
-    </svg>
-  );
-}
+const characterBannerItems = [...characterCarouselImages, ...placeholderBanners];
 
 export function CharactersExperience() {
-  const carouselRef = useRef(null);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [selectedIndex, setSelectedIndex] = useState(null);
-
-  const scrollCarousel = (direction) => {
-    const node = carouselRef.current;
-
-    if (!node) {
-      return;
-    }
-
-    const distance = Math.max(node.clientWidth * 0.72, 260);
-
-    node.scrollBy({
-      left: direction === "left" ? -distance : distance,
-      behavior: "smooth",
-    });
-  };
-
-  const activeIndex = hoveredIndex ?? selectedIndex;
-
   return (
     <main className="page-shell character-banner-page">
       <section className="character-banner-hero" id="character-banner-hero">
@@ -87,56 +305,39 @@ export function CharactersExperience() {
       </section>
 
       <div className="character-banner-scroll">
-        <span>Scroll to Discover</span>
+        <span>Meet the Roster</span>
         <i aria-hidden="true" />
       </div>
 
-      <section className="character-carousel" aria-label="Character image carousel">
-        <button
-          type="button"
-          className="character-carousel-arrow"
-          onClick={() => scrollCarousel("left")}
-          aria-label="Previous character images"
-        >
-          <CarouselArrow direction="left" />
-        </button>
-
-        <div className="character-carousel-track" ref={carouselRef}>
-          {characterCarouselImages.map((image, index) => (
-            <button
-              type="button"
-              className={`character-carousel-card ${activeIndex === index ? "is-active" : ""}`}
-              key={image.src}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              onFocus={() => setHoveredIndex(index)}
-              onBlur={() => setHoveredIndex(null)}
-              onTouchStart={() => setSelectedIndex(index)}
-              onClick={() => setSelectedIndex(index)}
-              aria-label={`${image.name} character image`}
-            >
-              <div className="character-carousel-card-media">
+      <section className="character-banner-stack" aria-label="Character banner gallery">
+        {characterBannerItems.map((image, index) => (
+          <article
+            className={`character-banner-card ${image.placeholder ? "is-placeholder" : ""}`}
+            key={image.src ?? image.id}
+          >
+            <div className="character-banner-card-media">
+              {image.placeholder ? (
+                <div className="character-banner-card-placeholder" aria-label={`${image.name} placeholder`}>
+                  <span className="character-banner-card-placeholder-kicker">Placeholder</span>
+                  <strong>{image.name}</strong>
+                  <small>Drop in a future character banner here.</small>
+                </div>
+              ) : (
                 <Image
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(max-width: 640px) 72vw, (max-width: 900px) 42vw, (max-width: 1180px) 34vw, 18vw"
-                  priority={index < 4}
+                  sizes="(max-width: 640px) 88vw, (max-width: 900px) 44vw, (max-width: 1280px) 30vw, 22vw"
+                  quality={image.quality}
+                  priority={index < 6}
+                  className={image.fit === "cover" ? "character-banner-image-cover" : "character-banner-image-contain"}
+                  style={image.position ? { objectPosition: image.position } : undefined}
                 />
-                <span className="character-carousel-card-name">{image.name}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-
-        <button
-          type="button"
-          className="character-carousel-arrow"
-          onClick={() => scrollCarousel("right")}
-          aria-label="Next character images"
-        >
-          <CarouselArrow direction="right" />
-        </button>
+              )}
+              <span className="character-banner-card-name">{image.name}</span>
+            </div>
+          </article>
+        ))}
       </section>
 
       <div className="attraction-browser-disclaimer">

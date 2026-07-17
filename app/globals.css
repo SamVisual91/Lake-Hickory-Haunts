@@ -14946,102 +14946,122 @@ h1 {
   filter: drop-shadow(0 0 8px rgba(23, 240, 194, 0.24));
 }
 
-.character-carousel {
+.character-banner-stack {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
-  align-items: center;
   width: 100%;
   margin: 0 auto;
   padding: 0 14px 42px;
 }
 
-.character-carousel-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
+.character-banner-card {
   padding: 0;
   border: 0;
   background: transparent;
-  color: #17f0c2;
-  cursor: pointer;
-  transition: transform 0.18s ease, filter 0.18s ease;
+  transition: transform 0.22s ease;
 }
 
-.character-carousel-arrow:hover,
-.character-carousel-arrow:focus-visible {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0 12px rgba(23, 240, 194, 0.28));
-}
-
-.character-carousel-arrow svg {
-  width: 34px;
-  height: 34px;
-}
-
-.character-carousel-track {
-  display: flex;
-  gap: 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  scroll-padding-inline: 12px;
-  overscroll-behavior-x: contain;
-  touch-action: pan-x;
-  padding: 8px 2px 10px;
-  scrollbar-width: none;
-}
-
-.character-carousel-track::-webkit-scrollbar {
-  display: none;
-}
-
-.character-carousel-card {
-  flex: 0 0 clamp(176px, 16.2vw, 246px);
-  margin-left: -22px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-  scroll-snap-align: start;
-  transition: transform 0.22s ease, z-index 0.22s ease;
-}
-
-.character-carousel-card:first-child {
-  margin-left: 0;
-}
-
-.character-carousel-card:hover,
-.character-carousel-card:focus-visible,
-.character-carousel-card.is-active {
+.character-banner-card:hover,
+.character-banner-card:focus-within {
   transform: translateY(-8px);
-  z-index: 3;
 }
 
-.character-carousel-card-media {
+.character-banner-card-media {
   position: relative;
   aspect-ratio: 768 / 1536;
   overflow: hidden;
   background: transparent;
   filter:
-    grayscale(1)
-    saturate(0.02)
-    brightness(0.58)
-    contrast(1.1)
+    grayscale(0)
+    saturate(1.02)
+    brightness(1)
+    contrast(1.02)
     drop-shadow(0 18px 32px rgba(0, 0, 0, 0.46));
   transition: filter 0.28s ease, transform 0.28s ease;
 }
 
-.character-carousel-card-media img {
+.character-banner-image-contain {
   object-fit: contain;
   object-position: center center;
 }
 
-.character-carousel-card-name {
+.character-banner-image-cover {
+  object-fit: cover;
+}
+
+.character-banner-card.is-placeholder .character-banner-card-media {
+  background:
+    linear-gradient(180deg, rgba(8, 15, 20, 0.94), rgba(5, 10, 14, 0.98)),
+    radial-gradient(circle at 50% 18%, rgba(23, 240, 194, 0.18), transparent 24%),
+    radial-gradient(circle at 50% 78%, rgba(96, 88, 255, 0.16), transparent 26%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    inset 0 0 0 2px rgba(23, 240, 194, 0.18),
+    0 18px 32px rgba(0, 0, 0, 0.46);
+}
+
+.character-banner-card-placeholder {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 14px;
+  padding: 28px 24px;
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 18%),
+    repeating-linear-gradient(
+      -32deg,
+      rgba(255, 255, 255, 0.028) 0 2px,
+      transparent 2px 24px
+    );
+}
+
+.character-banner-card-placeholder::before {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px dashed rgba(23, 240, 194, 0.4);
+  box-shadow: 0 0 22px rgba(23, 240, 194, 0.12);
+}
+
+.character-banner-card-placeholder-kicker,
+.character-banner-card-placeholder strong,
+.character-banner-card-placeholder small {
+  position: relative;
+  z-index: 1;
+}
+
+.character-banner-card-placeholder-kicker {
+  color: rgba(23, 240, 194, 0.92);
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 1rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.character-banner-card-placeholder strong {
+  color: #f3f7f5;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2rem, 2.4vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 0.96;
+  text-transform: uppercase;
+}
+
+.character-banner-card-placeholder small {
+  max-width: 18rem;
+  color: rgba(243, 247, 245, 0.72);
+  font-size: 0.96rem;
+  line-height: 1.5;
+}
+
+.character-banner-card-name {
   position: absolute;
   top: 18px;
   right: 14px;
@@ -15063,9 +15083,8 @@ h1 {
   pointer-events: none;
 }
 
-.character-carousel-card:hover .character-carousel-card-media,
-.character-carousel-card:focus-visible .character-carousel-card-media,
-.character-carousel-card.is-active .character-carousel-card-media {
+.character-banner-card:hover .character-banner-card-media,
+.character-banner-card:focus-within .character-banner-card-media {
   filter:
     grayscale(0)
     saturate(1.08)
@@ -15076,11 +15095,15 @@ h1 {
   transform: scale(1.01);
 }
 
-.character-carousel-card:hover .character-carousel-card-name,
-.character-carousel-card:focus-visible .character-carousel-card-name,
-.character-carousel-card.is-active .character-carousel-card-name {
+.character-banner-card:hover .character-banner-card-name,
+.character-banner-card:focus-within .character-banner-card-name {
   opacity: 1;
   transform: translateY(0);
+}
+
+.character-banner-card.is-placeholder .character-banner-card-name {
+  opacity: 1;
+  transform: none;
 }
 
 .character-detail {
@@ -15997,30 +16020,14 @@ h1 {
     padding-bottom: 16px;
   }
 
-  .character-carousel {
-    grid-template-columns: 1fr;
+  .character-banner-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
     padding-inline: 6px;
     padding-bottom: 24px;
   }
 
-  .character-carousel-arrow {
-    display: none;
-  }
-
-  .character-carousel-track {
-    gap: 10px;
-    padding: 0 14px 8px;
-    scroll-padding-inline: 14px;
-    scroll-snap-type: x proximity;
-  }
-
-  .character-carousel-card {
-    flex-basis: min(72vw, 280px);
-    margin-left: 0;
-  }
-
-  .character-carousel-card-name {
+  .character-banner-card-name {
     top: auto;
     bottom: 14px;
     right: 10px;
@@ -16032,11 +16039,24 @@ h1 {
     transform: none;
   }
 
-  .character-carousel-card-media {
+  .character-banner-card-placeholder {
+    gap: 10px;
+    padding: 22px 16px;
+  }
+
+  .character-banner-card-placeholder strong {
+    font-size: clamp(1.5rem, 7vw, 2.1rem);
+  }
+
+  .character-banner-card-placeholder small {
+    font-size: 0.86rem;
+  }
+
+  .character-banner-card-media {
     filter:
-      grayscale(0.08)
-      saturate(0.92)
-      brightness(0.92)
+      grayscale(0)
+      saturate(1.02)
+      brightness(1)
       contrast(1.04)
       drop-shadow(0 16px 28px rgba(0, 0, 0, 0.44));
   }
@@ -16161,16 +16181,16 @@ h1 {
 }
 
 @media (hover: none) {
-  .character-carousel-card-media {
+  .character-banner-card-media {
     filter:
-      grayscale(0.08)
-      saturate(0.92)
-      brightness(0.92)
+      grayscale(0)
+      saturate(1.02)
+      brightness(1)
       contrast(1.04)
       drop-shadow(0 16px 28px rgba(0, 0, 0, 0.44));
   }
 
-  .character-carousel-card-name {
+  .character-banner-card-name {
     opacity: 1;
     transform: none;
   }
