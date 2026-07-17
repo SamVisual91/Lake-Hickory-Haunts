@@ -10175,6 +10175,10 @@ h1 {
   line-height: 1.65;
 }
 
+.contactx-vip-widget {
+  margin-top: 18px;
+}
+
 .contactx-note-card {
   display: grid;
   gap: 10px;

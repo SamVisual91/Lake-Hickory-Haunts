@@ -1,14 +1,20 @@
 "use client";
 
-export function HomeVipTextSignup() {
+export function HomeVipTextSignup({
+  className = "",
+  height = 798,
+  title = "Lake Hickory Haunts VIP text list signup",
+} = {}) {
+  const shellClassName = ["vip-home-signup", className].filter(Boolean).join(" ");
+
   return (
-    <div className="vip-home-signup">
+    <div className={shellClassName}>
       <iframe
         className="vip-home-signup-embed"
         src="https://slicktext.com/widget/v2/ba72069446b05b3579f86202cae19a76"
-        title="Lake Hickory Haunts VIP text list signup"
+        title={title}
         width="400"
-        height="798"
+        height={height}
         frameBorder="0"
         loading="lazy"
       />

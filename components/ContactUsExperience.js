@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { HomeVipTextSignup } from "./HomeVipTextSignup";
 
 const inquiryTypes = [
   "General Question",
@@ -19,12 +20,6 @@ export function ContactUsExperience() {
     message: "",
   });
   const [contactStatus, setContactStatus] = useState({ type: "idle", message: "" });
-  const [vipSignup, setVipSignup] = useState({
-    name: "",
-    mobile: "",
-    email: "",
-  });
-  const [vipStatus, setVipStatus] = useState({ type: "idle", message: "" });
 
   const submitToInbox = async (payload) => {
     const response = await fetch(`https://formsubmit.co/ajax/${supportEmail}`, {
@@ -81,44 +76,6 @@ export function ContactUsExperience() {
       setContactStatus({
         type: "error",
         message: `We could not send your message right now. Please email ${supportEmail} directly.`,
-      });
-    }
-  };
-
-  const openVipSignupDraft = async () => {
-    if (!vipSignup.name.trim() || !vipSignup.mobile.trim() || !vipSignup.email.trim()) {
-      setVipStatus({
-        type: "error",
-        message: "Please fill in your name, mobile number, and email address before joining.",
-      });
-      return;
-    }
-
-    setVipStatus({ type: "sending", message: "Sending your VIP sign-up..." });
-
-    try {
-      await submitToInbox({
-        name: vipSignup.name,
-        mobile: vipSignup.mobile,
-        email: vipSignup.email,
-        requestType: "VIP Text List Sign Up",
-        message: "Please add me to the VIP text list for sales, offers, and discounts.",
-        _subject: `VIP Text List Sign Up - ${vipSignup.name || "Lake Hickory Haunts guest"}`,
-        _replyto: vipSignup.email,
-      });
-      setVipSignup({
-        name: "",
-        mobile: "",
-        email: "",
-      });
-      setVipStatus({
-        type: "success",
-        message: "Your VIP sign-up was sent to the haunt team.",
-      });
-    } catch {
-      setVipStatus({
-        type: "error",
-        message: `We could not send your VIP sign-up right now. Please email ${supportEmail} directly.`,
       });
     }
   };
@@ -213,51 +170,13 @@ export function ContactUsExperience() {
               Join our VIP text list to hear about special sales, limited-time offers, discounts, and event updates before everyone else.
             </p>
 
-            <div className="contactx-note-stack">
-              <label className="contactx-field">
-                <span>Your name</span>
-                <input
-                  type="text"
-                  value={vipSignup.name}
-                  onChange={(event) => setVipSignup((current) => ({ ...current, name: event.target.value }))}
-                  placeholder="Your name"
-                />
-              </label>
+            <HomeVipTextSignup className="contactx-vip-widget" />
 
-              <label className="contactx-field">
-                <span>Mobile number</span>
-                <input
-                  type="tel"
-                  value={vipSignup.mobile}
-                  onChange={(event) => setVipSignup((current) => ({ ...current, mobile: event.target.value }))}
-                  placeholder="(555) 555-5555"
-                />
-              </label>
-
-              <label className="contactx-field">
-                <span>Email address</span>
-                <input
-                  type="email"
-                  value={vipSignup.email}
-                  onChange={(event) => setVipSignup((current) => ({ ...current, email: event.target.value }))}
-                  placeholder="you@example.com"
-                />
-              </label>
-            </div>
-
-            <div className="contactx-actions contactx-actions-compact">
-              <button
-                type="button"
-                className="contactx-submit"
-                onClick={openVipSignupDraft}
-                disabled={vipStatus.type === "sending"}
-              >
-                Join VIP Text List
-              </button>
+            <div className="contactx-note-card">
+              <strong>Complete the opt-in</strong>
               <p>
-                This sends your VIP sign-up directly to the haunt team so they can add you to the sales, offers, and discounts list.
+                This form goes directly to SlickText. If they send a confirmation text, reply <strong>YES</strong> to finish joining the VIP list.
               </p>
-              {vipStatus.type !== "idle" ? <p>{vipStatus.message}</p> : null}
             </div>
           </aside>
         </div>
