@@ -17226,15 +17226,22 @@ h1 {
   }
 
   .attraction-picker-viewport {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
   }
 
+  .attraction-picker-row {
+    display: contents;
+  }
+
   .attraction-picker-row-top {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: unset;
+    justify-content: unset;
   }
 
   .attraction-picker-row-bottom {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: unset;
+    justify-content: unset;
   }
 
   .attraction-card {
@@ -17258,6 +17265,10 @@ h1 {
   .attraction-card-copy h2 {
     font-size: clamp(1.28rem, 0.9rem + 0.94vw, 1.76rem);
   }
+
+  .attraction-picker-arrow {
+    display: none;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -17267,15 +17278,22 @@ h1 {
   }
 
   .attraction-picker-viewport {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 10px;
   }
 
+  .attraction-picker-row {
+    display: contents;
+  }
+
   .attraction-picker-row-top {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: unset;
+    justify-content: unset;
   }
 
   .attraction-picker-row-bottom {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: unset;
+    justify-content: unset;
   }
 
   .attraction-card {
@@ -17294,6 +17312,10 @@ h1 {
 
   .attraction-card-copy h2 {
     font-size: clamp(1.28rem, 0.9rem + 0.94vw, 1.76rem);
+  }
+
+  .attraction-picker-arrow {
+    display: none;
   }
 }
 
