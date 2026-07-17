@@ -13,6 +13,10 @@ function getVisibleCount(viewportWidth) {
     return 2;
   }
 
+  if (viewportWidth <= 1500) {
+    return 3;
+  }
+
   return 4;
 }
 

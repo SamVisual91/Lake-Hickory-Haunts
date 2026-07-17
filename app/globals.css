@@ -1473,8 +1473,9 @@ h1 {
 }
 
 .home-attraction-section {
-  width: max-content;
-  max-width: none;
+  width: 100%;
+  max-width: 100%;
+  justify-self: stretch;
 }
 
 .home-promo-section .promo-grid {
@@ -1766,7 +1767,10 @@ h1 {
   border: 0;
   border-radius: 0;
   background: transparent;
-  box-shadow: none;
+  box-shadow:
+    0 0 26px color-mix(in srgb, var(--promo-glow-main) 62%, transparent),
+    0 0 52px color-mix(in srgb, var(--promo-glow-ambient) 92%, transparent),
+    0 16px 34px rgba(0, 0, 0, 0.2);
   width: 320px;
   min-height: 600px;
   max-width: 320px;
@@ -1781,8 +1785,8 @@ h1 {
   inset: 0;
   background: transparent;
   pointer-events: none;
-  filter: grayscale(0) saturate(0.9) brightness(0.96);
-  transform: scale(1);
+  filter: grayscale(0) saturate(0.94) brightness(0.98);
+  transform: scale(1.02);
   transform-origin: center;
   transition: filter 280ms ease, transform 780ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
@@ -1793,10 +1797,11 @@ h1 {
   inset: 0;
   border: 0;
   border-radius: 0;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   box-shadow:
-    0 0 0 transparent;
+    0 0 32px color-mix(in srgb, var(--promo-glow-main) 68%, transparent);
+  animation: promoGlowPulse 2.4s ease-in-out infinite;
   transition: opacity 220ms ease, box-shadow 320ms ease, border-color 220ms ease;
 }
 
@@ -2259,16 +2264,23 @@ h1 {
 
 .home-attraction-row-grid {
   display: grid;
-  grid-template-columns: repeat(4, 350px);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
   align-items: stretch;
 }
 
 .home-attraction-row-grid .attraction-card {
   min-height: 312px;
-  width: 350px;
+  width: 100%;
+  max-width: none;
   aspect-ratio: auto;
   filter: grayscale(0) saturate(1.32) brightness(1.08) contrast(1.05);
+}
+
+@media (max-width: 1500px) {
+  .home-attraction-row-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .home-attraction-row-arrow {
@@ -2355,7 +2367,7 @@ h1 {
 }
 
 .promo-title {
-  color: rgba(214, 214, 214, 0.72);
+  color: var(--promo-title-color);
   display: block;
   max-width: 260px;
   margin-inline: auto;
@@ -2366,7 +2378,7 @@ h1 {
   text-transform: uppercase;
   line-height: 0.96;
   text-shadow:
-    0 0 16px rgba(255, 255, 255, 0.08),
+    0 0 18px color-mix(in srgb, var(--promo-accent-text) 28%, transparent),
     0 6px 20px rgba(0, 0, 0, 0.5);
   transition: color 150ms ease, text-shadow 180ms ease;
 }
@@ -2384,15 +2396,15 @@ h1 {
   left: 50%;
   bottom: 0;
   margin: 0;
-  color: #ffffff;
+  color: var(--promo-accent-subtext);
   width: min(250px, 100%);
   font-size: 0.92rem;
   line-height: 1.45;
   text-shadow:
     0 2px 8px rgba(0, 0, 0, 0.7),
     0 8px 24px rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transform: translate(-50%, 14px);
+  opacity: 1;
+  transform: translate(-50%, 0);
   transition: opacity 240ms ease, transform 340ms cubic-bezier(0.18, 0.82, 0.22, 1), color 220ms ease;
 }
 
@@ -2418,20 +2430,20 @@ h1 {
   padding: 0 20px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 0;
-  color: #ffffff;
-  background: rgba(247, 244, 238, 0.1);
+  color: var(--promo-accent-text);
+  background: var(--promo-link-bg-hover);
   backdrop-filter: blur(8px);
   box-shadow:
-    0 10px 24px rgba(0, 0, 0, 0.24),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 12px 30px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
   font-family: "Oswald", "Bebas Neue", "Arial Narrow", sans-serif;
   font-size: 1.24rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   text-shadow: 0 8px 24px rgba(0, 0, 0, 0.52);
-  transform: translateY(18px);
-  opacity: 0;
+  transform: translateY(0);
+  opacity: 1;
   transition:
     transform 360ms cubic-bezier(0.18, 0.82, 0.22, 1),
     opacity 220ms ease,
