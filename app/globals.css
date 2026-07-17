@@ -9082,10 +9082,7 @@ h1 {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
-  background:
-    linear-gradient(180deg, rgba(1, 6, 18, 0.68) 0%, rgba(2, 5, 14, 0.84) 100%),
-    url("/assets/tickets-page-background-20260716.png") center top / cover no-repeat,
-    linear-gradient(180deg, #020504 0%, #050909 100%);
+  background: linear-gradient(180deg, #020504 0%, #050909 100%);
 }
 
 .ga2-shell::before,
@@ -9114,15 +9111,30 @@ h1 {
   z-index: 1;
 }
 
+.ga2-hero-inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  min-height: inherit;
+}
+
 .ga2-hero {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  align-items: center;
-  min-height: 560px;
-  padding-top: 44px;
-  padding-bottom: 34px;
+  align-items: start;
+  min-height: clamp(320px, 38vw, 540px);
+  padding: clamp(24px, 2.8vw, 40px) clamp(16px, 1.6vw, 24px) clamp(8px, 1vw, 16px);
   overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(3, 20, 24, 0.18) 0%, rgba(2, 14, 18, 0.2) 16%, rgba(0, 0, 0, 0.74) 68%, rgba(0, 0, 0, 0.96) 100%),
+    radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.08), transparent 24%),
+    url("/assets/attractions-page-background-20260715-v3.png"),
+    #000000;
+  background-repeat: no-repeat;
+  background-size: auto, auto, cover, auto;
+  background-position: center top, center top, center top, center;
 }
 
 .ga2-hero::before,
@@ -9156,7 +9168,10 @@ h1 {
   gap: 18px;
   position: relative;
   z-index: 1;
-  max-width: 40rem;
+  width: min(100%, 78rem);
+  max-width: none;
+  justify-items: center;
+  text-align: center;
 }
 
 .ga2-eyebrow {
@@ -9182,10 +9197,13 @@ h1 {
 .ga2-copy h1.ga2-title-single {
   max-width: none;
   color: var(--ga2-acid);
-  font-size: clamp(3rem, 6.8vw, 6.4rem);
+  font-size: clamp(3.8rem, 7.8vw, 8rem);
   line-height: 0.92;
   letter-spacing: 0.055em;
   white-space: nowrap;
+  text-shadow:
+    0 0 24px rgba(149, 245, 58, 0.16),
+    0 10px 26px rgba(0, 0, 0, 0.42);
 }
 
 .ga2-title-top,
@@ -9205,7 +9223,7 @@ h1 {
 }
 
 .ga2-lede {
-  max-width: 38rem;
+  max-width: 52rem;
   margin: 0;
   color: rgba(243, 247, 245, 0.78);
   font-family: "Barlow", "Trebuchet MS", sans-serif;
@@ -9320,6 +9338,15 @@ h1 {
   padding-top: 10px;
 }
 
+.ga2-shell-booking .ga2-hero {
+  min-height: clamp(260px, 30vw, 420px);
+  padding-bottom: 12px;
+}
+
+.ga2-shell-booking .ga2-grid-lite {
+  padding-top: 0;
+}
+
 .ga2-sale-strip {
   display: flex;
   justify-content: flex-end;
@@ -9395,6 +9422,10 @@ h1 {
   gap: 26px;
 }
 
+.ga2-shell-booking .ga2-main-lite {
+  gap: 20px;
+}
+
 .ga2-art-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -9444,6 +9475,10 @@ h1 {
   justify-items: center;
   gap: 10px;
   padding-top: 12px;
+}
+
+.ga2-shell-booking .ga2-next-step-heading {
+  padding-top: 0;
 }
 
 .ga2-next-step-heading h2 {
@@ -12471,10 +12506,20 @@ h1 {
 
 @media (max-width: 760px) {
   .ga2-hero {
-    min-height: 460px;
+    background:
+      linear-gradient(180deg, rgba(3, 20, 24, 0.04) 0%, rgba(2, 14, 18, 0.08) 18%, rgba(0, 0, 0, 0.42) 66%, rgba(0, 0, 0, 0.76) 100%),
+      radial-gradient(circle at 50% 14%, rgba(140, 255, 63, 0.1), transparent 28%),
+      url("/assets/attractions-page-background-20260715-v3.png"),
+      #000000;
+    background-repeat: no-repeat;
+    background-size: auto, auto, cover, auto;
+    background-position: center top, center top, center top, center;
+  }
+
+  .ga2-hero {
+    min-height: clamp(260px, 54vw, 400px);
     gap: 20px;
-    padding-top: 24px;
-    padding-bottom: 20px;
+    padding: 22px 16px 16px;
   }
 
   .ga2-hero::before {
@@ -12485,9 +12530,7 @@ h1 {
   }
 
   .ga2-hero::after {
-    background:
-      linear-gradient(180deg, rgba(2, 5, 4, 0.94) 0%, rgba(2, 5, 4, 0.62) 24%, rgba(2, 5, 4, 0.34) 52%, rgba(2, 5, 4, 0.92) 100%),
-      linear-gradient(90deg, rgba(2, 5, 4, 0.9) 0%, rgba(2, 5, 4, 0.48) 36%, rgba(2, 5, 4, 0.84) 100%);
+    background: none;
   }
 
   .ga2-copy h1 {
@@ -12498,8 +12541,14 @@ h1 {
 
   .ga2-copy h1.ga2-title-single {
     max-width: none;
-    font-size: clamp(2.15rem, 8.2vw, 4.2rem);
+    font-size: clamp(2.15rem, 8.2vw, 4.6rem);
     letter-spacing: 0.04em;
+    white-space: normal;
+  }
+
+  .ga2-shell-booking .ga2-hero {
+    min-height: clamp(240px, 48vw, 340px);
+    padding-bottom: 10px;
   }
 
   .ga2-lede {

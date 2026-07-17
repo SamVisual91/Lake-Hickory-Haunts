@@ -222,15 +222,17 @@ export function GeneralAdmissionDateTimePage({ titleClassName, initialDate = nul
 
   return (
     <main className="page-shell ga2-page">
-      <section className="ga2-shell">
+      <section className="ga2-shell ga2-shell-booking">
         <div className="ga2-backdrop" aria-hidden="true" />
 
-        <section className="page-width ga2-hero">
-          <div className="ga2-copy">
-            <h1 className={`${titleClassName} ga2-title-single`.trim()}>Secure your tickets</h1>
-            <p className="ga2-lede">
-              Plan a fun-filled night of spooky adventures and unforgettable experiences at The Premier <span>Haunted Attraction</span> of the Carolinas
-            </p>
+        <section className="ga2-hero">
+          <div className="ga2-hero-inner page-width">
+            <div className="ga2-copy">
+              <h1 className={`${titleClassName} ga2-title-single`.trim()}>Secure your tickets</h1>
+              <p className="ga2-lede">
+                Plan a fun-filled night of spooky adventures and unforgettable experiences at The Premier <span>Haunted Attraction</span> of the Carolinas
+              </p>
+            </div>
           </div>
         </section>
 
