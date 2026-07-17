@@ -55,7 +55,7 @@ export default function VisitMidwayGrid({ boxes }) {
 
             {box.image ? (
               <div className="visit-midway-card-media" aria-hidden="true">
-                <Image src={box.image} alt="" fill sizes="432px" />
+                <Image src={box.image} alt="" fill sizes="(max-width: 640px) 100vw, (max-width: 980px) 50vw, (max-width: 1380px) 33vw, 25vw" />
               </div>
             ) : null}
 

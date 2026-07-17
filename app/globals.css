@@ -2884,19 +2884,20 @@ h1 {
 }
 
 .visit-midway-grid-wrap {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 28px max(16px, calc((100vw - 1800px) / 2)) 0;
-  overflow-x: auto;
+  width: 100%;
+  margin-left: 0;
+  padding: 28px clamp(16px, 2vw, 28px) 0;
+  overflow-x: visible;
   overflow-y: visible;
 }
 
 .visit-midway-grid {
   display: grid;
-  width: max-content;
-  grid-template-columns: repeat(4, 432px);
-  gap: 24px;
+  width: 100%;
+  max-width: 1800px;
   margin: 0 auto;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
   perspective: 1200px;
 }
 
@@ -2915,11 +2916,11 @@ h1 {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  width: 432px;
-  min-width: 432px;
-  max-width: 432px;
-  height: 250px;
-  min-height: 250px;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: clamp(220px, 18vw, 250px);
+  min-height: clamp(220px, 18vw, 250px);
   padding: 84px 24px 22px;
   border: 2px solid;
   border-radius: 24px;
@@ -3287,13 +3288,25 @@ h1 {
 
 @media (max-width: 1120px) {
   .visit-midway-grid {
-    grid-template-columns: repeat(2, 432px);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
 @media (max-width: 1200px) {
   .visit-strip-hero {
     padding-inline: 14px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .visit-midway-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .visit-midway-card {
+    height: clamp(220px, 22vw, 246px);
+    min-height: clamp(220px, 22vw, 246px);
   }
 }
 
@@ -3305,11 +3318,13 @@ h1 {
 
 @media (max-width: 640px) {
   .visit-midway-grid {
-    grid-template-columns: 432px;
+    grid-template-columns: 1fr;
     gap: 18px;
   }
 
   .visit-midway-card {
+    height: auto;
+    min-height: 250px;
     padding-inline: 20px;
   }
 
