@@ -2,22 +2,29 @@
 
 export function HomeVipTextSignup({
   className = "",
-  height = 798,
-  title = "Lake Hickory Haunts VIP text list signup",
+  keyword = "LHH",
+  number = "888-908-1438",
 } = {}) {
   const shellClassName = ["vip-home-signup", className].filter(Boolean).join(" ");
+  const smsHref = `sms:8889081438?body=${encodeURIComponent(keyword)}`;
 
   return (
     <div className={shellClassName}>
-      <iframe
-        className="vip-home-signup-embed"
-        src="https://slicktext.com/widget/v2/ba72069446b05b3579f86202cae19a76"
-        title={title}
-        width="400"
-        height={height}
-        frameBorder="0"
-        loading="lazy"
-      />
+      <div className="vip-home-signup-card">
+        <p className="vip-home-signup-label">Temporary VIP text signup</p>
+        <p className="vip-home-signup-title">
+          Text <strong>{keyword}</strong> to <strong>{number}</strong>
+        </p>
+        <p className="vip-home-signup-copy">
+          Join the Lake Hickory Haunts VIP text list for special sales, discounts, and event updates sent straight to your phone.
+        </p>
+        <a className="vip-home-signup-link" href={smsHref}>
+          Start Texting {keyword}
+        </a>
+        <p className="vip-home-signup-note">
+          If the text button does not open on your device, send <strong>{keyword}</strong> manually to <strong>{number}</strong>.
+        </p>
+      </div>
     </div>
   );
 }

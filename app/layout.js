@@ -28,6 +28,14 @@ export const metadata = {
   applicationName: SITE_NAME,
   title: SITE_NAME,
   description: DEFAULT_DESCRIPTION,
+  icons: {
+    icon: [
+      { url: "/icon", type: "image/png", sizes: "512x512" },
+      { url: "/apple-icon", type: "image/png", sizes: "180x180" },
+    ],
+    shortcut: ["/icon"],
+    apple: [{ url: "/apple-icon", type: "image/png", sizes: "180x180" }],
+  },
   openGraph: {
     siteName: SITE_NAME,
     locale: "en_US",

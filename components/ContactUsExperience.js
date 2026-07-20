@@ -173,9 +173,9 @@ export function ContactUsExperience() {
             <HomeVipTextSignup className="contactx-vip-widget" />
 
             <div className="contactx-note-card">
-              <strong>Complete the opt-in</strong>
+              <strong>Text the keyword instead</strong>
               <p>
-                This form goes directly to SlickText. If they send a confirmation text, reply <strong>YES</strong> to finish joining the VIP list.
+                For now, the fastest way to join is to text <strong>LHH</strong> to <strong>888-908-1438</strong> directly from your phone.
               </p>
             </div>
           </aside>

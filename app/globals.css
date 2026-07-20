@@ -5112,20 +5112,86 @@ h1 {
 }
 
 .vip-home-signup {
-  width: min(100%, 400px);
+  width: min(100%, 480px);
   display: grid;
   justify-self: center;
   margin-top: 16px;
 }
 
-.vip-home-signup-embed {
-  display: block;
+.vip-home-signup-card {
+  display: grid;
+  gap: 16px;
   width: 100%;
-  max-width: 400px;
-  height: 798px;
-  margin: 0 auto;
-  border: 0;
-  background: transparent;
+  padding: 28px 24px;
+  border: 1px solid rgba(157, 247, 221, 0.22);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at top, rgba(73, 215, 208, 0.14), transparent 32%),
+    linear-gradient(180deg, rgba(6, 17, 18, 0.98), rgba(3, 9, 10, 0.98));
+  box-shadow:
+    0 24px 48px rgba(0, 0, 0, 0.28),
+    inset 0 0 0 1px rgba(157, 247, 221, 0.06);
+  text-align: center;
+}
+
+.vip-home-signup-label,
+.vip-home-signup-title,
+.vip-home-signup-copy,
+.vip-home-signup-note {
+  margin: 0;
+}
+
+.vip-home-signup-label {
+  color: var(--mint);
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: 0.98rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.vip-home-signup-title {
+  color: #ffffff;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 0.96;
+}
+
+.vip-home-signup-copy {
+  color: rgba(243, 247, 245, 0.82);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.vip-home-signup-link,
+.vip-home-signup-link:visited {
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  min-height: 54px;
+  padding: 0 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(140, 242, 69, 0.72);
+  background: linear-gradient(180deg, rgba(104, 255, 0, 0.94), rgba(71, 230, 0, 0.92));
+  color: #07110e;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 16px 32px rgba(89, 255, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.vip-home-signup-link:hover,
+.vip-home-signup-link:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 18px 34px rgba(89, 255, 0, 0.28);
+}
+
+.vip-home-signup-note {
+  color: rgba(243, 247, 245, 0.66);
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 .kraken-banner-copy .eyebrow {
