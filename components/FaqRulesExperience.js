@@ -475,7 +475,7 @@ const faqCategories = [
         question: "How do I work at Lake Hickory Haunts?",
         answer: (
           <>
-            Visit the employment <Link href="https://lakehickoryhaunts.com/contact/">application page</Link> to apply.
+            Visit the employment <Link href="/jobs">application page</Link> to apply.
             Applicants must be at least 16 years old.
           </>
         ),

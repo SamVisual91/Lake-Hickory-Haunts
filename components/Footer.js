@@ -7,10 +7,10 @@ const footerGroups = [
   {
     title: "Destinations",
     links: [
-      { label: "Lake Hickory Haunts", href: "https://lakehickoryhaunts.com/" },
-      { label: "Lake Hickory Escape", href: "https://lakehickoryhaunts.com/about-us/" },
+      { label: "Lake Hickory Haunts", href: "/" },
+      { label: "Lake Hickory Escape", href: "/about-us" },
       { label: "Directions", href: "/directions" },
-      { label: "View Attractions", href: "https://lakehickoryhaunts.com/attractions/" },
+      { label: "View Attractions", href: "/attractions" },
     ],
   },
   {
@@ -24,15 +24,15 @@ const footerGroups = [
     title: "Beyond the Haunt",
     links: [
       { label: "About Us", href: "/about-us" },
-      { label: "Careers", href: "https://lakehickoryhaunts.com/contact/" },
+      { label: "Careers", href: "/jobs" },
     ],
   },
   {
     title: "Help",
     links: [
-      { label: "Contact Us", href: "https://lakehickoryhaunts.com/contact/" },
-      { label: "FAQs", href: "https://lakehickoryhaunts.com/faq/" },
-      { label: "Accessibility", href: "https://lakehickoryhaunts.com/contact/" },
+      { label: "Contact Us", href: "/contact" },
+      { label: "FAQs", href: "/faq" },
+      { label: "Accessibility", href: "/contact" },
       { label: "Hours & Events", href: "/hours-events" },
     ],
   },

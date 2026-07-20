@@ -4,9 +4,12 @@ const legacyRedirects = new Map([
   ["/tickets.html", "/tickets"],
   ["/schedule.html", "/hours-events"],
   ["/hours-and-events", "/hours-events"],
+  ["/hours-and-events.html", "/hours-events"],
   ["/attractions.html", "/attractions"],
   ["/characters.html", "/characters"],
   ["/about.html", "/about-us"],
+  ["/awards-and-reviews", "/about-us"],
+  ["/awards-and-reviews.html", "/about-us"],
   ["/new.html", "/characters"],
   ["/get-directions", "/directions"],
   ["/about", "/about-us"],
@@ -28,16 +31,23 @@ const legacyRedirects = new Map([
   ["/Special", "/"],
   ["/tickets.html/1000", "/tickets"],
   ["/character-zone", "/characters"],
+  ["/contact", "/contact"],
   ["/contact.html", "/contact"],
   ["/contact-us", "/contact"],
+  ["/index.html", "/"],
   ["/pictures/lhh-2014", "/about-us"],
+  ["/photos", "/about-us"],
+  ["/photos.html", "/about-us"],
   ["/videos/profiles-season-1", "/characters"],
+  ["/videos", "/"],
+  ["/videos.html", "/"],
   ["/pdf/lakehickoryhauntsapplicationofemployment-01.pdf", "/jobs"],
   ["/www.XscapeNC.com", "/"],
   ["/warnings.html/1000", "/faq"],
   ["/photos-alt", "/about-us"],
   ["/schedule.html/1000", "/hours-events"],
   ["/gallery.html", "/about-us"],
+  ["/covid", "/faq"],
   ["/covid.html", "/"],
   ["/videos/{{ selectedReview.source.url }}", "/"],
   ["/videos/{{ testimonial.source.url }}", "/"],
@@ -71,6 +81,12 @@ function getRedirectDestination(pathname) {
   }
 
   for (const candidate of candidates) {
+    if (/^\/wp-.*\.php$/i.test(candidate)) {
+      return "/";
+    }
+  }
+
+  for (const candidate of candidates) {
     const destination = legacyRedirects.get(candidate);
 
     if (destination) {
@@ -82,13 +98,25 @@ function getRedirectDestination(pathname) {
 }
 
 export function proxy(request) {
-  const destination = getRedirectDestination(request.nextUrl.pathname);
+  const normalizedPath = normalizePath(request.nextUrl.pathname);
+  const legacyDestination = getRedirectDestination(request.nextUrl.pathname);
+  const destination = legacyDestination ?? normalizedPath;
+  const shouldRedirectHost = request.nextUrl.hostname === "lakehickoryhaunts.com";
+  const shouldRedirectPath = destination !== request.nextUrl.pathname;
 
-  if (!destination) {
+  if (!shouldRedirectHost && !shouldRedirectPath) {
     return NextResponse.next();
   }
 
-  return NextResponse.redirect(new URL(destination, request.url), 301);
+  const redirectUrl = new URL(request.url);
+
+  if (shouldRedirectHost) {
+    redirectUrl.hostname = "www.lakehickoryhaunts.com";
+  }
+
+  redirectUrl.pathname = destination;
+
+  return NextResponse.redirect(redirectUrl, 301);
 }
 
 export const config = {

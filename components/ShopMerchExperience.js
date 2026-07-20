@@ -1599,7 +1599,7 @@ export function ShopMerchExperience({ initialMerchData = null, initialAdminEnabl
             <div className="shopx-fashion-nav-links" aria-label="Shop primary">
               <Link href="/">Home</Link>
               <a href="#shopx-collection">Collection</a>
-              <a href="https://lakehickoryhaunts.com/contact/" target="_blank" rel="noreferrer">
+              <a href="/contact">
                 Contact
               </a>
             </div>

@@ -207,8 +207,8 @@ export const visitCards = [
     description:
       "The new entrance is listed as Lake Hickory Haunts Dr, giving this page a clear place for directions, parking notes, and arrival timing guidance.",
     cta: "Get directions",
-    href: "https://lakehickoryhaunts.com/directions/",
-    external: true,
+    href: "/directions",
+    external: false,
   },
   {
     label: "Contact",
@@ -216,8 +216,8 @@ export const visitCards = [
     description:
       "Email: lakehickoryhaunts@gmail.com. Guest questions, policies, disclaimers, and direct contact live together in one clean help lane.",
     cta: "Contact team",
-    href: "https://lakehickoryhaunts.com/contact/",
-    external: true,
+    href: "/contact",
+    external: false,
   },
   {
     label: "Offers",
@@ -225,8 +225,8 @@ export const visitCards = [
     description:
       "The existing text message offer becomes a premium promo block built for flash deals, countdowns, and repeat attendance incentives.",
     cta: "Join text list",
-    href: "https://lakehickoryhaunts.com/",
-    external: true,
+    href: "/",
+    external: false,
   },
 ];
 
@@ -357,7 +357,7 @@ export const ticketPages = [
     kicker: "Make it easy for friend groups, teams, and larger night-out plans",
     description:
       "This page is designed as the clear planning lane for larger groups, with visibility around timing, contact steps, and the kind of visit the group discount is best built for.",
-    primaryCta: { label: "Contact for Group Pricing", href: "https://lakehickoryhaunts.com/contact/" },
+    primaryCta: { label: "Contact for Group Pricing", href: "/contact" },
     quickFacts: [
       { label: "Best For", value: "Friend groups, team outings, and organized visits" },
       { label: "Planning Style", value: "Advance coordination recommended" },
