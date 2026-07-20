@@ -86,7 +86,14 @@ const characterCarouselImages = [
     position: "center 30%",
     quality: 100,
   },
-  { src: "/assets/character-banners/The Creature.png", alt: "The Creature character banner", name: "The Creature" },
+  {
+    src: "/assets/character-banners/the-creature-banner-20260720.jpg",
+    alt: "The Creature character banner",
+    name: "The Creature",
+    fit: "cover",
+    position: "center 30%",
+    quality: 100,
+  },
   {
     src: "/assets/character-banners/Nova Kaine.jpg",
     alt: "Nova Kaine character banner",
