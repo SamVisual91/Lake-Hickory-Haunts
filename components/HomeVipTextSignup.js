@@ -6,7 +6,6 @@ export function HomeVipTextSignup({
   number = "888-908-1438",
 } = {}) {
   const shellClassName = ["vip-home-signup", className].filter(Boolean).join(" ");
-  const smsHref = `sms:8889081438?body=${encodeURIComponent(keyword)}`;
 
   return (
     <div className={shellClassName}>
@@ -18,11 +17,8 @@ export function HomeVipTextSignup({
         <p className="vip-home-signup-copy">
           Join the Lake Hickory Haunts VIP text list for special sales, discounts, and event updates sent straight to your phone.
         </p>
-        <a className="vip-home-signup-link" href={smsHref}>
-          Start Texting {keyword}
-        </a>
         <p className="vip-home-signup-note">
-          If the text button does not open on your device, send <strong>{keyword}</strong> manually to <strong>{number}</strong>.
+          Send <strong>{keyword}</strong> manually to <strong>{number}</strong> to join the VIP text list.
         </p>
       </div>
     </div>
