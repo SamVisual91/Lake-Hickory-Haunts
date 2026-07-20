@@ -75,10 +75,10 @@ export default function WhileYouWaitPage() {
         <section className="visit-strip visit-strip-hero">
           <div className="visit-strip-media">
             <Image
-              src="/assets/while-you-wait-header-lighthouse-20260710.jpg"
+              src="/assets/while-you-wait-header-midway-crowd-20260720.png"
               alt="While You Wait header artwork"
-              width={1920}
-              height={1280}
+              width={2172}
+              height={724}
               priority
               sizes="100vw"
             />
