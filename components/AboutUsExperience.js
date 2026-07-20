@@ -255,7 +255,6 @@ export function AboutUsExperience() {
 
       <div className="about-gallery-shell page-width">
         <div className="about-gallery-header">
-          <p className="about-carousel-label">Photo Gallery</p>
           <h2>About Us Photos</h2>
           <p className="about-gallery-intro">
             A look at the screams, laughs, characters, and guest moments that make Lake

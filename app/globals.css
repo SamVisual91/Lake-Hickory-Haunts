@@ -1468,8 +1468,9 @@ h1 {
 }
 
 .home-promo-section {
-  width: max-content;
-  max-width: none;
+  width: 100%;
+  max-width: 100%;
+  justify-self: stretch;
 }
 
 .home-attraction-section {
@@ -1479,7 +1480,17 @@ h1 {
 }
 
 .home-promo-section .promo-grid {
-  grid-template-columns: repeat(4, 350px);
+  width: 100%;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  justify-content: stretch;
+}
+
+.home-promo-section .promo-card {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  justify-self: stretch;
 }
 
 .feature-grid,
@@ -1927,7 +1938,7 @@ h1 {
 .promo-card--events .promo-subtext {
   color: #ffffff;
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: none;
 }
 
 .promo-card:hover,
@@ -1965,7 +1976,7 @@ h1 {
 .promo-card:focus-within .promo-subtext {
   color: #ffffff;
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: none;
 }
 
 .promo-card--vip {
@@ -2063,7 +2074,7 @@ h1 {
 .promo-card--vip .promo-subtext {
   color: #ffffff;
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: none;
 }
 
 .promo-card--vip .promo-link {
@@ -2382,21 +2393,25 @@ h1 {
 
 .promo-copy {
   position: absolute;
-  top: 62px;
-  left: 22px;
-  right: 22px;
-  bottom: 104px;
+  top: 58px;
+  left: 18px;
+  right: 18px;
+  bottom: 96px;
   z-index: 2;
-  display: block;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  gap: 14px;
   text-align: center;
   max-width: none;
   pointer-events: none;
+  min-width: 0;
 }
 
 .promo-title {
   color: var(--promo-title-color);
   display: block;
-  max-width: 260px;
+  max-width: min(264px, 100%);
   margin-inline: auto;
   font-family: "Oswald", "Bebas Neue", "Arial Narrow", sans-serif;
   font-size: clamp(1.9rem, 3vw, 2.5rem);
@@ -2408,6 +2423,7 @@ h1 {
     0 0 18px color-mix(in srgb, var(--promo-accent-text) 28%, transparent),
     0 6px 20px rgba(0, 0, 0, 0.5);
   transition: color 150ms ease, text-shadow 180ms ease;
+  overflow-wrap: anywhere;
 }
 
 .promo-title--stacked {
@@ -2419,20 +2435,22 @@ h1 {
 }
 
 .promo-subtext {
-  position: absolute;
-  left: 50%;
-  bottom: 0;
+  position: relative;
+  left: auto;
+  bottom: auto;
   margin: 0;
   color: var(--promo-accent-subtext);
-  width: min(250px, 100%);
+  width: min(264px, calc(100% - 4px));
   font-size: 0.92rem;
   line-height: 1.45;
   text-shadow:
     0 2px 8px rgba(0, 0, 0, 0.7),
     0 8px 24px rgba(0, 0, 0, 0.5);
   opacity: 1;
-  transform: translate(-50%, 0);
+  transform: none;
   transition: opacity 240ms ease, transform 340ms cubic-bezier(0.18, 0.82, 0.22, 1), color 220ms ease;
+  overflow-wrap: anywhere;
+  margin-top: auto;
 }
 
 .promo-subtext--list {
@@ -2446,15 +2464,15 @@ h1 {
 
 .promo-link {
   position: absolute;
-  left: 22px;
-  right: 22px;
-  bottom: 22px;
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
   z-index: 2;
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  min-height: 68px;
-  padding: 0 20px;
+  min-height: 64px;
+  padding: 0 18px;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 0;
   color: var(--promo-accent-text);
@@ -2464,7 +2482,7 @@ h1 {
     0 12px 30px rgba(0, 0, 0, 0.28),
     inset 0 1px 0 rgba(255, 255, 255, 0.16);
   font-family: "Oswald", "Bebas Neue", "Arial Narrow", sans-serif;
-  font-size: 1.24rem;
+  font-size: 1.16rem;
   font-weight: 800;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2478,6 +2496,7 @@ h1 {
     border-color 220ms ease,
     background-color 220ms ease,
     box-shadow 220ms ease;
+  min-width: 0;
 }
 
 .promo-card:hover .promo-link,
