@@ -2,7 +2,6 @@ import { buildAbsoluteUrl, buildSitemapIndexXml } from "../../lib/seo";
 
 const sitemapEntries = [
   { loc: buildAbsoluteUrl("/page-sitemap.xml") },
-  { loc: buildAbsoluteUrl("/post-sitemap.xml") },
   { loc: buildAbsoluteUrl("/local-sitemap.xml") },
 ];
 

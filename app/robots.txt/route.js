@@ -7,10 +7,6 @@ Disallow: /api/
 Disallow: /tickets/general-admission-preview
 
 Sitemap: ${buildAbsoluteUrl("/sitemap.xml")}
-Sitemap: ${buildAbsoluteUrl("/sitemap_index.xml")}
-Sitemap: ${buildAbsoluteUrl("/page-sitemap.xml")}
-Sitemap: ${buildAbsoluteUrl("/post-sitemap.xml")}
-Sitemap: ${buildAbsoluteUrl("/local-sitemap.xml")}
 `;
 
   return new Response(body, {

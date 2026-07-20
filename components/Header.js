@@ -24,6 +24,9 @@ const mobileUtilityItems = [
   { label: "Hours and Events", href: "/hours-events" },
 ];
 
+const jobsApplicationUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSff7tZNJSOAJ-qrkF13y2ptqF4mcOZDW9OiSYQMGdLgWIY6ug/viewform";
+
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -111,16 +114,18 @@ export function Header() {
             </button>
 
             <div className="nav-mobile-actions">
-              <Link
+              <a
                 className="nav-mobile-apply-link"
-                href="/jobs"
+                href={jobsApplicationUrl}
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => {
                   setOpen(false);
                   setFaqOpen(false);
                 }}
               >
                 Apply Now
-              </Link>
+              </a>
 
               <Link
                 className="nav-mobile-ticket-button"
@@ -254,9 +259,11 @@ export function Header() {
             </div>
 
             <div className="nav-header-actions">
-              <Link
+              <a
                 className="nav-jobs-link"
-                href="/jobs"
+                href={jobsApplicationUrl}
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => {
                   setOpen(false);
                   setFaqOpen(false);
@@ -269,7 +276,7 @@ export function Header() {
                   height={834}
                 />
                 <span className="sr-only">Apply now</span>
-              </Link>
+              </a>
 
               <Link
                 className="nav-cta nav-cta-tickets"
