@@ -2001,7 +2001,7 @@ h1 {
 }
 
 .promo-card--vip .promo-title {
-  color: transparent;
+  color: var(--promo-accent-text);
   display: grid;
   justify-items: center;
   gap: 0.38rem;
@@ -2015,10 +2015,12 @@ h1 {
     #fff1b6 74%,
     #c88922 100%
   );
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   text-shadow:
-    0 0 24px rgba(255, 221, 126, 0.26),
+    0 0 20px color-mix(in srgb, var(--promo-accent-text) 28%, transparent),
+    0 0 24px rgba(255, 221, 126, 0.34),
     0 6px 20px rgba(0, 0, 0, 0.54);
 }
 
@@ -2029,10 +2031,10 @@ h1 {
   line-height: 0.84;
   letter-spacing: 0.18em;
   text-shadow:
-    0 0 28px rgba(255, 222, 124, 0.32),
-    0 0 52px rgba(232, 168, 44, 0.2),
+    0 0 32px rgba(255, 222, 124, 0.42),
+    0 0 58px rgba(232, 168, 44, 0.28),
     0 10px 24px rgba(0, 0, 0, 0.56);
-  filter: drop-shadow(0 0 10px rgba(255, 220, 112, 0.22));
+  filter: drop-shadow(0 0 14px rgba(255, 220, 112, 0.34));
 }
 
 .promo-card--vip .promo-title-word--pass {
@@ -2049,7 +2051,7 @@ h1 {
   box-shadow:
     inset 0 1px 0 rgba(255, 248, 220, 0.34),
     0 0 0 1px rgba(255, 210, 106, 0.08),
-    0 0 22px rgba(232, 168, 44, 0.16);
+    0 0 28px rgba(232, 168, 44, 0.26);
   font-size: clamp(1.02rem, 1.7vw, 1.28rem);
   font-weight: 700;
   line-height: 1;
@@ -2057,7 +2059,7 @@ h1 {
   text-indent: 0.34em;
   text-transform: uppercase;
   text-shadow:
-    0 0 16px rgba(255, 228, 144, 0.22),
+    0 0 20px rgba(255, 228, 144, 0.32),
     0 4px 14px rgba(0, 0, 0, 0.48);
 }
 

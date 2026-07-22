@@ -96,8 +96,6 @@ export function AttractionsExplorer() {
       </div>
       <div className="attraction-picker">
         <div className="attraction-picker-backdrop" aria-hidden="true" />
-        <p className="attraction-picker-heading">Select your attraction if you dare</p>
-
         <button
           type="button"
           className="attraction-picker-arrow attraction-picker-arrow-left"
