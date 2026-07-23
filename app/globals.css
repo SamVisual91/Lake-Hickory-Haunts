@@ -9623,7 +9623,7 @@ h1 {
   justify-items: center;
   gap: 10px;
   padding-top: 0;
-  margin-top: -22px;
+  margin-top: -38px;
 }
 
 .ga2-shell-booking .ga2-next-step-heading {
@@ -9785,10 +9785,10 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
-  gap: 12px;
+  gap: 8px;
   align-items: start;
   padding: 0;
-  margin-top: -28px;
+  margin-top: -52px;
 }
 
 .ga2-booking-calendar,
