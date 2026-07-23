@@ -71,7 +71,7 @@ const scheduleBands = [
 const featuredEvents = [
   {
     name: "Bourbon Sons Concert: September 25th",
-    timing: "",
+    timing: "8PM-9:30PM",
     description: "Included with Lake Hickory Haunts admission",
   },
   {
@@ -97,12 +97,12 @@ const featuredEvents = [
   },
   {
     name: "Small Town Titans Concert: October 30th and 31st",
-    timing: "",
+    timing: "8PM-9:30PM",
     description: "Included with Lake Hickory Haunts admission",
   },
   {
     name: "Contagious Concert: November 7th",
-    timing: "",
+    timing: "8PM-9:30PM",
     description: "Included with Lake Hickory Haunts admission",
   },
   {
