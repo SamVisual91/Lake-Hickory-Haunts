@@ -2016,7 +2016,6 @@ h1 {
     #fff1b6 74%,
     #c88922 100%
   );
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
   text-shadow:
@@ -2128,7 +2127,6 @@ h1 {
 .promo-card--vip:hover .promo-title,
 .promo-card--vip:focus-within .promo-title {
   color: var(--promo-accent-text);
-  -webkit-text-fill-color: transparent;
   text-shadow:
     0 0 20px color-mix(in srgb, var(--promo-accent-text) 28%, transparent),
     0 0 24px rgba(255, 221, 126, 0.34),
