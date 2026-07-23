@@ -9488,7 +9488,7 @@ h1 {
 
 .ga2-shell-booking .ga2-hero {
   min-height: clamp(260px, 30vw, 420px);
-  padding-bottom: 12px;
+  padding-bottom: 0;
 }
 
 .ga2-shell-booking .ga2-grid-lite {
@@ -9623,7 +9623,7 @@ h1 {
   justify-items: center;
   gap: 10px;
   padding-top: 0;
-  margin-top: -12px;
+  margin-top: -22px;
 }
 
 .ga2-shell-booking .ga2-next-step-heading {
@@ -9785,10 +9785,10 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
-  gap: 16px;
+  gap: 12px;
   align-items: start;
   padding: 0;
-  margin-top: -14px;
+  margin-top: -28px;
 }
 
 .ga2-booking-calendar,
@@ -12695,7 +12695,7 @@ h1 {
 
   .ga2-shell-booking .ga2-hero {
     min-height: clamp(240px, 48vw, 340px);
-    padding-bottom: 10px;
+    padding-bottom: 0;
   }
 
   .ga2-lede {
