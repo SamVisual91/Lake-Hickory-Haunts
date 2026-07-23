@@ -9320,7 +9320,7 @@ h1 {
   max-width: none;
   justify-items: center;
   text-align: center;
-  padding-top: clamp(20px, 3vw, 42px);
+  padding-top: clamp(30px, 4vw, 56px);
 }
 .ga2-eyebrow {
   margin: 0;
@@ -9623,7 +9623,7 @@ h1 {
   justify-items: center;
   gap: 10px;
   padding-top: 0;
-  margin-top: -22px;
+  margin-top: -28px;
 }
 
 .ga2-shell-booking .ga2-next-step-heading {
@@ -9790,7 +9790,7 @@ h1 {
   gap: 10px;
   align-items: start;
   padding: 0;
-  margin-top: -24px;
+  margin-top: -44px;
 }
 
 .ga2-booking-calendar,
@@ -12706,7 +12706,7 @@ h1 {
   }
 
   .ga2-copy {
-    padding-top: 18px;
+    padding-top: 28px;
   }
 
   .ga2-time-grid,
