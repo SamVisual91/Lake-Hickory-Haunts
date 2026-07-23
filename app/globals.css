@@ -7387,7 +7387,7 @@ h1 {
 
 .privacy-policy-page h1 {
   max-width: none;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .legal-kicker {
@@ -9646,7 +9646,7 @@ h1 {
   width: min(340px, 72vw);
   height: 12px;
   margin-top: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   background:
     linear-gradient(180deg, transparent 0 34%, var(--ga2-acid) 34% 66%, transparent 66%),
     repeating-linear-gradient(
@@ -9806,6 +9806,7 @@ h1 {
 
 .ga2-booking-monthbar {
   display: flex;
+  margin-top: 6px;
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -12872,6 +12873,7 @@ h1 {
 
   .ga2-booking-monthbar {
     gap: 18px;
+    margin-top: 8px;
   }
 
   .ga2-booking-recap {
