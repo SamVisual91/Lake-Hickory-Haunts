@@ -9272,8 +9272,8 @@ h1 {
   grid-template-columns: 1fr;
   gap: 20px;
   align-items: start;
-  min-height: clamp(320px, 38vw, 540px);
-  padding: clamp(24px, 2.8vw, 40px) clamp(16px, 1.6vw, 24px) clamp(8px, 1vw, 16px);
+  min-height: clamp(250px, 30vw, 420px);
+  padding: clamp(24px, 2.8vw, 40px) clamp(16px, 1.6vw, 24px) 0;
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(3, 20, 24, 0.18) 0%, rgba(2, 14, 18, 0.2) 16%, rgba(0, 0, 0, 0.74) 68%, rgba(0, 0, 0, 0.96) 100%),
@@ -9487,8 +9487,8 @@ h1 {
 }
 
 .ga2-shell-booking .ga2-hero {
-  min-height: clamp(260px, 30vw, 420px);
-  padding-bottom: 12px;
+  min-height: clamp(220px, 26vw, 340px);
+  padding-bottom: 0;
 }
 
 .ga2-shell-booking .ga2-grid-lite {
@@ -9622,7 +9622,8 @@ h1 {
   display: grid;
   justify-items: center;
   gap: 10px;
-  padding-top: 12px;
+  padding-top: 0;
+  margin-top: -4px;
 }
 
 .ga2-shell-booking .ga2-next-step-heading {
@@ -9784,9 +9785,10 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   justify-items: center;
-  gap: 24px;
+  gap: 20px;
   align-items: start;
-  padding: 8px 0 0;
+  padding: 0;
+  margin-top: -6px;
 }
 
 .ga2-booking-calendar,
@@ -12692,8 +12694,8 @@ h1 {
   }
 
   .ga2-shell-booking .ga2-hero {
-    min-height: clamp(240px, 48vw, 340px);
-    padding-bottom: 10px;
+    min-height: clamp(180px, 32vw, 230px);
+    padding-bottom: 0;
   }
 
   .ga2-lede {
@@ -22052,22 +22054,4 @@ h1 {
     transform: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
