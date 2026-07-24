@@ -255,11 +255,7 @@ export function AboutUsExperience() {
 
       <div className="about-gallery-shell page-width">
         <div className="about-gallery-header">
-          <h2>About Us Photos</h2>
-          <p className="about-gallery-intro">
-            A look at the screams, laughs, characters, and guest moments that make Lake
-            Hickory Haunts unforgettable. Click any photo to open it in a full lightbox view.
-          </p>
+          <h2>A look at the screams, laughs, characters, and guest moments that make Lake Hickory Haunts unforgettable.</h2>
         </div>
 
         <div className="about-gallery-grid">
