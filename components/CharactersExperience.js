@@ -337,6 +337,30 @@ const characterCarouselImages = [
     position: "45% 24%",
     quality: 100,
   },
+  {
+    src: "/assets/character-banners/Sue-E-2026.jpg",
+    alt: "Sue E. character banner",
+    name: "Sue E.",
+    fit: "cover",
+    position: "67% center",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Mad-Professor-2026.jpg",
+    alt: "Mad Professor character banner",
+    name: "Mad Professor",
+    fit: "cover",
+    position: "63% 28%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Cthulhu-2026.jpg",
+    alt: "Cthulhu character banner",
+    name: "Cthulhu",
+    fit: "cover",
+    position: "52% 22%",
+    quality: 100,
+  },
 ];
 
 const placeholderBanners = Array.from({ length: 0 }, (_, index) => ({
