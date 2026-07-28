@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const characterCarouselImages = [
   {
-    src: "/assets/character-banners/Boss.png",
+    src: "/assets/character-banners/Boss the Clown.jpg",
     alt: "Boss the Clown character banner",
     name: "Boss the Clown",
     fit: "cover",
@@ -25,7 +25,7 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/Shepherd.png",
+    src: "/assets/character-banners/Shepherd.jpg",
     alt: "Shepherd character banner",
     name: "Shepherd",
     fit: "cover",
