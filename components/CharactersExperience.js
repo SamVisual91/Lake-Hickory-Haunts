@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const characterCarouselImages = [
   {
-    src: "/assets/character-banners/Boss the Clown.jpg",
+    src: "/assets/character-banners/Boss.png",
     alt: "Boss the Clown character banner",
     name: "Boss the Clown",
     fit: "cover",
@@ -25,7 +25,7 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/Shepherd.jpg",
+    src: "/assets/character-banners/Shepherd.png",
     alt: "Shepherd character banner",
     name: "Shepherd",
     fit: "cover",
@@ -95,7 +95,7 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/Nova Kaine.jpg",
+    src: "/assets/character-banners/Nova Kaine.png",
     alt: "Nova Kaine character banner",
     name: "Nova Kaine",
     fit: "cover",
@@ -126,7 +126,14 @@ const characterCarouselImages = [
     fit: "cover",
     position: "center 34%",
   },
-  { src: "/assets/character-banners/Twigsaw.png", alt: "Twigsaw character banner", name: "Twigsaw" },
+  {
+    src: "/assets/character-banners/Twigsaw-2026.jpg",
+    alt: "Twigsaw character banner",
+    name: "Twigsaw",
+    fit: "cover",
+    position: "60% 32%",
+    quality: 100,
+  },
   {
     src: "/assets/character-banners/Ripr.jpg",
     alt: "Ripr character banner",
@@ -160,16 +167,30 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/Grave Digger.jpg",
+    src: "/assets/character-banners/Grave Digger.png",
     alt: "Grave Digger character banner",
     name: "Grave Digger",
     fit: "cover",
     position: "center 28%",
     quality: 100,
   },
-  { src: "/assets/character-banners/Precious.jpg", alt: "Precious character banner", name: "Precious", fit: "cover", position: "center 34%", quality: 100 },
-  { src: "/assets/character-banners/Pumpkin King.png", alt: "Pumpkin King character banner", name: "Pumpkin King" },
-  { src: "/assets/character-banners/Squeeks.png", alt: "Squeeks character banner", name: "Squeeks" },
+  { src: "/assets/character-banners/Precious.jpg", alt: "Precious character banner", name: "Precious", fit: "cover", position: "68% center", quality: 100 },
+  {
+    src: "/assets/character-banners/Pumpkin-King-2026.jpg",
+    alt: "Pumpkin King character banner",
+    name: "Pumpkin King",
+    fit: "cover",
+    position: "39% center",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Squeeks-2026.jpg",
+    alt: "Squeeks character banner",
+    name: "Squeeks",
+    fit: "cover",
+    position: "center 20%",
+    quality: 100,
+  },
   {
     src: "/assets/character-banners/Gouda.jpg",
     alt: "Gouda character banner",
@@ -358,7 +379,7 @@ export function CharactersExperience() {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  sizes="(max-width: 640px) 88vw, (max-width: 900px) 44vw, (max-width: 1280px) 30vw, 22vw"
+                  sizes="(max-width: 640px) 88vw, (max-width: 900px) 44vw, (max-width: 1280px) 31vw, 25vw"
                   quality={image.quality ?? 100}
                   priority={index < 6}
                   className={image.fit === "cover" ? "character-banner-image-cover" : "character-banner-image-contain"}
