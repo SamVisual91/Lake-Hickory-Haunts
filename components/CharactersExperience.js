@@ -136,11 +136,11 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/The Diver.jpg",
+    src: "/assets/character-banners/The-Diver-2026.jpg",
     alt: "The Diver character banner",
     name: "The Diver",
     fit: "cover",
-    position: "center 28%",
+    position: "center 24%",
     quality: 100,
   },
   {
@@ -152,11 +152,11 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/Eden.jpg",
+    src: "/assets/character-banners/Eden-2026.jpg",
     alt: "Eden character banner",
     name: "Eden",
     fit: "cover",
-    position: "center 30%",
+    position: "center 36%",
     quality: 100,
   },
   {
@@ -167,7 +167,7 @@ const characterCarouselImages = [
     position: "center 28%",
     quality: 100,
   },
-  { src: "/assets/character-banners/Precious.png", alt: "Precious character banner", name: "Precious" },
+  { src: "/assets/character-banners/Precious.jpg", alt: "Precious character banner", name: "Precious", fit: "cover", position: "center 34%", quality: 100 },
   { src: "/assets/character-banners/Pumpkin King.png", alt: "Pumpkin King character banner", name: "Pumpkin King" },
   { src: "/assets/character-banners/Squeeks.png", alt: "Squeeks character banner", name: "Squeeks" },
   {
@@ -270,11 +270,11 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/Headless Helga.jpg",
+    src: "/assets/character-banners/Headless-Helga-2026.jpg",
     alt: "Headless Helga character banner",
     name: "Headless Helga",
     fit: "cover",
-    position: "center 30%",
+    position: "center 38%",
     quality: 100,
   },
   {
@@ -283,6 +283,30 @@ const characterCarouselImages = [
     name: "Cupcake",
     fit: "cover",
     position: "center 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/The-Sheriff-2026.jpg",
+    alt: "The Sheriff character banner",
+    name: "The Sheriff",
+    fit: "cover",
+    position: "center 34%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Fadris-2026.jpg",
+    alt: "Fadris character banner",
+    name: "Fadris",
+    fit: "cover",
+    position: "35% 30%",
+    quality: 100,
+  },
+  {
+    src: "/assets/character-banners/Boogeyman-2026.jpg",
+    alt: "Boogeyman character banner",
+    name: "Boogeyman",
+    fit: "cover",
+    position: "45% 24%",
     quality: 100,
   },
 ];
