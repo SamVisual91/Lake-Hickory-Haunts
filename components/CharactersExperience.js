@@ -335,7 +335,7 @@ export function CharactersExperience() {
                   alt={image.alt}
                   fill
                   sizes="(max-width: 640px) 88vw, (max-width: 900px) 44vw, (max-width: 1280px) 30vw, 22vw"
-                  quality={image.quality}
+                  quality={image.quality ?? 100}
                   priority={index < 6}
                   className={image.fit === "cover" ? "character-banner-image-cover" : "character-banner-image-contain"}
                   style={image.position ? { objectPosition: image.position } : undefined}
