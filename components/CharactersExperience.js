@@ -259,8 +259,8 @@ const characterCarouselImages = [
   },
   {
     src: "/assets/character-banners/Guppy.jpg",
-    alt: "Guppy character banner",
-    name: "Guppy",
+    alt: "The Siren character banner",
+    name: "The Siren",
     fit: "cover",
     position: "center 28%",
     quality: 100,
@@ -306,11 +306,11 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
-    src: "/assets/character-banners/Cupcake.jpg",
+    src: "/assets/character-banners/Cupcake-2026.jpg",
     alt: "Cupcake character banner",
     name: "Cupcake",
     fit: "cover",
-    position: "center 30%",
+    position: "40% 24%",
     quality: 100,
   },
   {
