@@ -5,6 +5,23 @@ const legacyRedirects = new Map([
   ["/schedule.html", "/hours-events"],
   ["/hours-and-events", "/hours-events"],
   ["/hours-and-events.html", "/hours-events"],
+  ["/plan-the-ultimate-group-outing", "/tickets/group-discount-10-plus"],
+  ["/lake-hickory-haunts-more-than-a-haunted-house", "/about-us"],
+  ["/whats-happening-at-lake-hickory-haunts-2025", "/hours-events"],
+  ["/experience-the-thrilling-voodoo-bayou", "/attractions/voodoo-bayou"],
+  ["/team", "/about-us"],
+  ["/links", "/"],
+  ["/category/attractions", "/attractions"],
+  ["/family-fright-night-at-lake-hickory-haunts", "/hours-events"],
+  ["/the-unrivaled-haunted-attraction", "/about-us"],
+  ["/attractions/descent", "/attractions/decent"],
+  ["/exploring-the-depths-of-dread-unveiling-north-carolinas-most-haunted-attraction", "/attractions/decent"],
+  ["/category/charlotte-nc-haunts", "/"],
+  ["/discover-the-ultimate-haunted-experience-at-lake-hickory-haunts-a-must-visit-for-charlotte-residents", "/"],
+  ["/attractions/blog", "/attractions"],
+  ["/attractions/blog/page/2", "/attractions"],
+  ["/more-than-a-haunted-house", "/about-us"],
+  ["/get-ready-for-opening-night-at-lake-hickory-haunts-charlottes-top-haunted-destination", "/hours-events"],
   ["/attractions.html", "/attractions"],
   ["/characters.html", "/characters"],
   ["/about.html", "/about-us"],
@@ -115,6 +132,10 @@ export function proxy(request) {
   }
 
   redirectUrl.pathname = destination;
+
+  if (request.nextUrl.searchParams.has("et_blog")) {
+    redirectUrl.searchParams.delete("et_blog");
+  }
 
   return NextResponse.redirect(redirectUrl, 301);
 }
