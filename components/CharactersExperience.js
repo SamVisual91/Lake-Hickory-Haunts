@@ -79,6 +79,14 @@ const characterCarouselImages = [
     quality: 100,
   },
   {
+    src: "/assets/character-banners/Bonnie-2026.jpg",
+    alt: "Bonnie character banner",
+    name: "Bonnie",
+    fit: "cover",
+    position: "50% 24%",
+    quality: 100,
+  },
+  {
     src: "/assets/character-banners/Rat.jpg",
     alt: "Rat character banner",
     name: "Rat",
