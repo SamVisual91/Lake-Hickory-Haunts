@@ -280,6 +280,7 @@ export function AttractionDetailPage({ attraction }) {
     `Step deeper into ${attraction.shortTitle ?? attraction.title}. ${tagline ?? "The night only gets worse from here."}`;
   const detailVideoEmbedUrl = attraction.detailVideoEmbedUrl ?? null;
   const videoUpdate = attraction.videoUpdate ?? null;
+  const hideDetailVideo = attraction.hideDetailVideo === true;
   const isShipwreckedTheme = attraction.detailThemeClass === "detail-theme-shipwrecked";
   const hasHeroBanner = Boolean(attraction.heroBannerImage);
   const detailVideoSources =
@@ -287,13 +288,15 @@ export function AttractionDetailPage({ attraction }) {
     (attraction.detailVideoSrc
       ? [{ src: attraction.detailVideoSrc, type: attraction.detailVideoType }]
       : []);
-  const hasDetailVideo = Boolean(detailVideoEmbedUrl) || detailVideoSources.length > 0;
+  const hasDetailVideo = !hideDetailVideo && (Boolean(detailVideoEmbedUrl) || detailVideoSources.length > 0);
   const videoPoster =
-    attraction.detailVideoPoster ??
-    attraction.heroImage ??
-    gallery[0]?.imageSrc ??
-    attraction.heroBannerImage ??
-    null;
+    hideDetailVideo
+      ? null
+      : attraction.detailVideoPoster ??
+        attraction.heroImage ??
+        gallery[0]?.imageSrc ??
+        attraction.heroBannerImage ??
+        null;
   const selectedGalleryItem =
     selectedGalleryIndex === null ? null : galleryLightboxItems[selectedGalleryIndex] ?? null;
 
@@ -466,62 +469,64 @@ export function AttractionDetailPage({ attraction }) {
           </div>
 
           <div className="attraction-detail-artcolumn">
-            <div className={`attraction-detail-video-shell ${hasDetailVideo ? "has-video" : "is-placeholder"}`.trim()}>
-              <div className="attraction-detail-video-frame">
-                {detailVideoEmbedUrl ? (
-                  <iframe
-                    className="attraction-detail-video attraction-detail-video-embed"
-                    src={detailVideoEmbedUrl}
-                    title={`${attraction.shortTitle ?? attraction.title} video`}
-                    allow="autoplay; encrypted-media; picture-in-picture"
-                    allowFullScreen
-                    referrerPolicy="strict-origin-when-cross-origin"
-                  />
-                ) : hasDetailVideo ? (
-                  <video
-                    className="attraction-detail-video"
-                    controls
-                    preload="metadata"
-                    playsInline
-                    poster={videoPoster ?? undefined}
-                  >
-                    {detailVideoSources.map((source, index) => (
-                      <source
-                        key={`${source.src}-${index}`}
-                        src={source.src}
-                        type={source.type ?? undefined}
-                      />
-                    ))}
-                  </video>
-                ) : videoPoster ? (
-                  <div className="attraction-detail-video-posterwrap">
-                    <Image
-                      src={videoPoster}
-                      alt={`${attraction.shortTitle ?? attraction.title} preview still`}
-                      fill
-                      sizes="(max-width: 1080px) 100vw, 42vw"
-                      className="attraction-detail-video-poster"
+            {!hideDetailVideo ? (
+              <div className={`attraction-detail-video-shell ${hasDetailVideo ? "has-video" : "is-placeholder"}`.trim()}>
+                <div className="attraction-detail-video-frame">
+                  {detailVideoEmbedUrl ? (
+                    <iframe
+                      className="attraction-detail-video attraction-detail-video-embed"
+                      src={detailVideoEmbedUrl}
+                      title={`${attraction.shortTitle ?? attraction.title} video`}
+                      allow="autoplay; encrypted-media; picture-in-picture"
+                      allowFullScreen
+                      referrerPolicy="strict-origin-when-cross-origin"
                     />
-                  </div>
-                ) : (
-                  <div className="attraction-detail-video-fallback" aria-hidden="true" />
-                )}
-
-                <div className="attraction-detail-video-overlay" aria-hidden="true">
-                  {!hasDetailVideo ? (
-                    <span className="attraction-detail-video-playbadge">
-                      <span className="attraction-detail-video-playtriangle" />
-                    </span>
-                  ) : null}
-                  {!hasDetailVideo ? (
-                    <div className="attraction-detail-video-copy">
-                      <strong>Video Slot Ready</strong>
-                      <span>Add attraction footage here</span>
+                  ) : hasDetailVideo ? (
+                    <video
+                      className="attraction-detail-video"
+                      controls
+                      preload="metadata"
+                      playsInline
+                      poster={videoPoster ?? undefined}
+                    >
+                      {detailVideoSources.map((source, index) => (
+                        <source
+                          key={`${source.src}-${index}`}
+                          src={source.src}
+                          type={source.type ?? undefined}
+                        />
+                      ))}
+                    </video>
+                  ) : videoPoster ? (
+                    <div className="attraction-detail-video-posterwrap">
+                      <Image
+                        src={videoPoster}
+                        alt={`${attraction.shortTitle ?? attraction.title} preview still`}
+                        fill
+                        sizes="(max-width: 1080px) 100vw, 42vw"
+                        className="attraction-detail-video-poster"
+                      />
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="attraction-detail-video-fallback" aria-hidden="true" />
+                  )}
+
+                  <div className="attraction-detail-video-overlay" aria-hidden="true">
+                    {!hasDetailVideo ? (
+                      <span className="attraction-detail-video-playbadge">
+                        <span className="attraction-detail-video-playtriangle" />
+                      </span>
+                    ) : null}
+                    {!hasDetailVideo ? (
+                      <div className="attraction-detail-video-copy">
+                        <strong>Video Slot Ready</strong>
+                        <span>Add attraction footage here</span>
+                      </div>
+                    ) : null}
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : null}
 
             <UnderVideoMeta
               videoUpdate={videoUpdate}

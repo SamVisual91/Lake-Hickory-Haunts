@@ -579,6 +579,7 @@ export const attractions = [
     subtitle: "Moonlit Haunting",
     tagline: "Where the dead still keep watch.",
     theme: "abandoned western ghost town under full moon",
+    hideDetailVideo: true,
     className: "theme-ghost-town",
     detailThemeClass: "detail-theme-ghost-town",
     detailSignLabel: "Ghost Town",
@@ -800,6 +801,7 @@ if (naturesRevenge) {
 const descent = attractions.find((attraction) => attraction.slug === "decent");
 
 if (descent) {
+  descent.hideDetailVideo = true;
   descent.subtitle = null;
   descent.heroBannerImage = "/assets/descent-hero-banner.webp";
   descent.videoUpdate = [
