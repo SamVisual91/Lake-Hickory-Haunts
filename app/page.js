@@ -45,7 +45,7 @@ export default function HomePage() {
         <p className="hero-season-label">WHAT&apos;S NEW THIS YEAR</p>
         <div className="hero-tabs">
           <Link className="hero-tab is-active" href="/attractions/shipwrecked">Shipwrecked</Link>
-          <Link className="hero-tab" href="/attractions/decent">Descent</Link>
+          <Link className="hero-tab" href="/attractions/descent">Descent</Link>
           <Link className="hero-tab" href="/attractions/aquaphobia">Aquaphobia Expansion</Link>
         </div>
       </section>

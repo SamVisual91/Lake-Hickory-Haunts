@@ -464,7 +464,7 @@ export const attractions = [
   },
   {
     id: 9,
-    slug: "decent",
+    slug: "descent",
     title: "Descent",
     lines: ["DESCENT"],
     shortTitle: "Descent",
@@ -798,7 +798,7 @@ if (naturesRevenge) {
   ];
 }
 
-const descent = attractions.find((attraction) => attraction.slug === "decent");
+const descent = attractions.find((attraction) => attraction.slug === "descent");
 
 if (descent) {
   descent.hideDetailVideo = true;
