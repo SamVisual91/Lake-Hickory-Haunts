@@ -579,7 +579,6 @@ export const attractions = [
     subtitle: "Moonlit Haunting",
     tagline: "Where the dead still keep watch.",
     theme: "abandoned western ghost town under full moon",
-    selected: true,
     className: "theme-ghost-town",
     detailThemeClass: "detail-theme-ghost-town",
     detailSignLabel: "Ghost Town",
