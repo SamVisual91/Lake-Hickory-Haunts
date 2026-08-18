@@ -24,9 +24,6 @@ const mobileUtilityItems = [
   { label: "Hours and Events", href: "/hours-events" },
 ];
 
-const jobsApplicationUrl =
-  "https://docs.google.com/forms/d/e/1FAIpQLSff7tZNJSOAJ-qrkF13y2ptqF4mcOZDW9OiSYQMGdLgWIY6ug/viewform";
-
 export function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -114,19 +111,6 @@ export function Header() {
             </button>
 
             <div className="nav-mobile-actions">
-              <a
-                className="nav-mobile-apply-link"
-                href={jobsApplicationUrl}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => {
-                  setOpen(false);
-                  setFaqOpen(false);
-                }}
-              >
-                Apply Now
-              </a>
-
               <Link
                 className="nav-mobile-ticket-button"
                 href="/tickets"
@@ -259,25 +243,6 @@ export function Header() {
             </div>
 
             <div className="nav-header-actions">
-              <a
-                className="nav-jobs-link"
-                href={jobsApplicationUrl}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => {
-                  setOpen(false);
-                  setFaqOpen(false);
-                }}
-              >
-                <Image
-                  src="/assets/jobs-monsters-wanted.png"
-                  alt="Monsters Wanted apply now"
-                  width={2048}
-                  height={834}
-                />
-                <span className="sr-only">Apply now</span>
-              </a>
-
               <Link
                 className="nav-cta nav-cta-tickets"
                 href="/tickets"
