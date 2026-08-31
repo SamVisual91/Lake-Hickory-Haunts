@@ -685,7 +685,7 @@ const shipwrecked = attractions.find((attraction) => attraction.slug === "shipwr
 
 if (shipwrecked) {
   shipwrecked.subtitle = null;
-  shipwrecked.detailVideoEmbedUrl = "https://www.youtube.com/embed/XKe07X-7MS0?controls=1&rel=0&modestbranding=1&playsinline=1";
+  shipwrecked.detailVideoEmbedUrl = "https://www.youtube.com/embed/N4NyvVtRmeM?controls=1&rel=0&modestbranding=1&playsinline=1";
   shipwrecked.detailVideoSrc = "/assets/shipwrecked-trailer.mp4";
   shipwrecked.detailVideoType = "video/mp4";
   shipwrecked.videoUpdate = [
@@ -801,7 +801,7 @@ if (naturesRevenge) {
 const descent = attractions.find((attraction) => attraction.slug === "descent");
 
 if (descent) {
-  descent.hideDetailVideo = true;
+  descent.detailVideoEmbedUrl = "https://www.youtube.com/embed/v069Q8TDf6A?controls=1&rel=0&modestbranding=1&playsinline=1";
   descent.subtitle = null;
   descent.heroBannerImage = "/assets/descent-hero-banner.webp";
   descent.videoUpdate = [
