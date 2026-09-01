@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 const legacyRedirects = new Map([
+  ["/category/uncategorized", "/"],
   ["/tickets.html", "/tickets"],
   ["/schedule.html", "/hours-events"],
   ["/hours-and-events", "/hours-events"],
@@ -22,6 +23,7 @@ const legacyRedirects = new Map([
   ["/attractions/blog/page/2", "/attractions"],
   ["/more-than-a-haunted-house", "/about-us"],
   ["/get-ready-for-opening-night-at-lake-hickory-haunts-charlottes-top-haunted-destination", "/hours-events"],
+  ["/attractions/midway-of-mayhem", "/attractions/midway-mayhem"],
   ["/attractions.html", "/attractions"],
   ["/characters.html", "/characters"],
   ["/about.html", "/about-us"],
@@ -74,6 +76,7 @@ const legacyRedirects = new Map([
   ["/links.html", "/"],
   ["/faq.html", "/faq"],
   ["/warnings.html", "/faq"],
+  ["/family-fright-night-at-lake-hickory-haunted-house-safe-fun-thrills-for-all-ages", "/hours-events"],
 ]);
 
 function normalizePath(pathname) {
@@ -118,6 +121,7 @@ export function proxy(request) {
   const normalizedPath = normalizePath(request.nextUrl.pathname);
   const legacyDestination = getRedirectDestination(request.nextUrl.pathname);
   const destination = legacyDestination ?? normalizedPath;
+  const [destinationPathname, destinationHash] = destination.split("#");
   const shouldRedirectHost = request.nextUrl.hostname === "lakehickoryhaunts.com";
   const shouldRedirectPath = destination !== request.nextUrl.pathname;
 
@@ -131,7 +135,8 @@ export function proxy(request) {
     redirectUrl.hostname = "www.lakehickoryhaunts.com";
   }
 
-  redirectUrl.pathname = destination;
+  redirectUrl.pathname = destinationPathname || "/";
+  redirectUrl.hash = destinationHash ? `#${destinationHash}` : "";
 
   if (request.nextUrl.searchParams.has("et_blog")) {
     redirectUrl.searchParams.delete("et_blog");
