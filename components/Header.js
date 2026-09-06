@@ -239,16 +239,25 @@ export function Header() {
             </div>
 
             <div className="nav-header-actions">
-              <Link
-                className="nav-cta nav-cta-tickets"
-                href="/tickets"
-                onClick={() => {
-                  setOpen(false);
-                  setFaqOpen(false);
-                }}
-              >
-                Tickets
-              </Link>
+              {pathname === "/" ? (
+                <a
+                  className="nav-cta nav-cta-tickets"
+                  href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
+                >
+                  Tickets
+                </a>
+              ) : (
+                <Link
+                  className="nav-cta nav-cta-tickets"
+                  href="/tickets"
+                  onClick={() => {
+                    setOpen(false);
+                    setFaqOpen(false);
+                  }}
+                >
+                  Tickets
+                </Link>
+              )}
             </div>
 
             <button
