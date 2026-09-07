@@ -100,6 +100,10 @@ function getRedirectDestination(pathname) {
     // Keep the raw pathname when decoding fails.
   }
 
+  for (const candidate of [...candidates]) {
+    candidates.add(candidate.toLowerCase());
+  }
+
   for (const candidate of candidates) {
     if (/^\/wp-.*\.php$/i.test(candidate)) {
       return "/";
@@ -120,7 +124,10 @@ function getRedirectDestination(pathname) {
 export function proxy(request) {
   const normalizedPath = normalizePath(request.nextUrl.pathname);
   const legacyDestination = getRedirectDestination(request.nextUrl.pathname);
-  const destination = legacyDestination ?? normalizedPath;
+  // Page routes are case-sensitive in Next.js, so canonicalize typed URLs such as /TICKETS.
+  // Leave file paths alone because public assets can intentionally use capital letters.
+  const canonicalPath = normalizedPath.includes(".") ? normalizedPath : normalizedPath.toLowerCase();
+  const destination = legacyDestination ?? canonicalPath;
   const [destinationPathname, destinationHash] = destination.split("#");
   const shouldRedirectHost = request.nextUrl.hostname === "lakehickoryhaunts.com";
   const shouldRedirectPath = destination !== request.nextUrl.pathname;
