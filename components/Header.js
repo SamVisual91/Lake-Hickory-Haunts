@@ -107,16 +107,16 @@ export function Header() {
             </button>
 
             <div className="nav-mobile-actions">
-              <Link
+              <a
                 className="nav-mobile-ticket-button"
-                href="/tickets"
+                href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
                 onClick={() => {
                   setOpen(false);
                   setFaqOpen(false);
                 }}
               >
                 Tickets
-              </Link>
+              </a>
             </div>
 
             <div className={`nav-menu ${open ? "is-open" : ""}`} id="nav-menu">
