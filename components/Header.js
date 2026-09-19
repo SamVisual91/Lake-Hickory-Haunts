@@ -241,7 +241,11 @@ export function Header() {
             <div className="nav-header-actions">
               <a
                 className="nav-cta nav-cta-tickets"
-                href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
+                href={
+                  pathname === "/"
+                    ? "https://app.hauntpay.com/events/lhh-2026/event_times"
+                    : "https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
+                }
               >
                 Tickets
               </a>
