@@ -59,7 +59,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          LAKE HICKORY HAUNTS IS OPEN SEPT 12TH-NOV 7TH.
+          Lake Hickory Haunts is OPEN FRIDAY and SATURDAY 7:30pm-10:30pm Featuring the Bourbon Sons LIVE on Friday, Nightshades LIVE on Saturday, and Green Goblin Head from Maximum Overdrive both nights!
         </Link>
       </div>
 
