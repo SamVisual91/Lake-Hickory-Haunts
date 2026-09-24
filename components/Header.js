@@ -109,7 +109,11 @@ export function Header() {
             <div className="nav-mobile-actions">
               <a
                 className="nav-mobile-ticket-button"
-                href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
+                href={
+                  pathname === "/"
+                    ? "https://app.hauntpay.com/events/lhh-2026/event_times"
+                    : "https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
+                }
                 onClick={() => {
                   setOpen(false);
                   setFaqOpen(false);
