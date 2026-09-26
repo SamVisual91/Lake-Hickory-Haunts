@@ -345,6 +345,8 @@ export const attractions = [
       { title: "Mist Harbor", className: "gallery-aqua-harbor", imageSrc: "/assets/aquaphobia-gallery-7-replacement.png", caption: "A misty harbor scene with boats, cabins, and ghostly waterfront reflections" },
       { title: "Dock House", className: "gallery-aqua-dockhouse", imageSrc: "/assets/aquaphobia-gallery-8-replacement.png", caption: "A waterside shack glows above the dock beneath purple fog and blue lantern light" },
       { title: "Flooded Turn", className: "gallery-aqua-turn", imageSrc: "/assets/aquaphobia-gallery-9-replacement.png", caption: "A tall flooded corner of the village wrapped in nets, timber, and lantern glow" },
+      { title: "Drowned Divers", className: "gallery-aqua-divers", imageSrc: "/assets/aquaphobia-gallery-10-drowned-divers-20260926.jpg", caption: "Drowned Aquaphobia characters emerge from the depths of the sunken village" },
+      { title: "Deep Sea Hunter", className: "gallery-aqua-hunter", imageSrc: "/assets/aquaphobia-gallery-11-deep-sea-diver-20260926.jpg", caption: "A deep-sea diver stalks the haunted fishing village beneath green water glow" },
     ],
   },
   {
