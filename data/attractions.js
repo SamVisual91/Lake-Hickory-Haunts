@@ -696,6 +696,8 @@ const shipwrecked = attractions.find((attraction) => attraction.slug === "shipwr
 
 if (shipwrecked) {
   shipwrecked.subtitle = null;
+  shipwrecked.selectorImage = "/assets/shipwrecked-logo-bottom.jpg";
+  shipwrecked.selectorImageAlt = "Shipwrecked attraction logo";
   shipwrecked.detailVideoEmbedUrl = "https://www.youtube.com/embed/N4NyvVtRmeM?controls=1&rel=0&modestbranding=1&playsinline=1";
   shipwrecked.detailVideoSrc = "/assets/shipwrecked-trailer.mp4";
   shipwrecked.detailVideoType = "video/mp4";
@@ -814,6 +816,8 @@ const descent = attractions.find((attraction) => attraction.slug === "descent");
 if (descent) {
   descent.detailVideoEmbedUrl = "https://www.youtube.com/embed/v069Q8TDf6A?controls=1&rel=0&modestbranding=1&playsinline=1";
   descent.subtitle = null;
+  descent.selectorImage = "/assets/descent-logo-bottom.jpg";
+  descent.selectorImageAlt = "Descent attraction logo";
   descent.heroBannerImage = "/assets/descent-hero-banner.webp";
   descent.videoUpdate = [
     { type: "label", text: "Attraction Update:" },
@@ -908,7 +912,7 @@ attractions.forEach((attraction) => {
   }
 
   const firstGalleryItem = attraction.gallery[0];
-  if (firstGalleryItem?.imageSrc) {
+  if (!attraction.selectorImage && firstGalleryItem?.imageSrc) {
     attraction.selectorImage = firstGalleryItem.imageSrc;
     attraction.selectorImageAlt = firstGalleryItem.caption ?? `${attraction.title} attraction logo`;
   }
