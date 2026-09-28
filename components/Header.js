@@ -59,7 +59,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          Lake HIckory Haunts is OPEN FRIDAY & SATURDAY Featuring the Scree-Used Jeepers Creepers Movie Truck and Creepers Cousin
+          Lake HIckory Haunts is OPEN FRIDAY & SATURDAY Featuring the Screen-Used Jeepers Creepers Movie Truck and Creepers Cousin
         </Link>
       </div>
 
