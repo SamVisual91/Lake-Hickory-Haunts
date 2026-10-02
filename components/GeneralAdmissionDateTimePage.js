@@ -172,7 +172,7 @@ function formatBookingDateId(year, monthIndex, day) {
 
 function resolveInitialBookingSelection(initialDate) {
   if (!initialDate) {
-    return { monthIndex: 0, day: 12 };
+    return { monthIndex: 1, day: 2 };
   }
 
   const [yearString, monthString, dayString] = initialDate.split("-");
@@ -181,7 +181,7 @@ function resolveInitialBookingSelection(initialDate) {
   const requestedDay = Number.parseInt(dayString, 10);
 
   if ([requestedYear, requestedMonth, requestedDay].some((value) => Number.isNaN(value))) {
-    return { monthIndex: 0, day: 12 };
+    return { monthIndex: 1, day: 2 };
   }
 
   const matchedMonthIndex = bookingMonths.findIndex(
@@ -192,7 +192,7 @@ function resolveInitialBookingSelection(initialDate) {
   );
 
   if (matchedMonthIndex === -1) {
-    return { monthIndex: 0, day: 12 };
+    return { monthIndex: 1, day: 2 };
   }
 
   return { monthIndex: matchedMonthIndex, day: requestedDay };
