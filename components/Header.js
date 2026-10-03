@@ -59,7 +59,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          OPEN TONIGHT (10/3 7-11) Featuring the Screen-Used Jeepers Creepers Truck! We are Open Rain or Shine! (Unless otherwise posted)
+          OPEN TONIGHT (10/3 7-10) Featuring the Screen-Used Jeepers Creepers Truck! We are Open Rain or Shine! (Unless otherwise posted)
         </Link>
       </div>
 
