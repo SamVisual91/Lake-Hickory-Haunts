@@ -101,6 +101,11 @@ const featuredEvents = [
     description: "Included with Lake Hickory Haunts admission",
   },
   {
+    name: "Nightshades Live in Concert: November 6th",
+    timing: "",
+    description: "Three 30 minute shows throughout the night. Included with Lake Hickory Haunts admission.",
+  },
+  {
     name: "Contagious Concert: November 7th",
     timing: "8PM-9:30PM",
     description: "Included with Lake Hickory Haunts admission",
