@@ -91,7 +91,7 @@ const featuredEvents = [
     description: "Included with Lake Hickory Haunts admission",
   },
   {
-    name: "The Mystery Machine and Ecto-1 Ghostbusters replica cars: October 9th through November 7th",
+    name: "The Mystery Machine and Stranger Things Van replicas: October 9th through November 7th",
     timing: "",
     description: "Included with Lake Hickory Haunts admission",
   },
