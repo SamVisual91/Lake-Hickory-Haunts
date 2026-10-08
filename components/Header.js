@@ -59,7 +59,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          WE ARE OPEN FRIDAY, SATURDAY, AND SUNDAY (10/9, 10/10, 10/11). FEATURING THE SCOOBY DOO MYSTERY MACHINE & STRANGER THINGS PIZZA VAN
+          WE ARE OPEN FRIDAY, SATURDAY, AND SUNDAY (10/9, 10/10, 10/11). FEATURING THE SCOOBY DOO MYSTERY MACHINE & STRANGER THINGS PIZZA VAN REPLICAS
         </Link>
       </div>
 
