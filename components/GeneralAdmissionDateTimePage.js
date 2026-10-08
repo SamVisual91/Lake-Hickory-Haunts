@@ -37,13 +37,13 @@ const bookingScheduleBands = [
     dates: ["2026-09-12", "2026-09-18", "2026-09-19", "2026-10-11", "2026-10-29", "2026-11-01", "2026-11-06", "2026-11-07"],
     onlinePrices: [
       "General Admission: $33 (plus tax)",
-      "Fast Pass: $48 (plus tax)",
-      "VIP Pass: $66 (plus tax)",
-    ],
-    inPersonPrices: [
-      "General Admission: $34 (plus tax)",
       "Fast Pass: $49 (plus tax)",
       "VIP Pass: $68 (plus tax)",
+    ],
+    inPersonPrices: [
+      "General Admission: $35 (plus tax)",
+      "Fast Pass: $50 (plus tax)",
+      "VIP Pass: $70 (plus tax)",
     ],
   },
   {
@@ -58,12 +58,12 @@ const bookingScheduleBands = [
     onlinePrices: [
       "General Admission: $36 (plus tax)",
       "Fast Pass: $52 (plus tax)",
-      "VIP Pass: $69 (plus tax)",
+      "VIP Pass: $72 (plus tax)",
     ],
     inPersonPrices: [
-      "General Admission: $38 (plus tax)",
+      "General Admission: $40 (plus tax)",
       "Fast Pass: $55 (plus tax)",
-      "VIP Pass: $72 (plus tax)",
+      "VIP Pass: $74 (plus tax)",
     ],
   },
   {
@@ -77,12 +77,12 @@ const bookingScheduleBands = [
     dates: ["2026-10-03", "2026-10-10", "2026-10-17", "2026-10-24", "2026-10-30", "2026-10-31"],
     onlinePrices: [
       "General Admission: $39 (plus tax)",
-      "Fast Pass: $56 (plus tax)",
-      "VIP Pass: $74 (plus tax)",
+      "Fast Pass: $58 (plus tax)",
+      "VIP Pass: $75 (plus tax)",
     ],
     inPersonPrices: [
-      "General Admission: $42 (plus tax)",
-      "Fast Pass: $58 (plus tax)",
+      "General Admission: $45 (plus tax)",
+      "Fast Pass: $60 (plus tax)",
       "VIP Pass: $77 (plus tax)",
     ],
   },
