@@ -36,7 +36,7 @@ const bookingScheduleBands = [
     timeOptions: ["7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM"],
     dates: ["2026-09-12", "2026-09-18", "2026-09-19", "2026-10-11", "2026-10-29", "2026-11-01", "2026-11-06", "2026-11-07"],
     onlinePrices: [
-      "General Admission: $32 (plus tax)",
+      "General Admission: $33 (plus tax)",
       "Fast Pass: $48 (plus tax)",
       "VIP Pass: $66 (plus tax)",
     ],

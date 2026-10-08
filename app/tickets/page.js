@@ -14,7 +14,7 @@ const ticketPricingSchema = {
   "@type": "Event",
   name: "Lake Hickory Haunts 2026 Season",
   description:
-    "Online tickets start at $32 plus tax for General Admission, $48 plus tax for Fast Pass, and $66 plus tax for VIP. Prices vary by date and ticket type.",
+    "Online tickets start at $33 plus tax for General Admission, $48 plus tax for Fast Pass, and $66 plus tax for VIP. Prices vary by date and ticket type.",
   url: "https://www.lakehickoryhaunts.com/tickets",
   startDate: "2026-09-12T19:30:00-04:00",
   endDate: "2026-11-07T23:00:00-05:00",
@@ -36,7 +36,7 @@ const ticketPricingSchema = {
     "@type": "AggregateOffer",
     url: "https://www.lakehickoryhaunts.com/tickets",
     priceCurrency: "USD",
-    lowPrice: "32",
+    lowPrice: "33",
     highPrice: "74",
     offerCount: "3",
     availability: "https://schema.org/InStock",

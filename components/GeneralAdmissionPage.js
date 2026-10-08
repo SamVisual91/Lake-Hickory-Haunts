@@ -30,8 +30,8 @@ const pricingPanels = [
       </>
     ),
     description: "Access to all attractions.",
-    price: "$32.99",
-    priceValue: 32.99,
+    price: "$33.99",
+    priceValue: 33.99,
     purchaseLabel: "Online",
     purchaseNote: "$39.99 at the gate",
   },
