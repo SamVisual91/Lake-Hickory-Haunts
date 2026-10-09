@@ -58,6 +58,15 @@ const scheduleBands = [
     note: "Peak October operating nights with the latest closing window of the season.",
   },
   {
+    id: "nov-green-night",
+    accent: "#63f000",
+    glow: "rgba(99, 240, 0, 0.28)",
+    hours: "7:00 PM - 9:30 PM",
+    label: "NOV: 5",
+    dates: ["2026-11-05"],
+    note: "A least-crowded Green Night before finale weekend.",
+  },
+  {
     id: "nov-finale",
     accent: "#ff3b32",
     glow: "rgba(255, 59, 50, 0.28)",
