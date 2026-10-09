@@ -21,7 +21,7 @@ const bookingMonths = [
     monthIndex: 10,
     monthName: "November",
     year: 2026,
-    availableDates: [1, 6, 7],
+    availableDates: [1, 5, 6, 7],
   },
 ];
 
@@ -34,7 +34,7 @@ const bookingScheduleBands = [
     note: "Least crowded nights of the season.",
     crowdLabel: "Least crowded",
     timeOptions: ["7:30 PM", "8:00 PM", "8:30 PM", "9:00 PM"],
-    dates: ["2026-09-12", "2026-09-18", "2026-09-19", "2026-10-11", "2026-10-29", "2026-11-01", "2026-11-06", "2026-11-07"],
+    dates: ["2026-09-12", "2026-09-18", "2026-09-19", "2026-10-11", "2026-10-29", "2026-11-01", "2026-11-05", "2026-11-06", "2026-11-07"],
     onlinePrices: [
       "General Admission: $33 (plus tax)",
       "Fast Pass: $49 (plus tax)",
