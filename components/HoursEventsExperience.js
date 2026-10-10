@@ -58,21 +58,12 @@ const scheduleBands = [
     note: "Peak October operating nights with the latest closing window of the season.",
   },
   {
-    id: "nov-green-night",
-    accent: "#63f000",
-    glow: "rgba(99, 240, 0, 0.28)",
-    hours: "7:00 PM - 9:30 PM",
-    label: "NOV: 5",
-    dates: ["2026-11-05"],
-    note: "A least-crowded Green Night before finale weekend.",
-  },
-  {
     id: "nov-finale",
     accent: "#ff3b32",
     glow: "rgba(255, 59, 50, 0.28)",
     hours: "7:00 PM - 9:30 PM",
-    label: "NOV: 6 & 7",
-    dates: ["2026-11-06", "2026-11-07"],
+    label: "NOV: 5, 6 & 7",
+    dates: ["2026-11-05", "2026-11-06", "2026-11-07"],
     note: "Finale weekend with a shorter box-office window before the season closes.",
   },
 ];
@@ -105,12 +96,17 @@ const featuredEvents = [
     description: "Included with Lake Hickory Haunts admission",
   },
   {
+    name: "Bourbon Sons Concert: October 23rd",
+    timing: "8PM-9:30PM",
+    description: "Included with Lake Hickory Haunts admission.",
+  },
+  {
     name: "Small Town Titans Concert: October 30th and 31st",
     timing: "8PM-9:30PM",
     description: "Included with Lake Hickory Haunts admission",
   },
   {
-    name: "Nightshades Live in Concert: November 6th",
+    name: "Nightshades Live in Concert: Nov 5th and 6th",
     timing: "",
     description: "Three 30 minute shows throughout the night. Included with Lake Hickory Haunts admission.",
   },
