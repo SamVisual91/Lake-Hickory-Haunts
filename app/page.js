@@ -110,6 +110,19 @@ export default function HomePage() {
 
       <HomeAttractionRowCarousel />
 
+      <section className="page-width stack home-reveal" aria-labelledby="home-haunt-search-heading">
+        <div className="event-highlight-header">
+          <p className="eyebrow">Lake Hickory Haunts</p>
+          <h2 id="home-haunt-search-heading">A premier haunted attraction in North Carolina</h2>
+          <p className="event-meta">
+            Looking for the best haunt in NC, the best haunted attraction in NC, or the scariest haunt in NC? Lake
+            Hickory Haunts delivers 13 immersive attractions, including a haunted trail in NC, all for one admission.
+            Discover why guests call it one of the best haunted houses in NC and a must-visit haunted attraction in
+            North Carolina.
+          </p>
+        </div>
+      </section>
+
       <section className="page-width stack home-reveal">
         <div className="event-highlight-header">
           <p className="eyebrow">Stay in Touch with LHH!</p>
