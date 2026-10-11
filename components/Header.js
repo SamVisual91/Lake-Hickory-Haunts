@@ -59,7 +59,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          For the safety of our guests, visitors and staff, we are closed tonight, Saturday, 10/10. We are open tomorrow, Sunday 10/11 from 7pm-10pm.
+          OPEN TONIGHT; SUNDAY, 10/10 7pm-10pm, Featuring the Scooby Doo Mystery Machine and Stranger Things Van Replicas.
         </Link>
       </div>
 
