@@ -15,7 +15,7 @@ const bookingMonths = [
     monthIndex: 9,
     monthName: "October",
     year: 2026,
-    availableDates: [2, 3, 9, 10, 11, 16, 17, 18, 23, 24, 25, 29, 30, 31],
+    availableDates: [2, 3, 9, 10, 11, 16, 17, 18, 22, 23, 24, 25, 29, 30, 31],
   },
   {
     monthIndex: 10,
