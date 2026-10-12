@@ -368,6 +368,10 @@ html.splash-pending .site-shell {
   text-underline-offset: 0.14em;
 }
 
+.season-banner-mobile-break {
+  display: none;
+}
+
 @media (max-width: 760px) {
   .header-wrap {
     background:
@@ -380,6 +384,10 @@ html.splash-pending .site-shell {
     padding: 8px 12px;
     font-size: 0.72rem;
     letter-spacing: 0.16em;
+  }
+
+  .season-banner-mobile-break {
+    display: block;
   }
 }
 
