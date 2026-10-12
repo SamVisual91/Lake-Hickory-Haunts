@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useState } from "react";
 
 const months = [
-  { id: "2026-09", label: "September 2026", shortLabel: "SEP", monthIndex: 8, year: 2026 },
   { id: "2026-10", label: "October 2026", shortLabel: "OCT", monthIndex: 9, year: 2026 },
   { id: "2026-11", label: "November 2026", shortLabel: "NOV", monthIndex: 10, year: 2026 },
 ];
@@ -69,27 +68,6 @@ const scheduleBands = [
 ];
 
 const featuredEvents = [
-  {
-    name: "Bourbon Sons Concert: September 25th",
-    timing: "8PM-9:30PM",
-    description: "Included with Lake Hickory Haunts admission",
-  },
-  {
-    name: "Nightshades Concert: September 26th",
-    timing: "",
-    description:
-      "Three 30 minute shows throughout the night. One of these shows is included with Lake Hickory Haunts admission",
-  },
-  {
-    name: "Screen Used Maximum Overdrive Green Goblin Head: September 25th and 26th",
-    timing: "",
-    description: "Included with Lake Hickory Haunts admission",
-  },
-  {
-    name: "Screen Used Jeepers Creepers Truck: October 2nd and 3rd",
-    timing: "",
-    description: "Included with Lake Hickory Haunts admission",
-  },
   {
     name: "The Mystery Machine and Stranger Things Van replicas: October 9th through November 7th",
     timing: "",
@@ -198,7 +176,7 @@ function ChevronIcon({ direction = "left" }) {
 
 export function HoursEventsExperience() {
   const [activeMonthIndex, setActiveMonthIndex] = useState(0);
-  const [selectedDate, setSelectedDate] = useState("2026-09-12");
+  const [selectedDate, setSelectedDate] = useState("2026-10-16");
 
   const activeMonth = months[activeMonthIndex];
   const calendarDays = buildCalendarDays(activeMonth);
@@ -285,7 +263,7 @@ export function HoursEventsExperience() {
 
             <div className="hx-month-switcher">
               <h2 id="hx-calendar-heading">{activeMonth.label}</h2>
-              <p className="hx-season-range">September 2026 through November 2026</p>
+              <p className="hx-season-range">October 2026 through November 2026</p>
               <div className="hx-month-tabs" aria-label="Available months">
                 {months.map((month, index) => (
                   <button
