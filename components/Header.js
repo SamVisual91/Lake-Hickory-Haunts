@@ -59,7 +59,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          OPEN TONIGHT; SUNDAY, 10/10 7pm-10pm, Featuring the Scooby Doo Mystery Machine and Stranger Things Van Replicas.
+          OPEN FRIDAY & SATURDAY (10/16, 10/17) 7pm-11pm and SUNDAY (10/18) 7pm -10pm.
         </Link>
       </div>
 
