@@ -18,7 +18,7 @@ const faqLinks = [
 ];
 
 const mobileUtilityItems = [
-  { label: "Book Your Night", href: "https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287", external: true },
+  { label: "Book Your Night", href: "https://app.hauntpay.com/events/lhh-2026/event_times", external: true },
   { label: "Directions", href: "/directions" },
   { label: "About Us", href: "/about-us" },
   { label: "Hours and Events", href: "/hours-events" },
@@ -68,7 +68,7 @@ export function Header() {
       <div className="utility-bar">
         <div className="page-width utility-inner">
           <div className="utility-left">
-            <a className="utility-book-link" href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287">
+            <a className="utility-book-link" href="https://app.hauntpay.com/events/lhh-2026/event_times">
               Book Your Night
             </a>
             <Link href="/directions">Directions</Link>
