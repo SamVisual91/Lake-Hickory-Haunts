@@ -32,8 +32,8 @@ const scheduleBands = [
     accent: "#d545ff",
     glow: "rgba(213, 69, 255, 0.24)",
     hours: "7:00 PM - 10:00 PM",
-    label: "OCT: 11, 18, 25, 29  |  NOV: 1",
-    dates: ["2026-10-11", "2026-10-18", "2026-10-25", "2026-10-29", "2026-11-01"],
+    label: "OCT: 11, 18, 22, 25, 29  |  NOV: 1",
+    dates: ["2026-10-11", "2026-10-18", "2026-10-22", "2026-10-25", "2026-10-29", "2026-11-01"],
     note: "Prime haunted nights with standard entry pacing and full event atmosphere.",
   },
   {
