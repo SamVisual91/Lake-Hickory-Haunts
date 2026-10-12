@@ -17,8 +17,10 @@ const faqLinks = [
   { label: "General Questions", href: "/faq#general-questions" },
 ];
 
+const hauntPayEventTimesUrl = "https://app.hauntpay.com/events/lhh-2026/event_times";
+
 const mobileUtilityItems = [
-  { label: "Book Your Night", href: "https://app.hauntpay.com/events/lhh-2026/event_times", external: true },
+  { label: "Book Your Night", href: hauntPayEventTimesUrl, external: true },
   { label: "Directions", href: "/directions" },
   { label: "About Us", href: "/about-us" },
   { label: "Hours and Events", href: "/hours-events" },
@@ -68,7 +70,7 @@ export function Header() {
       <div className="utility-bar">
         <div className="page-width utility-inner">
           <div className="utility-left">
-            <a className="utility-book-link" href="https://app.hauntpay.com/events/lhh-2026/event_times">
+            <a className="utility-book-link" href={hauntPayEventTimesUrl}>
               Book Your Night
             </a>
             <Link href="/directions">Directions</Link>
@@ -111,11 +113,7 @@ export function Header() {
             <div className="nav-mobile-actions">
               <a
                 className="nav-mobile-ticket-button"
-                href={
-                  pathname === "/"
-                    ? "https://app.hauntpay.com/events/lhh-2026/event_times"
-                    : "https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
-                }
+                href={hauntPayEventTimesUrl}
                 onClick={() => {
                   setOpen(false);
                   setFaqOpen(false);
@@ -167,9 +165,9 @@ export function Header() {
                   <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
                 </Link>
 
-                <Link
+                <a
                   className="nav-menu-ticket-link"
-                  href="/tickets"
+                  href={hauntPayEventTimesUrl}
                   onClick={() => {
                     setOpen(false);
                     setFaqOpen(false);
@@ -177,7 +175,7 @@ export function Header() {
                 >
                   <span>Tickets</span>
                   <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
-                </Link>
+                </a>
 
                 <div className={`nav-ticket-wrap ${faqOpen ? "is-open" : ""}`}>
                   <button
@@ -247,11 +245,7 @@ export function Header() {
             <div className="nav-header-actions">
               <a
                 className="nav-cta nav-cta-tickets"
-                href={
-                  pathname === "/"
-                    ? "https://app.hauntpay.com/events/lhh-2026/event_times"
-                    : "https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
-                }
+                href={hauntPayEventTimesUrl}
               >
                 Tickets
               </a>
