@@ -165,9 +165,9 @@ export function Header() {
                   <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
                 </Link>
 
-                <a
+                <Link
                   className="nav-menu-ticket-link"
-                  href={hauntPayEventTimesUrl}
+                  href="/tickets"
                   onClick={() => {
                     setOpen(false);
                     setFaqOpen(false);
@@ -175,7 +175,7 @@ export function Header() {
                 >
                   <span>Tickets</span>
                   <span className="nav-mobile-arrow" aria-hidden="true">{">"}</span>
-                </a>
+                </Link>
 
                 <div className={`nav-ticket-wrap ${faqOpen ? "is-open" : ""}`}>
                   <button
