@@ -294,7 +294,7 @@ const faqCategories = [
         id: "group-rates",
         question: "Does Lake Hickory Haunts offer group rates?",
         answer:
-          "Yes, we offer a special price for groups of 20 or greater on Green and Yellow Nights! Group rate tickets are $30 per person on Green Nights and $34 per person on Yellow Nights. To order group tickets please contact us at lakehickoryhaunts@gmail.com, group tickets must be purchased at least 48 hours in advance.",
+          "YES! We offer $5 OFF per person for groups of 20+ on Green and Yellow nights. To receive the discount, purchase 20 or more General Admission tickets online for any Green or Yellow night, and your $5 discount will automatically be applied!",
       },
       {
         id: "parking-cost",
