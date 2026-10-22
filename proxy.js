@@ -1,12 +1,17 @@
 import { NextResponse } from "next/server";
 
 const legacyRedirects = new Map([
+  ["/what-is-the-vip-pass", "/tickets/vip-experience"],
+  ["/premium-haunted-attraction", "/about-us"],
+  ["/lhh-charlotte-nc", "/attractions"],
+  ["/lake-hickory-haunts-2024-13-years-of-fear", "/about-us"],
   ["/category/uncategorized", "/"],
   ["/tickets.html", "/tickets"],
   ["/schedule.html", "/hours-events"],
   ["/hours-and-events", "/hours-events"],
   ["/hours-and-events.html", "/hours-events"],
   ["/plan-the-ultimate-group-outing", "/tickets/group-discount-10-plus"],
+  ["/plan-the-ultimate-group-outing/feed", "/tickets/group-discount-10-plus"],
   ["/lake-hickory-haunts-more-than-a-haunted-house", "/about-us"],
   ["/whats-happening-at-lake-hickory-haunts-2025", "/hours-events"],
   ["/experience-the-thrilling-voodoo-bayou", "/attractions/voodoo-bayou"],
