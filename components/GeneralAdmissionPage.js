@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { submitHauntPayDateSelection } from "../lib/hauntpay";
+import { getLocalCalendarDateId, isPastBookingDate } from "../lib/bookingDates";
 
 const ticketSaleNotes = [
   {
@@ -415,6 +416,7 @@ export function GeneralAdmissionPage({ titleClassName = "", initialDate = null }
   const [selectedPanelIndex, setSelectedPanelIndex] = useState(0);
   const [selectedMonthIndex, setSelectedMonthIndex] = useState(initialSelection.monthIndex);
   const [selectedDate, setSelectedDate] = useState(initialSelection.day);
+  const [todayDateId, setTodayDateId] = useState(getLocalCalendarDateId);
   const [adultCount, setAdultCount] = useState(2);
   const [selectedAddOnIds, setSelectedAddOnIds] = useState([]);
   const [subtotalTick, setSubtotalTick] = useState(false);
@@ -429,7 +431,9 @@ export function GeneralAdmissionPage({ titleClassName = "", initialDate = null }
 
   const activeMonth = bookingMonths[selectedMonthIndex] ?? bookingMonths[0];
   const bookingCalendarCells = buildCalendarCells(activeMonth.year, activeMonth.monthIndex);
-  const bookingAvailableDates = activeMonth.availableDates;
+  const bookingAvailableDates = activeMonth.availableDates.filter(
+    (date) => !isPastBookingDate(formatBookingDateId(activeMonth.year, activeMonth.monthIndex, date), todayDateId),
+  );
   const activeSaleNote = ticketSaleNotes[saleNoteIndex] ?? ticketSaleNotes[0];
   const selectedDateLabel = `${activeMonth.monthName} ${selectedDate}, ${activeMonth.year}`;
   const canGoPrevMonth = selectedMonthIndex > 0;
@@ -466,10 +470,39 @@ export function GeneralAdmissionPage({ titleClassName = "", initialDate = null }
   }, []);
 
   useEffect(() => {
+    const refreshToday = () => setTodayDateId(getLocalCalendarDateId());
+    const now = new Date();
+    const nextMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1).getTime();
+    const midnightTimer = window.setTimeout(refreshToday, nextMidnight - now.getTime() + 100);
+    const refreshTimer = window.setInterval(refreshToday, 60_000);
+
+    return () => {
+      window.clearTimeout(midnightTimer);
+      window.clearInterval(refreshTimer);
+    };
+  }, []);
+
+  useEffect(() => {
     if (!bookingAvailableDates.includes(selectedDate)) {
-      setSelectedDate(bookingAvailableDates[0]);
+      setSelectedDate(bookingAvailableDates[0] ?? null);
     }
   }, [bookingAvailableDates, selectedDate]);
+
+  useEffect(() => {
+    if (bookingAvailableDates.length > 0) {
+      return;
+    }
+
+    const nextAvailableMonthIndex = bookingMonths.findIndex((month) =>
+      month.availableDates.some(
+        (date) => !isPastBookingDate(formatBookingDateId(month.year, month.monthIndex, date), todayDateId),
+      ),
+    );
+
+    if (nextAvailableMonthIndex !== -1 && nextAvailableMonthIndex !== selectedMonthIndex) {
+      setSelectedMonthIndex(nextAvailableMonthIndex);
+    }
+  }, [bookingAvailableDates.length, selectedMonthIndex, todayDateId]);
 
   useEffect(() => {
     if (adultCount < minimumGuests) {
@@ -661,9 +694,9 @@ export function GeneralAdmissionPage({ titleClassName = "", initialDate = null }
                       return <span key={`booking-empty-${index}`} className="ga2-booking-empty" aria-hidden="true" />;
                     }
 
-                    const isAvailable = bookingAvailableDates.includes(date);
-                    const isSelected = selectedDate === date;
                     const dateId = formatBookingDateId(activeMonth.year, activeMonth.monthIndex, date);
+                    const isAvailable = bookingAvailableDates.includes(date);
+                    const isSelected = isAvailable && selectedDate === date;
                     const dateBand = bookingDateToBand[dateId];
                     const accent = dateBand?.accent ?? "#95f53a";
                     const glow = dateBand?.glow ?? "rgba(149, 245, 58, 0.2)";

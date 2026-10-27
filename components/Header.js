@@ -61,7 +61,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          NOW OPEN THURSDAY through SUNDAY!
+          NOW OPEN THURSDAY THROUGH SUNDAY! FEAT. SMALL TOWN TITANS CONCERT 10/30 & 10/31
         </Link>
       </div>
 
