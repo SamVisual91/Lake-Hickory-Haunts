@@ -61,7 +61,7 @@ export function Header() {
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
         <Link href="/tickets">
-          OPEN TONIGHT (11/1) 7pm -10pm. Also open on NOV 5th, 6th, and 7th!
+          OPEN THURSDAY (11/5), FRIDAY (11/6) and SATURDAY (11/7) Featuring Concerts Every Night!
         </Link>
       </div>
 
