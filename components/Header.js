@@ -18,6 +18,8 @@ const faqLinks = [
 ];
 
 const hauntPayEventTimesUrl = "https://app.hauntpay.com/events/lhh-2026/event_times";
+const jobsApplicationUrl =
+  "https://docs.google.com/forms/d/e/1FAIpQLSff7tZNJSOAJ-qrkF13y2ptqF4mcOZDW9OiSYQMGdLgWIY6ug/viewform";
 
 const mobileUtilityItems = [
   { label: "Book Your Night", href: hauntPayEventTimesUrl, external: true },
@@ -60,9 +62,9 @@ export function Header() {
   return (
     <header className="header-wrap" ref={headerRef}>
       <div className="season-banner">
-        <Link href="/tickets">
-          OPEN THURSDAY (11/5), FRIDAY (11/6) and SATURDAY (11/7) Featuring Concerts Every Night!
-        </Link>
+        <a href="https://lakehickoryescape.com/" target="_blank" rel="noreferrer">
+          Visit Lakehickoryescape.com to Book your year-round Activities at Lake Hickory Attractions
+        </a>
       </div>
 
       <div className="utility-bar">
@@ -109,6 +111,18 @@ export function Header() {
             </button>
 
             <div className="nav-mobile-actions">
+              <a
+                className="nav-mobile-apply-link"
+                href={jobsApplicationUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => {
+                  setOpen(false);
+                  setFaqOpen(false);
+                }}
+              >
+                Apply Now
+              </a>
               <a
                 className="nav-mobile-ticket-button"
                 href={hauntPayEventTimesUrl}
@@ -241,6 +255,24 @@ export function Header() {
             </div>
 
             <div className="nav-header-actions">
+              <a
+                className="nav-jobs-link"
+                href={jobsApplicationUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => {
+                  setOpen(false);
+                  setFaqOpen(false);
+                }}
+              >
+                <Image
+                  src="/assets/jobs-monsters-wanted.png"
+                  alt="Monsters Wanted apply now"
+                  width={2048}
+                  height={834}
+                />
+                <span className="sr-only">Apply now</span>
+              </a>
               <a
                 className="nav-cta nav-cta-tickets"
                 href={hauntPayEventTimesUrl}

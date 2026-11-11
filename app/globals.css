@@ -7891,6 +7891,25 @@ h1 {
       inset 0 0 0 1px rgba(220, 255, 211, 0.22);
   }
 
+  .nav-mobile-apply-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    color: rgba(243, 247, 245, 0.86);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    line-height: 1;
+    text-transform: uppercase;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.72);
+  }
+
+  .nav-mobile-apply-link:hover,
+  .nav-mobile-apply-link:focus-visible {
+    color: var(--mint);
+  }
+
   body.nav-drawer-open .nav-mobile-actions {
     opacity: 0;
     pointer-events: none;
