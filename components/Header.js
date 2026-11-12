@@ -123,7 +123,13 @@ export function Header() {
                   setFaqOpen(false);
                 }}
               >
-                Apply Now
+                <Image
+                  src="/assets/monsters-staff-wanted-badge.png"
+                  alt="Monsters and staff wanted, apply now"
+                  width={1774}
+                  height={887}
+                />
+                <span className="sr-only">Apply now</span>
               </a>
               <a
                 className="nav-mobile-ticket-button"
@@ -268,10 +274,10 @@ export function Header() {
                 }}
               >
                 <Image
-                  src="/assets/jobs-monsters-wanted.png"
-                  alt="Monsters Wanted apply now"
-                  width={2048}
-                  height={834}
+                  src="/assets/monsters-staff-wanted-badge.png"
+                  alt="Monsters and staff wanted, apply now"
+                  width={1774}
+                  height={887}
                 />
                 <span className="sr-only">Apply now</span>
               </a>
