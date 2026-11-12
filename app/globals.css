@@ -663,7 +663,7 @@ html.splash-pending .site-shell {
 }
 
 .nav-jobs-link img {
-  width: clamp(88px, 7.4vw, 116px);
+  width: clamp(112px, 9.6vw, 150px);
   height: auto;
   background: transparent;
   transition: transform 220ms ease, filter 220ms ease;
@@ -7888,7 +7888,7 @@ h1 {
   }
 
   .nav-mobile-apply-link img {
-    width: 108px;
+    width: 140px;
     height: auto;
     background: transparent;
   }
