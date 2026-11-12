@@ -103,6 +103,9 @@ const featuredEvents = [
 
 const dayLabels = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
 
+// Keep the 2026 schedule and event details ready to restore when the 2027 season is announced.
+const isOffSeason = true;
+
 const dateToBand = scheduleBands.reduce((lookup, band) => {
   band.dates.forEach((date) => {
     lookup[date] = band;
@@ -212,6 +215,12 @@ export function HoursEventsExperience() {
         <h1 className="hx-title">Hours and Events</h1>
       </div>
 
+      {isOffSeason ? (
+        <section className="hx-offseason-schedule" aria-label="2027 ticket schedule updates">
+          <p>Stay tune for Updates on our</p>
+          <strong>2027 tickets schedule!</strong>
+        </section>
+      ) : (
       <div className="hx-board">
         <section className="hx-panel hx-schedule-panel" aria-labelledby="hx-schedule-heading">
           <div className="hx-panel-heading">
@@ -329,6 +338,7 @@ export function HoursEventsExperience() {
           </div>
         </section>
       </div>
+      )}
 
       <section className="hx-events-section" aria-labelledby="hx-events-heading">
         <div className="hx-events-header">
@@ -340,6 +350,12 @@ export function HoursEventsExperience() {
           </p>
         </div>
 
+        {isOffSeason ? (
+          <div className="hx-offseason-schedule hx-offseason-schedule--events" aria-label="2027 special event updates">
+            <p>Stay tune for Updates on our</p>
+            <strong>2027 tickets schedule!</strong>
+          </div>
+        ) : (
         <div className="live-events-lineup">
           <div className="live-events-grid">
             {featuredEvents.map((event) => (
@@ -351,6 +367,7 @@ export function HoursEventsExperience() {
             ))}
           </div>
         </div>
+        )}
       </section>
     </section>
   );

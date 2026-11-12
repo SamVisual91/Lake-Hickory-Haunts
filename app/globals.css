@@ -13252,6 +13252,50 @@ h1 {
   padding: 0 24px;
 }
 
+.hx-offseason-schedule {
+  display: grid;
+  gap: 10px;
+  place-items: center;
+  margin: 0 24px;
+  padding: clamp(42px, 8vw, 88px) clamp(24px, 6vw, 72px);
+  border: 1px solid rgba(140, 242, 69, 0.32);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(140, 242, 69, 0.18), transparent 58%),
+    linear-gradient(180deg, rgba(6, 14, 7, 0.94), rgba(2, 4, 3, 0.98));
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 18px 46px rgba(0, 0, 0, 0.34);
+  text-align: center;
+}
+
+.hx-offseason-schedule p {
+  margin: 0;
+  color: rgba(243, 247, 245, 0.84);
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.hx-offseason-schedule strong {
+  color: #8cf245;
+  font-family: "Bebas Neue", Impact, sans-serif;
+  font-size: clamp(3.1rem, 8vw, 7.6rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 0.9;
+  text-transform: uppercase;
+  text-shadow:
+    0 0 12px rgba(140, 242, 69, 0.34),
+    0 0 28px rgba(140, 242, 69, 0.18);
+}
+
+.hx-offseason-schedule--events {
+  margin: 28px 0 0;
+}
+
 .hx-panel,
 .hx-detail-panel {
   position: relative;
