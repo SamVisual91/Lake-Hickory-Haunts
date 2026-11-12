@@ -126,8 +126,8 @@ export function Header() {
                 <Image
                   src="/assets/monsters-staff-wanted-badge.png"
                   alt="Monsters and staff wanted, apply now"
-                  width={1774}
-                  height={887}
+                  width={1316}
+                  height={529}
                 />
                 <span className="sr-only">Apply now</span>
               </a>
@@ -276,8 +276,8 @@ export function Header() {
                 <Image
                   src="/assets/monsters-staff-wanted-badge.png"
                   alt="Monsters and staff wanted, apply now"
-                  width={1774}
-                  height={887}
+                  width={1316}
+                  height={529}
                 />
                 <span className="sr-only">Apply now</span>
               </a>
