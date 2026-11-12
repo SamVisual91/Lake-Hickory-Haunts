@@ -5,6 +5,8 @@ import { submitHauntPayDateSelection } from "../lib/hauntpay";
 import { getLocalCalendarDateId, isPastBookingDate } from "../lib/bookingDates";
 
 const bookingWeekdays = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+// Keep the seasonal booking UI ready to restore when 2027 ticket dates are announced.
+const isOffSeason = true;
 const bookingMonths = [
   {
     monthIndex: 8,
@@ -271,74 +273,85 @@ export function GeneralAdmissionDateTimePage({ titleClassName, initialDate = nul
 
         <section className="page-width ga2-grid ga2-grid-lite">
           <div className="ga2-main ga2-main-lite">
-            <div className="ga2-next-step-heading">
-              <h2>Select your date</h2>
-              <span className="ga2-next-step-brush" aria-hidden="true" />
-            </div>
+            {isOffSeason ? (
+              <section className="ga2-offseason-schedule" aria-label="2027 ticket schedule updates">
+                <p>Stay tune for Updates on our</p>
+                <strong>2027 tickets schedule!</strong>
+              </section>
+            ) : (
+              <div className="ga2-next-step-heading">
+                <h2>Select your date</h2>
+                <span className="ga2-next-step-brush" aria-hidden="true" />
+              </div>
+            )}
 
             <section className="ga2-booking-strip" aria-label="Select date">
               <div className="ga2-booking-calendar">
-                <div className="ga2-booking-monthbar">
-                  <button
-                    type="button"
-                    className="ga2-booking-chevron is-prev"
-                    aria-label="Previous month"
-                    onClick={() => canGoPrevMonth && setSelectedMonthIndex((current) => current - 1)}
-                    disabled={!canGoPrevMonth}
-                  >
-                    {"\u2039"}
-                  </button>
-                  <div className="ga2-booking-monthcopy">
-                    <strong>{activeMonth.monthName} {activeMonth.year}</strong>
-                    <span>September 2026 through November 2026</span>
-                  </div>
-                  <button
-                    type="button"
-                    className="ga2-booking-chevron is-next"
-                    aria-label="Next month"
-                    onClick={() => canGoNextMonth && setSelectedMonthIndex((current) => current + 1)}
-                    disabled={!canGoNextMonth}
-                  >
-                    {"\u203A"}
-                  </button>
-                </div>
-
-                <div className="ga2-booking-weekdays" aria-hidden="true">
-                  {bookingWeekdays.map((day) => (
-                    <span key={day}>{day}</span>
-                  ))}
-                </div>
-
-                <div className="ga2-booking-dates">
-                  {bookingCalendarCells.map((date, index) => {
-                    if (date === null) {
-                      return <span key={`booking-empty-${index}`} className="ga2-booking-empty" aria-hidden="true" />;
-                    }
-
-                    const dateId = formatBookingDateId(activeMonth.year, activeMonth.monthIndex, date);
-                    const isAvailable = bookingAvailableDates.includes(date);
-                    const isSelected = isAvailable && selectedDate === date;
-                    const dateBand = bookingDateToBand[dateId];
-                    const accent = dateBand?.accent ?? "#95f53a";
-                    const glow = dateBand?.glow ?? "rgba(149, 245, 58, 0.2)";
-                    return (
+                {!isOffSeason ? (
+                  <>
+                    <div className="ga2-booking-monthbar">
                       <button
-                        key={`${activeMonth.monthName}-${date}`}
                         type="button"
-                        className={`ga2-booking-date ${isAvailable ? "is-available" : ""} ${isSelected ? "is-selected" : ""}`}
-                        style={isAvailable ? { "--ga2-date-accent": accent, "--ga2-date-glow": glow } : undefined}
-                        onClick={() => {
-                          if (isAvailable) {
-                            submitHauntPayDateSelection(dateId);
-                          }
-                        }}
-                        disabled={!isAvailable}
+                        className="ga2-booking-chevron is-prev"
+                        aria-label="Previous month"
+                        onClick={() => canGoPrevMonth && setSelectedMonthIndex((current) => current - 1)}
+                        disabled={!canGoPrevMonth}
                       >
-                        <span>{date}</span>
+                        {"\u2039"}
                       </button>
-                    );
-                  })}
-                </div>
+                      <div className="ga2-booking-monthcopy">
+                        <strong>{activeMonth.monthName} {activeMonth.year}</strong>
+                        <span>September 2026 through November 2026</span>
+                      </div>
+                      <button
+                        type="button"
+                        className="ga2-booking-chevron is-next"
+                        aria-label="Next month"
+                        onClick={() => canGoNextMonth && setSelectedMonthIndex((current) => current + 1)}
+                        disabled={!canGoNextMonth}
+                      >
+                        {"\u203A"}
+                      </button>
+                    </div>
+
+                    <div className="ga2-booking-weekdays" aria-hidden="true">
+                      {bookingWeekdays.map((day) => (
+                        <span key={day}>{day}</span>
+                      ))}
+                    </div>
+
+                    <div className="ga2-booking-dates">
+                      {bookingCalendarCells.map((date, index) => {
+                        if (date === null) {
+                          return <span key={`booking-empty-${index}`} className="ga2-booking-empty" aria-hidden="true" />;
+                        }
+
+                        const dateId = formatBookingDateId(activeMonth.year, activeMonth.monthIndex, date);
+                        const isAvailable = bookingAvailableDates.includes(date);
+                        const isSelected = isAvailable && selectedDate === date;
+                        const dateBand = bookingDateToBand[dateId];
+                        const accent = dateBand?.accent ?? "#95f53a";
+                        const glow = dateBand?.glow ?? "rgba(149, 245, 58, 0.2)";
+                        return (
+                          <button
+                            key={`${activeMonth.monthName}-${date}`}
+                            type="button"
+                            className={`ga2-booking-date ${isAvailable ? "is-available" : ""} ${isSelected ? "is-selected" : ""}`}
+                            style={isAvailable ? { "--ga2-date-accent": accent, "--ga2-date-glow": glow } : undefined}
+                            onClick={() => {
+                              if (isAvailable) {
+                                submitHauntPayDateSelection(dateId);
+                              }
+                            }}
+                            disabled={!isAvailable}
+                          >
+                            <span>{date}</span>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </>
+                ) : null}
 
                 <div className="ga2-ticket-info-shell" aria-label="Compare ticket options">
                   <div className="ga2-ticket-info-row">
@@ -368,49 +381,57 @@ export function GeneralAdmissionDateTimePage({ titleClassName, initialDate = nul
                           ) : null}
                         </div>
 
-                        <a
-                          className="ga2-ticket-info-action"
-                          href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          Buy Now
-                        </a>
+                        {isOffSeason ? (
+                          <span className="ga2-ticket-info-action is-unavailable" aria-disabled="true">
+                            Stay tune for updates
+                          </span>
+                        ) : (
+                          <a
+                            className="ga2-ticket-info-action"
+                            href="https://app.hauntpay.com/events/lhh-2026/event_times?et_id=1789287"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Buy Now
+                          </a>
+                        )}
                       </article>
                     ))}
                   </div>
                 </div>
 
-                <div className="ga2-booking-pricing" aria-label="Night pricing tiers">
-                  {bookingScheduleBands.map((band) => (
-                    <article
-                      key={band.id}
-                      className="ga2-booking-pricing-card"
-                      style={{ "--ga2-pricing-accent": band.accent, "--ga2-pricing-glow": band.glow }}
-                    >
-                      <header className="ga2-booking-pricing-head">
-                        <strong>{band.name}</strong>
-                        <small>({band.crowdLabel.toUpperCase()})</small>
-                      </header>
-                      <div className="ga2-booking-pricing-copy">
-                        <p>Online tickets:</p>
-                        <ul>
-                          {band.onlinePrices.map((price) => (
-                            <li key={price}>{price}</li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div className="ga2-booking-pricing-copy">
-                        <p>In-person tickets:</p>
-                        <ul>
-                          {band.inPersonPrices.map((price) => (
-                            <li key={price}>{price}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </article>
-                  ))}
-                </div>
+                {!isOffSeason ? (
+                  <div className="ga2-booking-pricing" aria-label="Night pricing tiers">
+                    {bookingScheduleBands.map((band) => (
+                      <article
+                        key={band.id}
+                        className="ga2-booking-pricing-card"
+                        style={{ "--ga2-pricing-accent": band.accent, "--ga2-pricing-glow": band.glow }}
+                      >
+                        <header className="ga2-booking-pricing-head">
+                          <strong>{band.name}</strong>
+                          <small>({band.crowdLabel.toUpperCase()})</small>
+                        </header>
+                        <div className="ga2-booking-pricing-copy">
+                          <p>Online tickets:</p>
+                          <ul>
+                            {band.onlinePrices.map((price) => (
+                              <li key={price}>{price}</li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div className="ga2-booking-pricing-copy">
+                          <p>In-person tickets:</p>
+                          <ul>
+                            {band.inPersonPrices.map((price) => (
+                              <li key={price}>{price}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </article>
+                    ))}
+                  </div>
+                ) : null}
               </div>
             </section>
           </div>
