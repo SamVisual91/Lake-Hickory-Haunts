@@ -18,6 +18,7 @@ const faqLinks = [
 ];
 
 const hauntPayEventTimesUrl = "https://app.hauntpay.com/events/lhh-2026/event_times";
+const ticketsPageUrl = "https://www.lakehickoryhaunts.com/tickets";
 const lakeHickoryEscapeUrl = "https://lakehickoryescape.com/";
 const jobsApplicationUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSff7tZNJSOAJ-qrkF13y2ptqF4mcOZDW9OiSYQMGdLgWIY6ug/viewform";
@@ -126,7 +127,7 @@ export function Header() {
               </a>
               <a
                 className="nav-mobile-ticket-button"
-                href={hauntPayEventTimesUrl}
+                href={ticketsPageUrl}
                 onClick={() => {
                   setOpen(false);
                   setFaqOpen(false);
@@ -276,7 +277,7 @@ export function Header() {
               </a>
               <a
                 className="nav-cta nav-cta-tickets"
-                href={hauntPayEventTimesUrl}
+                href={ticketsPageUrl}
               >
                 Tickets
               </a>
