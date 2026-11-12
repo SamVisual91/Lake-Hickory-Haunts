@@ -18,11 +18,12 @@ const faqLinks = [
 ];
 
 const hauntPayEventTimesUrl = "https://app.hauntpay.com/events/lhh-2026/event_times";
+const lakeHickoryEscapeUrl = "https://lakehickoryescape.com/";
 const jobsApplicationUrl =
   "https://docs.google.com/forms/d/e/1FAIpQLSff7tZNJSOAJ-qrkF13y2ptqF4mcOZDW9OiSYQMGdLgWIY6ug/viewform";
 
 const mobileUtilityItems = [
-  { label: "Book Your Night", href: hauntPayEventTimesUrl, external: true },
+  { label: "Visit Lake Hickory Escape", href: lakeHickoryEscapeUrl, external: true },
   { label: "Directions", href: "/directions" },
   { label: "About Us", href: "/about-us" },
   { label: "Hours and Events", href: "/hours-events" },
@@ -70,8 +71,8 @@ export function Header() {
       <div className="utility-bar">
         <div className="page-width utility-inner">
           <div className="utility-left">
-            <a className="utility-book-link" href={hauntPayEventTimesUrl}>
-              Book Your Night
+            <a className="utility-book-link" href={lakeHickoryEscapeUrl}>
+              Visit Lake Hickory Escape
             </a>
             <Link href="/directions">Directions</Link>
           </div>
