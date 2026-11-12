@@ -216,9 +216,9 @@ export function HoursEventsExperience() {
       </div>
 
       {isOffSeason ? (
-        <section className="hx-offseason-schedule" aria-label="2027 ticket schedule updates">
+        <section className="hx-offseason-schedule" aria-label="2027 hours and events updates">
           <p>Stay tune for Updates on our</p>
-          <strong>2027 tickets schedule!</strong>
+          <strong>2027 Hours and Events!</strong>
         </section>
       ) : (
       <div className="hx-board">
@@ -351,9 +351,9 @@ export function HoursEventsExperience() {
         </div>
 
         {isOffSeason ? (
-          <div className="hx-offseason-schedule hx-offseason-schedule--events" aria-label="2027 special event updates">
+          <div className="hx-offseason-schedule hx-offseason-schedule--events" aria-label="2027 hours and events updates">
             <p>Stay tune for Updates on our</p>
-            <strong>2027 tickets schedule!</strong>
+            <strong>2027 Hours and Events!</strong>
           </div>
         ) : (
         <div className="live-events-lineup">

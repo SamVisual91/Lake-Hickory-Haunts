@@ -13257,7 +13257,7 @@ h1 {
   gap: 10px;
   place-items: center;
   margin: 0 24px;
-  padding: clamp(42px, 8vw, 88px) clamp(24px, 6vw, 72px);
+  padding: clamp(30px, 5vw, 58px) clamp(20px, 5vw, 56px);
   border: 1px solid rgba(140, 242, 69, 0.32);
   border-radius: 28px;
   background:
@@ -13273,7 +13273,7 @@ h1 {
   margin: 0;
   color: rgba(243, 247, 245, 0.84);
   font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  font-size: clamp(1.2rem, 2.4vw, 1.85rem);
   letter-spacing: 0.08em;
   line-height: 1;
   text-transform: uppercase;
@@ -13282,7 +13282,7 @@ h1 {
 .hx-offseason-schedule strong {
   color: #8cf245;
   font-family: "Bebas Neue", Impact, sans-serif;
-  font-size: clamp(3.1rem, 8vw, 7.6rem);
+  font-size: clamp(2.5rem, 6vw, 5.6rem);
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 0.9;
