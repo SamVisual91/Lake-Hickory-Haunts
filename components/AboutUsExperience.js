@@ -106,6 +106,51 @@ const aboutGalleryItems = [
     caption: "The scares hit hardest when guests least expect them deep inside the haunt.",
     imageSrc: "/assets/about-us-gallery/codex-clipboard-1f30039a-6f42-4889-b5fb-7a069f08621e.png",
   },
+  {
+    title: "Midway Crew",
+    caption: "Guests and monsters make the Lake Hickory Haunts midway unforgettable.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-midway-crew.jpg",
+  },
+  {
+    title: "Ticket Entrance",
+    caption: "The excitement begins the moment guests arrive at the park entrance.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-ticket-entrance.jpg",
+  },
+  {
+    title: "Family Night Out",
+    caption: "Friends and families make memories before heading into the scares.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-family-night.jpg",
+  },
+  {
+    title: "Midway Mayhem",
+    caption: "The pirate ship and glowing midway set the stage for a night of fright.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-midway-mayhem.jpg",
+  },
+  {
+    title: "Guest Monster Meetups",
+    caption: "Photo-ready monsters and unforgettable guest encounters fill the midway.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-guest-meetup.jpg",
+  },
+  {
+    title: "Your Journey Begins",
+    caption: "The iconic Lake Hickory Haunts entrance welcomes guests into the darkness.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-midway-entrance.jpg",
+  },
+  {
+    title: "Character Encounters",
+    caption: "The fun does not stop when guests come face-to-face with the characters.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-character-encounter.jpg",
+  },
+  {
+    title: "Aerial Haunt View",
+    caption: "A bird's-eye look at the attractions lighting up Lake Hickory Haunts.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-aerial-attraction.jpg",
+  },
+  {
+    title: "Waterfront Frights",
+    caption: "The lakeside setting creates a one-of-a-kind haunt experience after dark.",
+    imageSrc: "/assets/about-us-gallery/about-us-2026-waterfront.jpg",
+  },
 ];
 
 function CarouselArrow({ direction = "left" }) {
