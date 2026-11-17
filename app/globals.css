@@ -695,6 +695,9 @@ html.splash-pending .site-shell {
 
 .jobs-page {
   max-width: 760px;
+  margin-inline: auto;
+  display: grid;
+  justify-items: center;
   text-align: center;
 }
 
@@ -708,10 +711,12 @@ html.splash-pending .site-shell {
 }
 
 .jobs-page h1 {
+  width: 100%;
   margin: 0;
   color: #f5f7f4;
   font-size: clamp(2.4rem, 5vw, 4.5rem);
   line-height: 0.96;
+  text-align: center;
 }
 
 .jobs-page-copy {
